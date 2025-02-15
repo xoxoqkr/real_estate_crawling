@@ -1,0 +1,8 @@
+aws/dist/
+aws/dist/lib-dynload/
+__pycache__/
+*.pyc
+*.pyo
+*.so
+venv/
+virtualenv/

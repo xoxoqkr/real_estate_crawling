@@ -6,12 +6,13 @@ from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.action_chains import ActionChains
 from webdriver_manager.chrome import ChromeDriverManager
 from bs4 import BeautifulSoup
 
 
 
-def setup_webdriver():
+def setup_webdriver_old():
     """
     Chrome 웹드라이버를 설정하고 반환하는 함수입니다.
 
@@ -40,6 +41,37 @@ def setup_webdriver():
     driver = webdriver.Chrome(service=service, options=options)
     driver.implicitly_wait(10)
     return driver
+
+
+def setup_webdriver():
+    options = Options()
+    
+    # 운영체제 확인
+    import platform
+    is_windows = platform.system() == 'Windows'
+    
+    if not is_windows:  # Linux 환경
+        options.binary_location = "/usr/bin/google-chrome"
+    
+    # 공통 옵션 설정
+    options.add_argument("--headless")
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
+    options.add_argument("--disable-gpu")
+    options.add_argument("--window-size=1280x1024")
+    options.add_argument("--disable-extensions")
+    options.add_argument("--disable-blink-features=AutomationControlled")
+    
+    try:
+        # ChromeDriver 자동 설치 및 설정
+        from webdriver_manager.chrome import ChromeDriverManager
+        service = Service(ChromeDriverManager().install())
+        driver = webdriver.Chrome(service=service, options=options)
+        return driver
+    except Exception as e:
+        print(f"ChromeDriver 설정 중 오류 발생: {e}")
+        raise
+
 
 def navigate_to_search_page(driver, court_name :str = None, area_name :str = None):
     """
@@ -93,7 +125,8 @@ def navigate_to_search_page(driver, court_name :str = None, area_name :str = Non
     """
     # 검색 버튼 클릭
     search_button = wait.until(EC.element_to_be_clickable((By.ID, "mf_btn_quickSearchGds")))
-    search_button.click()
+    #search_button.click()
+    click_button(driver, search_button)
 
 def extract_results(driver, loading_wait_time_sec :int = 3):
     """
@@ -155,72 +188,83 @@ def extract_results(driver, loading_wait_time_sec :int = 3):
     df = df.dropna(subset=['printCsNo'])  # Drop rows where 'printCsNo' is NaN
     return df
 
+
+def click_button(driver, button):
+    try:
+        # 버튼이 보일 때까지 대기
+        WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.CLASS_NAME, "w2pageList_col_next"))
+        )
+        
+        # 버튼이 화면에 보이도록 스크롤
+        driver.execute_script("arguments[0].scrollIntoView(true);", button)
+        
+        # 버튼이 클릭 가능할 때까지 대기
+        WebDriverWait(driver, 5).until(
+            EC.element_to_be_clickable((By.CLASS_NAME, "w2pageList_col_next"))
+        ).click()
+    
+    except:
+        try:
+            # 만약 클릭이 막히면 ActionChains로 클릭
+            actions = ActionChains(driver)
+            actions.move_to_element(button).click().perform()
+        except:
+            # 그래도 클릭이 안 되면 JavaScript를 사용한 강제 클릭
+            driver.execute_script("arguments[0].click();", button)
+
+
 def paginate_and_extract(driver, max_pages : int = 100, loading_wait_time_sec :int = 3):
-    """
-    법원 경매 웹사이트의 모든 페이지를 순회하며 데이터를 추출하는 함수입니다.
-
-    Args:
-        driver (webdriver.Chrome): 법원 경매 페이지가 로드된 Chrome 웹드라이버
-        max_pages (int, optional): 크롤링할 최대 페이지 수. 기본값은 100페이지.
-        loading_wait_time_sec (int, optional): 페이지 로딩 대기 시간 단위 초 (기본값: 3초)
-
-    Returns:
-        pd.DataFrame: 모든 페이지에서 추출된 경매 데이터를 포함하는 DataFrame.
-            - 각 페이지의 데이터가 하나의 DataFrame으로 통합됨
-            - 페이지 순서대로 데이터가 누적됨
-
-    처리 과정:
-        1. 현재 페이지의 데이터 추출 (extract_results 함수 사용)
-        2. 추출된 데이터를 전체 결과에 누적
-        3. 페이지 이동 처리:
-            - 일반적인 경우: 다음 페이지 버튼 클릭
-            - 10페이지 단위: "다음 목록" 버튼 클릭 (11, 21, 31... 페이지)
-        4. max_pages에 도달하거나 오류 발생 시 종료
-
-    예외 처리:
-        - 페이지 이동 실패 시 현재까지 수집된 데이터 반환
-        - 데이터 추출 실패 시 현재까지 수집된 데이터 반환
-        - 모든 예외 상황에서 오류 메시지 출력
-
-    예시:
-        >>> driver = setup_webdriver()
-        >>> driver.get("https://www.courtauction.go.kr/...")
-        >>> df = paginate_and_extract(driver, max_pages=5)
-        >>> print(len(df))  # 추출된 총 데이터 수 확인
-        >>> driver.quit()
-    """
     all_results = pd.DataFrame()
     current_page = 1
     while True:
         try:
+            # 데이터 추출 전에 페이지 로딩 대기 추가
+            WebDriverWait(driver, 10).until(
+                EC.presence_of_element_located((By.CLASS_NAME, "grid_body_row"))
+            )
+            
             result_df = extract_results(driver, loading_wait_time_sec)
+            
+            # 데이터 유효성 검사 추가
+            if result_df.empty or 'printCsNo' not in result_df.columns:
+                print(f"페이지 {current_page}에서 유효한 데이터를 찾을 수 없습니다.")
+                break
+                
             print(result_df[['printCsNo','maemulSer']])
             all_results = pd.concat([all_results, result_df], ignore_index=True)
             
-            # 다음 페이지 버튼 클릭
+            # 다음 페이지 버튼 클릭 전 대기 시간 추가
+            time.sleep(loading_wait_time_sec)
+            
             print('current page : {}'.format(current_page))
             next_page = current_page + 1
-            if next_page % 10 == 1:  # 11, 21, 31 페이지에 도달하면 "다음 목록" 버튼 클릭
+            
+            if next_page % 10 == 1:
                 try:
-                    next_list_button = driver.find_element(By.CLASS_NAME, "w2pageList_col_next")
-                    next_list_button.click()
-                    time.sleep(3)
+                    next_list_button = WebDriverWait(driver, 10).until(
+                        EC.element_to_be_clickable((By.CLASS_NAME, "w2pageList_col_next"))
+                    )
+                    click_button(driver, next_list_button)
                 except Exception as e:
                     print(f"다음 목록 버튼 클릭 중 오류 발생: {e}")
                     break
             else:
                 try:
-                    next_page_button = driver.find_element(By.ID, f"mf_wfm_mainFrame_pgl_gdsDtlSrchPage_page_{next_page}")
-                    next_page_button.click()
-                    time.sleep(loading_wait_time_sec)
+                    next_page_button = WebDriverWait(driver, 10).until(
+                        EC.element_to_be_clickable((By.ID, f"mf_wfm_mainFrame_pgl_gdsDtlSrchPage_page_{next_page}"))
+                    )
+                    click_button(driver, next_page_button)
                 except Exception as e:
                     print(f"페이지 {next_page} 이동 중 오류 발생: {e}")
                     break
+            
             current_page += 1
             if current_page >= max_pages:
                 break
+                
         except Exception as e:
-            print(f"페이지 {current_page} 이동 중 오류 발생: {e}")
+            print(f"페이지 {current_page} 처리 중 오류 발생: {e}")
             break
     
     return all_results

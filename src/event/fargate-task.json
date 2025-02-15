@@ -1,0 +1,29 @@
+{
+    "family": "real_estate_crawling",
+    "networkMode": "awsvpc",
+    "requiresCompatibilities": ["FARGATE"],
+    "cpu": "1024",
+    "memory": "2048",
+    "executionRoleArn": "arn:aws:iam::730335187691:role/ecsTaskExecutionRole",
+    "containerDefinitions": [
+        {
+            "name": "real_estate_crawling",
+            "image": "730335187691.dkr.ecr.eu-north-1.amazonaws.com/real_estate_crawling:latest",
+            "essential": true,
+            "environment": [
+                {
+                    "name": "PYTHONUNBUFFERED",
+                    "value": "1"
+                }
+            ],
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-group": "/ecs/fargate-cluster",
+                    "awslogs-region": "eu-north-1",
+                    "awslogs-stream-prefix": "ecs"
+                }
+            }
+        }
+    ]
+}
