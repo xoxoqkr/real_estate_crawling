@@ -3,6 +3,8 @@ import numpy as np
 import boto3
 import io
 from datetime import datetime
+import os
+
 
 def create_random_data():
     """
@@ -28,9 +30,9 @@ def save_to_s3_test():
         # S3 클라이언트 생성 (with credentials)
         s3_client = boto3.client(
             's3',
-            aws_access_key_id='AKIA2UC26SLVUYNLDTU5',      # AWS Access Key ID 입력
-            aws_secret_access_key='',     # AWS Secret Access Key 입력
-            region_name='eu-north-1'                 # 리전 이름 (예: 서울 리전)
+            aws_access_key_id=os.environ.get('AWS_ACCESS_KEY_ID'),
+            aws_secret_access_key=os.environ.get('AWS_SECRET_ACCESS_KEY'),
+            region_name=os.environ.get('AWS_REGION', 'ap-northeast-2')
         )
         
         # 테스트 데이터 생성

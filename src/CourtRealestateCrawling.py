@@ -1,8 +1,5 @@
 import pandas as pd
-import numpy as np
-import re
 import time
-import urllib.parse
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait, Select
@@ -11,52 +8,8 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
 from bs4 import BeautifulSoup
-import uuid
-import boto3
-import io
-from datetime import datetime
 
-def save_to_s3(df, bucket_name, folder_name):
-    """
-    DataFrame을 AWS S3에 저장하는 함수입니다.
 
-    Args:
-        df (pd.DataFrame): 저장할 데이터프레임
-        bucket_name (str): S3 버킷 이름
-        folder_name (str): S3 버킷 내 저장할 폴더 이름
-
-    Returns:
-        bool: 저장 성공 여부
-    """
-    try:
-        # S3 클라이언트 생성
-        s3_client = boto3.client(
-            's3',
-            aws_access_key_id='',      # AWS Access Key ID 입력
-            aws_secret_access_key='',     # AWS Secret Access Key 입력
-            region_name='eu-north-1'                 # 리전 이름 (예: 서울 리전)
-        )
-        
-        # 현재 시간을 파일명에 포함
-        current_time = datetime.now().strftime("%Y%m%d_%H%M%S")
-        
-        # CSV 파일로 변환
-        csv_buffer = io.StringIO()
-        df.to_csv(csv_buffer, index=False)
-        
-        # S3에 업로드
-        file_name = f"{folder_name}/court_data_{current_time}.csv"
-        s3_client.put_object(
-            Bucket=bucket_name,
-            Key=file_name,
-            Body=csv_buffer.getvalue()
-        )
-        print(f"Successfully saved to S3: s3://{bucket_name}/{file_name}")
-        return True
-        
-    except Exception as e:
-        print(f"Error saving to S3: {e}")
-        return False
 
 def setup_webdriver():
     """
@@ -392,7 +345,6 @@ def process_court_data(df : pd.DataFrame, save_dir : str, uuid : str):
 
 #각 링크에 해당 물건의 url을 넣는 방법
 
-uuid = str(uuid.uuid4())
 """
 if __name__ == "__main__":
     save_dir = 'C:/Users/xoxoq/Downloads/'
@@ -413,35 +365,4 @@ if __name__ == "__main__":
     driver.quit()
     print("크롤링된 종료")
 """
-if __name__ == "__main__":
-    # S3 설정
-    BUCKET_NAME = "odtest01"  # 실제 S3 버킷 이름으로 변경
-    FOLDER_NAME = "court_data"        # 원하는 폴더 이름으로 변경
-    
-    save_dir = 'C:/Users/xoxoq/Downloads/'
-    driver = setup_webdriver()
-    navigate_to_search_page(driver, court_name="서울중앙지방법원")
-    merged_result_df = paginate_and_extract(driver, max_pages=5)
-    
-    # 원본 데이터 S3 저장
-    try:
-        save_to_s3(merged_result_df, BUCKET_NAME, f"{FOLDER_NAME}/raw")
-    except Exception as e:
-        print(f"원본 데이터 S3 저장 중 오류 발생: {e}")
-        # 로컬에 백업 저장
-        merged_result_df.to_csv(f'{save_dir}court_Data_org.csv')
-    
-    # 데이터 처리
-    merged_result_df = process_court_data(merged_result_df, save_dir, uuid)
-    
-    # 처리된 데이터 S3 저장
-    try:
-        save_to_s3(merged_result_df, BUCKET_NAME, f"{FOLDER_NAME}/processed")
-    except Exception as e:
-        print(f"처리된 데이터 S3 저장 중 오류 발생: {e}")
-        # 로컬에 백업 저장
-        merged_result_df.to_csv(f'{save_dir}court_Data_processed.csv')
-    
-    driver.quit()
-    print("크롤링 종료")
     
