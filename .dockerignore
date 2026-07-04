@@ -1,0 +1,35 @@
+# 자격증명/비밀 (절대 이미지에 포함되면 안 됨)
+.env
+.env.*
+!.env.example
+
+# git / IDE
+.git
+.gitignore
+.vscode
+
+# 대용량 불필요 파일
+awscliv2.zip
+aws/dist/
+
+# 개발용 실험/디버그 스크립트 (프로덕션 파이프라인에 불필요)
+src/test_*.py
+src/discover_*.py
+src/refresh_naver_token*.py
+src/check_mobile*.py
+src/analyze_js.py
+src/temp/
+
+# 크롤링 디버그 산출물
+*.html
+*.js
+*.json
+!src/event/*.json
+!src/rule/*.json
+
+# 파이썬 캐시/가상환경
+__pycache__/
+*.pyc
+*.pyo
+venv/
+virtualenv/

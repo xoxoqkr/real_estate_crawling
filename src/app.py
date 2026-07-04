@@ -22,7 +22,8 @@ if __name__ == "__main__":
         merged_result_df.to_csv(f'{save_dir}court_Data_org.csv')
     
     # 데이터 처리
-    merged_result_df = process_court_data(merged_result_df, save_dir, uuid)
+    if len(merged_result_df) > 0:
+        merged_result_df = process_court_data(merged_result_df, save_dir, uuid)
     
     # 처리된 데이터 S3 저장
     try:

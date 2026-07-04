@@ -123,10 +123,9 @@ def navigate_to_search_page(driver, court_name :str = None, area_name :str = Non
     """
     mf_sbx_rletRpdtSggLst 는 시/도 하위의 행정구역(주로 시/군/구)을 의미함.
     """
-    # 검색 버튼 클릭
-    search_button = wait.until(EC.element_to_be_clickable((By.ID, "mf_btn_quickSearchGds")))
-    #search_button.click()
-    click_button(driver, search_button)
+    # 검색 버튼 클릭 (JavaScript click으로 안정성 확보)
+    search_button = wait.until(EC.presence_of_element_located((By.ID, "mf_btn_quickSearchGds")))
+    driver.execute_script("arguments[0].click();", search_button)
 
 def extract_results(driver, loading_wait_time_sec :int = 3):
     """
@@ -191,26 +190,12 @@ def extract_results(driver, loading_wait_time_sec :int = 3):
 
 def click_button(driver, button):
     try:
-        # 버튼이 보일 때까지 대기
-        WebDriverWait(driver, 10).until(
-            EC.presence_of_element_located((By.CLASS_NAME, "w2pageList_col_next"))
-        )
-        
-        # 버튼이 화면에 보이도록 스크롤
-        driver.execute_script("arguments[0].scrollIntoView(true);", button)
-        
-        # 버튼이 클릭 가능할 때까지 대기
-        WebDriverWait(driver, 5).until(
-            EC.element_to_be_clickable((By.CLASS_NAME, "w2pageList_col_next"))
-        ).click()
-    
+        button.click()
     except:
         try:
-            # 만약 클릭이 막히면 ActionChains로 클릭
             actions = ActionChains(driver)
             actions.move_to_element(button).click().perform()
         except:
-            # 그래도 클릭이 안 되면 JavaScript를 사용한 강제 클릭
             driver.execute_script("arguments[0].click();", button)
 
 

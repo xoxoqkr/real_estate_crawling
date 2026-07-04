@@ -7,21 +7,16 @@ WORKDIR /app
 # 필요한 파일 복사
 COPY . .
 
-# 필수 패키지 설치
+# 필수 패키지 설치 (headless Chrome 실행에 필요한 최소 구성)
 RUN apt-get update && apt-get install -y \
     wget \
     unzip \
     curl \
     gnupg \
     ca-certificates \
-    software-properties-common \
-    xvfb \
     libxi6 \
-    libgconf-2-4 \
     libnss3 \
     libxss1 \
-    libappindicator1 \
-    libayatana-indicator7 \
     fonts-liberation \
     libasound2 \
     libatk-bridge2.0-0 \

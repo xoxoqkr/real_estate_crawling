@@ -4,5 +4,5 @@ pandas
 uuid
 requests
 webdriver_manager
-selenium
 bs4
+python-dotenv
