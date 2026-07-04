@@ -1,0 +1,854 @@
+<script>var tokenList = {};var postCodeList = new Array();localStorage.removeItem('postCodeList');tokenList[1]='J02|2016|828|5';postCodeList.push('');tokenList[2]='C01|2004|12246|1';postCodeList.push('');tokenList[3]='C01|2004|12775|1';postCodeList.push('');tokenList[4]='C01|2004|14251|1';postCodeList.push('');tokenList[5]='C01|2004|17450|1';postCodeList.push('');tokenList[6]='C01|2004|17479|1';postCodeList.push('');tokenList[7]='C01|2004|13648|1';postCodeList.push('');tokenList[8]='C01|2004|15091|1';postCodeList.push('');tokenList[9]='C01|2004|17354|1';postCodeList.push('');tokenList[10]='C01|2004|17472|1';postCodeList.push('');tokenList[11]='C01|2004|17502|1';postCodeList.push('');tokenList[12]='C01|2004|17514|1';postCodeList.push('');tokenList[13]='C01|2004|17554|1';postCodeList.push('');tokenList[14]='C01|2003|14605|1';postCodeList.push('');tokenList[15]='C01|2004|13695|1';postCodeList.push('');localStorage.setItem('tokenList',JSON.stringify(tokenList));localStorage.removeItem('tokenList');localStorage.removeItem('postCodeList');localStorage.setItem('tokenList',JSON.stringify(tokenList));localStorage.setItem('postCodeList',JSON.stringify(postCodeList));tokenList = {};</script>							<h4>
+						<span>검색결과 : 	│ <strong>총 36,822건</strong></span>
+						<em>( ~ )</em>					</h4>
+								<div class="group">
+						<div class="con">
+													<dl>
+								<dt>물건통계</dt>
+								<dd>
+									<ul>
+										<li class="sel" onclick="search_obj('', this);"><a href="javascript:">전체(36,822)</a></li>
+																				<li class="" onclick="search_obj('23', this);"><a href="javascript:">대금미납(181)</a></li>
+																				<li class="" onclick="search_obj('12', this);"><a href="javascript:">불허(356)</a></li>
+																				<li class="" onclick="search_obj('21', this);"><a href="javascript:">이송(27)</a></li>
+																				<li class="" onclick="search_obj('10', this);"><a href="javascript:">취소(3)</a></li>
+																				<li class="" onclick="search_obj('19', this);"><a href="javascript:">항고(210)</a></li>
+																				<li class="" onclick="search_obj('16', this);"><a href="javascript:">배당종결(1,357,329)</a></li>
+																				<li class="" onclick="search_obj('17', this);"><a href="javascript:">재매각(553)</a></li>
+																				<li class="" onclick="search_obj('11', this);"><a href="javascript:">미진행(395)</a></li>
+																				<li class="" onclick="search_obj('8', this);"><a href="javascript:">재진행(2,630)</a></li>
+																				<li class="" onclick="search_obj('1', this);"><a href="javascript:">신건(5,357)</a></li>
+																				<li class="" onclick="search_obj('2', this);"><a href="javascript:">유찰(28,276)</a></li>
+																				<li class="" onclick="search_obj('4', this);"><a href="javascript:">변경(9,824)</a></li>
+																				<li class="" onclick="search_obj('9', this);"><a href="javascript:">연기(13)</a></li>
+																				<li class="" onclick="search_obj('5', this);"><a href="javascript:">취하(285,258)</a></li>
+																				<li class="" onclick="search_obj('6', this);"><a href="javascript:">기각(106,916)</a></li>
+																				<li class="" onclick="search_obj('7', this);"><a href="javascript:">정지(1,437)</a></li>
+																				<li class="" onclick="search_obj('20', this);"><a href="javascript:">정지(128)</a></li>
+																				<li class="" onclick="search_obj('3', this);"><a href="javascript:">매각(17,481)</a></li>
+																				<li class="" onclick="search_obj('15', this);"><a href="javascript:">잔금납부(10,697)</a></li>
+																				<li class="" onclick="search_obj('', this);"><a href="javascript:">기타(37)</a></li>
+																				<li class="" onclick="search_obj('24', this);"><a href="javascript:">기타(3,898)</a></li>
+																				<li class="" onclick="search_obj('13', this);"><a href="javascript:">각하(930)</a></li>
+																			</ul>
+								</dd>
+							</dl>
+							<dl>
+								<dt>용도통계</dt>
+								<dd>
+									<ul>
+										<!--<li class="all"><a href="javascript:">전체(36,822)</a></li>-->
+																				<li class="" onclick="search_usage('01', this);"><a href="javascript:">아파트(4,112)</a></li>
+																				<li class="" onclick="search_usage('02', this);"><a href="javascript:">주택(1,465)</a></li>
+																				<li class="" onclick="search_usage('03', this);"><a href="javascript:">다세대(빌라)(5,443)</a></li>
+																				<li class="" onclick="search_usage('04', this);"><a href="javascript:">다가구(원룸등)(417)</a></li>
+																				<li class="" onclick="search_usage('05', this);"><a href="javascript:">근린주택(620)</a></li>
+																				<li class="" onclick="search_usage('06', this);"><a href="javascript:">오피스텔(4,195)</a></li>
+																				<li class="" onclick="search_usage('07', this);"><a href="javascript:">도시형생활주택(2,597)</a></li>
+																				<li class="" onclick="search_usage('09', this);"><a href="javascript:">농가주택(11)</a></li>
+																				<li class="" onclick="search_usage('21', this);"><a href="javascript:">근린시설(532)</a></li>
+																				<li class="" onclick="search_usage('22', this);"><a href="javascript:">근린상가(3,566)</a></li>
+																				<li class="" onclick="search_usage('24', this);"><a href="javascript:">공장(591)</a></li>
+																				<li class="" onclick="search_usage('25', this);"><a href="javascript:">숙박시설(483)</a></li>
+																				<li class="" onclick="search_usage('26', this);"><a href="javascript:">주유소(42)</a></li>
+																				<li class="" onclick="search_usage('28', this);"><a href="javascript:">병원(12)</a></li>
+																				<li class="" onclick="search_usage('29', this);"><a href="javascript:">아파트상가(463)</a></li>
+																				<li class="" onclick="search_usage('30', this);"><a href="javascript:">창고(146)</a></li>
+																				<li class="" onclick="search_usage('33', this);"><a href="javascript:">아파트형공장(884)</a></li>
+																				<li class="" onclick="search_usage('34', this);"><a href="javascript:">목욕탕(15)</a></li>
+																				<li class="" onclick="search_usage('35', this);"><a href="javascript:">상가(사우나)(18)</a></li>
+																				<li class="" onclick="search_usage('36', this);"><a href="javascript:">노유자시설(73)</a></li>
+																				<li class="" onclick="search_usage('37', this);"><a href="javascript:">장례식장(1)</a></li>
+																				<li class="" onclick="search_usage('41', this);"><a href="javascript:">대지(1,188)</a></li>
+																				<li class="" onclick="search_usage('42', this);"><a href="javascript:">임야(2,623)</a></li>
+																				<li class="" onclick="search_usage('43', this);"><a href="javascript:">전(3,006)</a></li>
+																				<li class="" onclick="search_usage('44', this);"><a href="javascript:">답(2,409)</a></li>
+																				<li class="" onclick="search_usage('45', this);"><a href="javascript:">과수원(166)</a></li>
+																				<li class="" onclick="search_usage('46', this);"><a href="javascript:">잡종지(93)</a></li>
+																				<li class="" onclick="search_usage('47', this);"><a href="javascript:">공장용지(36)</a></li>
+																				<li class="" onclick="search_usage('48', this);"><a href="javascript:">도로(168)</a></li>
+																				<li class="" onclick="search_usage('49', this);"><a href="javascript:">구거(5)</a></li>
+																				<li class="" onclick="search_usage('50', this);"><a href="javascript:">유지(10)</a></li>
+																				<li class="" onclick="search_usage('51', this);"><a href="javascript:">목장용지(24)</a></li>
+																				<li class="" onclick="search_usage('54', this);"><a href="javascript:">체육용지(1)</a></li>
+																				<li class="" onclick="search_usage('55', this);"><a href="javascript:">제방(4)</a></li>
+																				<li class="" onclick="search_usage('56', this);"><a href="javascript:">하천(17)</a></li>
+																				<li class="" onclick="search_usage('57', this);"><a href="javascript:">유원지(6)</a></li>
+																				<li class="" onclick="search_usage('60', this);"><a href="javascript:">창고용지(14)</a></li>
+																				<li class="" onclick="search_usage('71', this);"><a href="javascript:">축사(78)</a></li>
+																				<li class="" onclick="search_usage('72', this);"><a href="javascript:">콘도(8)</a></li>
+																				<li class="" onclick="search_usage('74', this);"><a href="javascript:">주차장(11)</a></li>
+																				<li class="" onclick="search_usage('75', this);"><a href="javascript:">묘지(30)</a></li>
+																				<li class="" onclick="search_usage('76', this);"><a href="javascript:">광업권(2)</a></li>
+																				<li class="" onclick="search_usage('77', this);"><a href="javascript:">어업권(11)</a></li>
+																				<li class="" onclick="search_usage('78', this);"><a href="javascript:">농가관련시설(76)</a></li>
+																				<li class="" onclick="search_usage('79', this);"><a href="javascript:">종교시설(29)</a></li>
+																				<li class="" onclick="search_usage('80', this);"><a href="javascript:">기타(14)</a></li>
+																				<li class="" onclick="search_usage('81', this);"><a href="javascript:">염전(2)</a></li>
+																				<li class="" onclick="search_usage('82', this);"><a href="javascript:">양어장(18)</a></li>
+																				<li class="" onclick="search_usage('83', this);"><a href="javascript:">종교용지(4)</a></li>
+																				<li class="" onclick="search_usage('85', this);"><a href="javascript:">자동차관련시설(13)</a></li>
+																				<li class="" onclick="search_usage('86', this);"><a href="javascript:">문화및집회시설(6)</a></li>
+																				<li class="" onclick="search_usage('87', this);"><a href="javascript:">공원(2)</a></li>
+																				<li class="" onclick="search_usage('88', this);"><a href="javascript:">분뇨처리및자원순환시설(11)</a></li>
+																				<li class="" onclick="search_usage('89', this);"><a href="javascript:">교육연구시설(12)</a></li>
+																				<li class="" onclick="search_usage('90', this);"><a href="javascript:">주유소용지(5)</a></li>
+																				<li class="" onclick="search_usage('91', this);"><a href="javascript:">승용자동차(361)</a></li>
+																				<li class="" onclick="search_usage('92', this);"><a href="javascript:">승합자동차(68)</a></li>
+																				<li class="" onclick="search_usage('93', this);"><a href="javascript:">화물자동차(167)</a></li>
+																				<li class="" onclick="search_usage('94', this);"><a href="javascript:">중장비(26)</a></li>
+																				<li class="" onclick="search_usage('95', this);"><a href="javascript:">차량기타(24)</a></li>
+																				<li class="" onclick="search_usage('96', this);"><a href="javascript:">덤프트럭(27)</a></li>
+																				<li class="" onclick="search_usage('97', this);"><a href="javascript:">선박(126)</a></li>
+																				<li class="" onclick="search_usage('98', this);"><a href="javascript:">SUV(215)</a></li>
+																			</ul>
+								</dd>
+							</dl>
+
+						</div>
+						<a class="btn" href="javascript:">상세용도 접기</a>
+					</div>
+				<script>
+				// 상세 통계 BOX 접기/펼치기
+				$(".auction_result .group .btn").on('click', function () {
+
+					if ($(".auction_result .group .con").is(':visible'))
+						$(this).text('상세용도 펼치기');
+					else
+						$(this).text('상세용도 접기');
+					$(".auction_result .group .con").slideToggle("slow");
+					return false;
+				});
+				</script>				
+							
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+					<!--  결과리스트 -->
+					<div class="tbl_top">
+					<input type="checkbox" id="select-all"><label for="select-all"> 전체선택</label>							
+						<select name="list_view_cnt" onchange="setListView(this)">
+							<option value="15" selected>15개씩 보기</option>
+							<option value="25">25개씩 보기</option>
+							<option value="50">50개씩 보기</option>
+							<option value="100">100개씩 보기</option>
+							<option value="150">150개씩 보기</option>							
+						</select>						
+						<div class="btn">							
+							<a class="mark" href="javascript:add_interest();"><span>관심</span></a>
+							<a class="mark" style="width:115px; text-align:center;" href="javascript:add_select();"><span>열람물건저장</span></a>
+							<a class="print" style="width:73px; text-align:center;" href="javascript:f_print_NEW('.tbl_result','standard')"><span>인쇄 1</span></a>
+							<a class="print" style="width:73px;" href="javascript:f_print_NEW('.tbl_result','courtParticipate',452016)"><span>인쇄 2</span></a>
+							<a class="excel" style="width:60px;" href="javascript:f_print_NEW('.tbl_result','excel')"><span>엑셀</span></a>
+						</div>
+					</div>
+					<div class="tbl_result">
+						<table>
+							<colgroup>
+								<col style="width:40px;">
+								<col style="width:95px;">
+								<col style=";">
+								<col style="width:84px;">
+								<col style="width:116px;">
+								<col style="width:96px;">
+								<col style="width:80px;">
+								<col style="width:52px;">
+							</colgroup>
+							<thead style="background-color: rgba(255, 0, 0, 1) !important;">
+								<tr>
+									<th>선택</th>
+									<th>법원명<br />사건번호<br />물건번호</th>
+									<th>소재지</th>
+									<th>용도</th>
+									<th>감정가<br />최저가<br />[낙찰가]</th>
+									<th>매각기일<br />(개찰기일)<br />[입찰인원]</th>
+									<th>결과<br />유찰수<br />%</th>
+									<th>조회</th>
+								</tr>
+							</thead>
+							<tbody>
+																							<tr id="no1"
+																		
+									data-courtno="J02"
+									data-courtno2="경매2계"
+									data-eventno="2016"
+									data-eventno2="828"
+									data-objno="5"
+									data-speed_usagecode=""
+									data-usagecode="01">
+									<th >
+										<input type="checkbox" class="list_chk_box" id="chk_tbl1" value="1"><label for="chk_tbl1">선택</label>
+																			</th>									
+									<td class="number" onclick="view_product('J02','2016','828','5','product'); document.getElementById('chk_tbl1').checked=true; setCheckBoxColor('no1'); return false;">
+																																				거창 2계<br />
+									2016-828
+									<br />물번[5]																											</td>
+									<td class="subject"  onclick="view_product('J02','2016','828','5','product'); document.getElementById('chk_tbl1').checked=true; setCheckBoxColor('no1'); return false;">
+										<div class="thumbs thumbs_div" data-imglink="'/pub/images/sub/noimage-small.png'">
+											<a class="btn" href="javascript:" onclick="view_product('J02','2016','828','5','product'); document.getElementById('chk_tbl1').checked=true; setCheckBoxColor('no1'); return false;"></a>
+										</div>
+										<a href="javascript:" onclick="view_product('J02','2016','828','5','product'); document.getElementById('chk_tbl1').checked=true; setCheckBoxColor('no1'); return false;">
+											경상남도 거창군 남하면 둔마리 679
+											
+											
+																																																							<span class="red">[관련사건]</span>
+																					</a>
+									</td>
+									<td></td>
+									<td class="price">
+										0<br>
+										<span style="color:#144aaa;">0</span>
+																			</td>
+									<td class="date">
+										
+																			</td>
+									<td class="result">
+										<span >신건</span><br />
+																				<span>(0%)</span>
+																			</td>
+									<td class="hit">5</td>
+								</tr>
+																								<tr id="no2"
+																		
+									data-courtno="C01"
+									data-courtno2="경매10계"
+									data-eventno="2004"
+									data-eventno2="12246"
+									data-objno="1"
+									data-speed_usagecode="03"
+									data-usagecode="03">
+									<th >
+										<input type="checkbox" class="list_chk_box" id="chk_tbl2" value="2"><label for="chk_tbl2">선택</label>
+																			</th>									
+									<td class="number" onclick="view_product('C01','2004','12246','1','product'); document.getElementById('chk_tbl2').checked=true; setCheckBoxColor('no2'); return false;">
+																																				인천 10계<br />
+									2004-12246
+																																				</td>
+									<td class="subject"  onclick="view_product('C01','2004','12246','1','product'); document.getElementById('chk_tbl2').checked=true; setCheckBoxColor('no2'); return false;">
+										<div class="thumbs thumbs_div" data-imglink="'/pub/images/sub/noimage-small.png'">
+											<a class="btn" href="javascript:" onclick="view_product('C01','2004','12246','1','product'); document.getElementById('chk_tbl2').checked=true; setCheckBoxColor('no2'); return false;"></a>
+										</div>
+										<a href="javascript:" onclick="view_product('C01','2004','12246','1','product'); document.getElementById('chk_tbl2').checked=true; setCheckBoxColor('no2'); return false;">
+											인천광역시 남동구 만수동 855-7 지층 2호
+											
+											
+																																																						</a>
+									</td>
+									<td>다세대<br>(빌라)</td>
+									<td class="price">
+										25,000,000<br>
+										<span style="color:#144aaa;">12,250,000</span>
+																			</td>
+									<td class="date">
+										2005-03-28
+																			</td>
+									<td class="result">
+										<span >유찰</span><br />
+																				<span>(49%)</span>
+																			</td>
+									<td class="hit">4</td>
+								</tr>
+																								<tr id="no3"
+																		
+									data-courtno="C01"
+									data-courtno2="경매10계"
+									data-eventno="2004"
+									data-eventno2="12775"
+									data-objno="1"
+									data-speed_usagecode="03"
+									data-usagecode="03">
+									<th >
+										<input type="checkbox" class="list_chk_box" id="chk_tbl3" value="3"><label for="chk_tbl3">선택</label>
+																			</th>									
+									<td class="number" onclick="view_product('C01','2004','12775','1','product'); document.getElementById('chk_tbl3').checked=true; setCheckBoxColor('no3'); return false;">
+																																				인천 10계<br />
+									2004-12775
+																																				</td>
+									<td class="subject"  onclick="view_product('C01','2004','12775','1','product'); document.getElementById('chk_tbl3').checked=true; setCheckBoxColor('no3'); return false;">
+										<div class="thumbs thumbs_div" data-imglink="'/pub/images/sub/noimage-small.png'">
+											<a class="btn" href="javascript:" onclick="view_product('C01','2004','12775','1','product'); document.getElementById('chk_tbl3').checked=true; setCheckBoxColor('no3'); return false;"></a>
+										</div>
+										<a href="javascript:" onclick="view_product('C01','2004','12775','1','product'); document.getElementById('chk_tbl3').checked=true; setCheckBoxColor('no3'); return false;">
+											인천광역시 서구 가정동 560-55 3층 302호
+											
+											
+																																																						</a>
+									</td>
+									<td>다세대<br>(빌라)</td>
+									<td class="price">
+										44,000,000<br>
+										<span style="color:#144aaa;">30,800,000</span>
+																			</td>
+									<td class="date">
+										2005-03-28
+																			</td>
+									<td class="result">
+										<span >유찰</span><br />
+																				<span>(70%)</span>
+																			</td>
+									<td class="hit">4</td>
+								</tr>
+																								<tr id="no4"
+																		
+									data-courtno="C01"
+									data-courtno2="경매10계"
+									data-eventno="2004"
+									data-eventno2="14251"
+									data-objno="1"
+									data-speed_usagecode="03"
+									data-usagecode="03">
+									<th >
+										<input type="checkbox" class="list_chk_box" id="chk_tbl4" value="4"><label for="chk_tbl4">선택</label>
+																			</th>									
+									<td class="number" onclick="view_product('C01','2004','14251','1','product'); document.getElementById('chk_tbl4').checked=true; setCheckBoxColor('no4'); return false;">
+																																				인천 10계<br />
+									2004-14251
+																																				</td>
+									<td class="subject"  onclick="view_product('C01','2004','14251','1','product'); document.getElementById('chk_tbl4').checked=true; setCheckBoxColor('no4'); return false;">
+										<div class="thumbs thumbs_div" data-imglink="'/pub/images/sub/noimage-small.png'">
+											<a class="btn" href="javascript:" onclick="view_product('C01','2004','14251','1','product'); document.getElementById('chk_tbl4').checked=true; setCheckBoxColor('no4'); return false;"></a>
+										</div>
+										<a href="javascript:" onclick="view_product('C01','2004','14251','1','product'); document.getElementById('chk_tbl4').checked=true; setCheckBoxColor('no4'); return false;">
+											인천광역시 남구 숭의동 2-124경진주택 2층 201호
+											
+											
+																																																						</a>
+									</td>
+									<td>다세대<br>(빌라)</td>
+									<td class="price">
+										65,000,000<br>
+										<span style="color:#144aaa;">45,500,000</span>
+																			</td>
+									<td class="date">
+										2005-03-28
+																			</td>
+									<td class="result">
+										<span >유찰</span><br />
+																				<span>(70%)</span>
+																			</td>
+									<td class="hit">6</td>
+								</tr>
+																								<tr id="no5"
+																		
+									data-courtno="C01"
+									data-courtno2="경매10계"
+									data-eventno="2004"
+									data-eventno2="17450"
+									data-objno="1"
+									data-speed_usagecode="01"
+									data-usagecode="01">
+									<th >
+										<input type="checkbox" class="list_chk_box" id="chk_tbl5" value="5"><label for="chk_tbl5">선택</label>
+																			</th>									
+									<td class="number" onclick="view_product('C01','2004','17450','1','product'); document.getElementById('chk_tbl5').checked=true; setCheckBoxColor('no5'); return false;">
+																																				인천 10계<br />
+									2004-17450
+																																				</td>
+									<td class="subject"  onclick="view_product('C01','2004','17450','1','product'); document.getElementById('chk_tbl5').checked=true; setCheckBoxColor('no5'); return false;">
+										<div class="thumbs thumbs_div" data-imglink="'/pub/images/sub/noimage-small.png'">
+											<a class="btn" href="javascript:" onclick="view_product('C01','2004','17450','1','product'); document.getElementById('chk_tbl5').checked=true; setCheckBoxColor('no5'); return false;"></a>
+										</div>
+										<a href="javascript:" onclick="view_product('C01','2004','17450','1','product'); document.getElementById('chk_tbl5').checked=true; setCheckBoxColor('no5'); return false;">
+											인천광역시 남구 학익동 719동아.풍림아파트 111동 8층 804호
+											
+											
+																																																						</a>
+									</td>
+									<td>아파트</td>
+									<td class="price">
+										310,000,000<br>
+										<span style="color:#144aaa;">310,000,000</span>
+																			</td>
+									<td class="date">
+										2005-03-28
+																			</td>
+									<td class="result">
+										<span >유찰</span><br />
+										1회<br />										<span>(100%)</span>
+																			</td>
+									<td class="hit">3</td>
+								</tr>
+																								<tr id="no6"
+																		
+									data-courtno="C01"
+									data-courtno2="경매10계"
+									data-eventno="2004"
+									data-eventno2="17479"
+									data-objno="1"
+									data-speed_usagecode="01"
+									data-usagecode="01">
+									<th >
+										<input type="checkbox" class="list_chk_box" id="chk_tbl6" value="6"><label for="chk_tbl6">선택</label>
+																			</th>									
+									<td class="number" onclick="view_product('C01','2004','17479','1','product'); document.getElementById('chk_tbl6').checked=true; setCheckBoxColor('no6'); return false;">
+																																				인천 10계<br />
+									2004-17479
+																																				</td>
+									<td class="subject"  onclick="view_product('C01','2004','17479','1','product'); document.getElementById('chk_tbl6').checked=true; setCheckBoxColor('no6'); return false;">
+										<div class="thumbs thumbs_div" data-imglink="'/pub/images/sub/noimage-small.png'">
+											<a class="btn" href="javascript:" onclick="view_product('C01','2004','17479','1','product'); document.getElementById('chk_tbl6').checked=true; setCheckBoxColor('no6'); return false;"></a>
+										</div>
+										<a href="javascript:" onclick="view_product('C01','2004','17479','1','product'); document.getElementById('chk_tbl6').checked=true; setCheckBoxColor('no6'); return false;">
+											인천광역시 서구 석남동 208-1동남아파트 1동 2층 206호
+											
+											
+																																																						</a>
+									</td>
+									<td>아파트</td>
+									<td class="price">
+										38,000,000<br>
+										<span style="color:#144aaa;">38,000,000</span>
+																			</td>
+									<td class="date">
+										2005-03-28
+																			</td>
+									<td class="result">
+										<span >유찰</span><br />
+										1회<br />										<span>(100%)</span>
+																			</td>
+									<td class="hit">5</td>
+								</tr>
+																								<tr id="no7"
+																		
+									data-courtno="C01"
+									data-courtno2="경매2계"
+									data-eventno="2004"
+									data-eventno2="13648"
+									data-objno="1"
+									data-speed_usagecode="01"
+									data-usagecode="01">
+									<th >
+										<input type="checkbox" class="list_chk_box" id="chk_tbl7" value="7"><label for="chk_tbl7">선택</label>
+																			</th>									
+									<td class="number" onclick="view_product('C01','2004','13648','1','product'); document.getElementById('chk_tbl7').checked=true; setCheckBoxColor('no7'); return false;">
+																																				인천 2계<br />
+									2004-13648
+																																				</td>
+									<td class="subject"  onclick="view_product('C01','2004','13648','1','product'); document.getElementById('chk_tbl7').checked=true; setCheckBoxColor('no7'); return false;">
+										<div class="thumbs thumbs_div" data-imglink="'/pub/images/sub/noimage-small.png'">
+											<a class="btn" href="javascript:" onclick="view_product('C01','2004','13648','1','product'); document.getElementById('chk_tbl7').checked=true; setCheckBoxColor('no7'); return false;"></a>
+										</div>
+										<a href="javascript:" onclick="view_product('C01','2004','13648','1','product'); document.getElementById('chk_tbl7').checked=true; setCheckBoxColor('no7'); return false;">
+											인천광역시 연수구 동춘동 925-7삼환아파트 111동 16층 1601호
+											
+											
+																																																						</a>
+									</td>
+									<td>아파트</td>
+									<td class="price">
+										230,000,000<br>
+										<span style="color:#144aaa;">230,000,000</span>
+																			</td>
+									<td class="date">
+										2005-03-29
+																			</td>
+									<td class="result">
+										<span >유찰</span><br />
+										1회<br />										<span>(100%)</span>
+																			</td>
+									<td class="hit">2</td>
+								</tr>
+																								<tr id="no8"
+																		
+									data-courtno="C01"
+									data-courtno2="경매14계"
+									data-eventno="2004"
+									data-eventno2="15091"
+									data-objno="1"
+									data-speed_usagecode="01"
+									data-usagecode="01">
+									<th >
+										<input type="checkbox" class="list_chk_box" id="chk_tbl8" value="8"><label for="chk_tbl8">선택</label>
+																			</th>									
+									<td class="number" onclick="view_product('C01','2004','15091','1','product'); document.getElementById('chk_tbl8').checked=true; setCheckBoxColor('no8'); return false;">
+																																				인천 14계<br />
+									2004-15091
+																																				</td>
+									<td class="subject"  onclick="view_product('C01','2004','15091','1','product'); document.getElementById('chk_tbl8').checked=true; setCheckBoxColor('no8'); return false;">
+										<div class="thumbs thumbs_div" data-imglink="'/pub/images/sub/noimage-small.png'">
+											<a class="btn" href="javascript:" onclick="view_product('C01','2004','15091','1','product'); document.getElementById('chk_tbl8').checked=true; setCheckBoxColor('no8'); return false;"></a>
+										</div>
+										<a href="javascript:" onclick="view_product('C01','2004','15091','1','product'); document.getElementById('chk_tbl8').checked=true; setCheckBoxColor('no8'); return false;">
+											인천광역시 남구 주안동 1216-11 2층 202호
+											
+											
+																																																						</a>
+									</td>
+									<td>아파트</td>
+									<td class="price">
+										82,000,000<br>
+										<span style="color:#144aaa;">82,000,000</span>
+																			</td>
+									<td class="date">
+										2005-04-01
+																			</td>
+									<td class="result">
+										<span >유찰</span><br />
+										1회<br />										<span>(100%)</span>
+																			</td>
+									<td class="hit">2</td>
+								</tr>
+																								<tr id="no9"
+																		
+									data-courtno="C01"
+									data-courtno2="경매3계"
+									data-eventno="2004"
+									data-eventno2="17354"
+									data-objno="1"
+									data-speed_usagecode="01"
+									data-usagecode="01">
+									<th >
+										<input type="checkbox" class="list_chk_box" id="chk_tbl9" value="9"><label for="chk_tbl9">선택</label>
+																			</th>									
+									<td class="number" onclick="view_product('C01','2004','17354','1','product'); document.getElementById('chk_tbl9').checked=true; setCheckBoxColor('no9'); return false;">
+																																				인천 3계<br />
+									2004-17354
+																																				</td>
+									<td class="subject"  onclick="view_product('C01','2004','17354','1','product'); document.getElementById('chk_tbl9').checked=true; setCheckBoxColor('no9'); return false;">
+										<div class="thumbs thumbs_div" data-imglink="'/pub/images/sub/noimage-small.png'">
+											<a class="btn" href="javascript:" onclick="view_product('C01','2004','17354','1','product'); document.getElementById('chk_tbl9').checked=true; setCheckBoxColor('no9'); return false;"></a>
+										</div>
+										<a href="javascript:" onclick="view_product('C01','2004','17354','1','product'); document.getElementById('chk_tbl9').checked=true; setCheckBoxColor('no9'); return false;">
+											인천광역시 서구 마전동 639영남탑스빌아파트 109동 7층 701호
+											
+											
+																																																						</a>
+									</td>
+									<td>아파트</td>
+									<td class="price">
+										300,000,000<br>
+										<span style="color:#144aaa;">300,000,000</span>
+																			</td>
+									<td class="date">
+										2005-04-04
+																			</td>
+									<td class="result">
+										<span >유찰</span><br />
+										1회<br />										<span>(100%)</span>
+																			</td>
+									<td class="hit">5</td>
+								</tr>
+																								<tr id="no10"
+																		
+									data-courtno="C01"
+									data-courtno2="경매3계"
+									data-eventno="2004"
+									data-eventno2="17472"
+									data-objno="1"
+									data-speed_usagecode=""
+									data-usagecode="02">
+									<th >
+										<input type="checkbox" class="list_chk_box" id="chk_tbl10" value="10"><label for="chk_tbl10">선택</label>
+																			</th>									
+									<td class="number" onclick="view_product('C01','2004','17472','1','product'); document.getElementById('chk_tbl10').checked=true; setCheckBoxColor('no10'); return false;">
+																																				인천 3계<br />
+									2004-17472
+																																				</td>
+									<td class="subject"  onclick="view_product('C01','2004','17472','1','product'); document.getElementById('chk_tbl10').checked=true; setCheckBoxColor('no10'); return false;">
+										<div class="thumbs thumbs_div" data-imglink="'/pub/images/sub/noimage-small.png'">
+											<a class="btn" href="javascript:" onclick="view_product('C01','2004','17472','1','product'); document.getElementById('chk_tbl10').checked=true; setCheckBoxColor('no10'); return false;"></a>
+										</div>
+										<a href="javascript:" onclick="view_product('C01','2004','17472','1','product'); document.getElementById('chk_tbl10').checked=true; setCheckBoxColor('no10'); return false;">
+											인천광역시 동구 송림동 80-38
+											
+											
+																																																						</a>
+									</td>
+									<td></td>
+									<td class="price">
+										74,382,100<br>
+										<span style="color:#144aaa;">74,382,100</span>
+																			</td>
+									<td class="date">
+										2005-04-04
+																			</td>
+									<td class="result">
+										<span >유찰</span><br />
+										1회<br />										<span>(100%)</span>
+																			</td>
+									<td class="hit">2</td>
+								</tr>
+																								<tr id="no11"
+																		
+									data-courtno="C01"
+									data-courtno2="경매3계"
+									data-eventno="2004"
+									data-eventno2="17502"
+									data-objno="1"
+									data-speed_usagecode="03"
+									data-usagecode="03">
+									<th >
+										<input type="checkbox" class="list_chk_box" id="chk_tbl11" value="11"><label for="chk_tbl11">선택</label>
+																			</th>									
+									<td class="number" onclick="view_product('C01','2004','17502','1','product'); document.getElementById('chk_tbl11').checked=true; setCheckBoxColor('no11'); return false;">
+																																				인천 3계<br />
+									2004-17502
+																																				</td>
+									<td class="subject"  onclick="view_product('C01','2004','17502','1','product'); document.getElementById('chk_tbl11').checked=true; setCheckBoxColor('no11'); return false;">
+										<div class="thumbs thumbs_div" data-imglink="'/pub/images/sub/noimage-small.png'">
+											<a class="btn" href="javascript:" onclick="view_product('C01','2004','17502','1','product'); document.getElementById('chk_tbl11').checked=true; setCheckBoxColor('no11'); return false;"></a>
+										</div>
+										<a href="javascript:" onclick="view_product('C01','2004','17502','1','product'); document.getElementById('chk_tbl11').checked=true; setCheckBoxColor('no11'); return false;">
+											인천광역시 부평구 십정동 362-15정원빌리지 1동 1층 102호
+											
+											
+																																																						</a>
+									</td>
+									<td>다세대<br>(빌라)</td>
+									<td class="price">
+										55,000,000<br>
+										<span style="color:#144aaa;">55,000,000</span>
+																			</td>
+									<td class="date">
+										2005-04-04
+																			</td>
+									<td class="result">
+										<span >유찰</span><br />
+										1회<br />										<span>(100%)</span>
+																			</td>
+									<td class="hit">4</td>
+								</tr>
+																								<tr id="no12"
+																		
+									data-courtno="C01"
+									data-courtno2="경매3계"
+									data-eventno="2004"
+									data-eventno2="17514"
+									data-objno="1"
+									data-speed_usagecode="03"
+									data-usagecode="03">
+									<th >
+										<input type="checkbox" class="list_chk_box" id="chk_tbl12" value="12"><label for="chk_tbl12">선택</label>
+																			</th>									
+									<td class="number" onclick="view_product('C01','2004','17514','1','product'); document.getElementById('chk_tbl12').checked=true; setCheckBoxColor('no12'); return false;">
+																																				인천 3계<br />
+									2004-17514
+																																				</td>
+									<td class="subject"  onclick="view_product('C01','2004','17514','1','product'); document.getElementById('chk_tbl12').checked=true; setCheckBoxColor('no12'); return false;">
+										<div class="thumbs thumbs_div" data-imglink="'/pub/images/sub/noimage-small.png'">
+											<a class="btn" href="javascript:" onclick="view_product('C01','2004','17514','1','product'); document.getElementById('chk_tbl12').checked=true; setCheckBoxColor('no12'); return false;"></a>
+										</div>
+										<a href="javascript:" onclick="view_product('C01','2004','17514','1','product'); document.getElementById('chk_tbl12').checked=true; setCheckBoxColor('no12'); return false;">
+											인천광역시 남동구 만수동 1100-7롯데맨션 1동 4층 401호
+											
+											
+																																																							<span class="red">[대항력있는임차인]</span>
+																					</a>
+									</td>
+									<td>다세대<br>(빌라)</td>
+									<td class="price">
+										60,000,000<br>
+										<span style="color:#144aaa;">60,000,000</span>
+																			</td>
+									<td class="date">
+										2005-04-04
+																			</td>
+									<td class="result">
+										<span >유찰</span><br />
+										1회<br />										<span>(100%)</span>
+																			</td>
+									<td class="hit">2</td>
+								</tr>
+																								<tr id="no13"
+																		
+									data-courtno="C01"
+									data-courtno2="경매3계"
+									data-eventno="2004"
+									data-eventno2="17554"
+									data-objno="1"
+									data-speed_usagecode="01"
+									data-usagecode="01">
+									<th >
+										<input type="checkbox" class="list_chk_box" id="chk_tbl13" value="13"><label for="chk_tbl13">선택</label>
+																			</th>									
+									<td class="number" onclick="view_product('C01','2004','17554','1','product'); document.getElementById('chk_tbl13').checked=true; setCheckBoxColor('no13'); return false;">
+																																				인천 3계<br />
+									2004-17554
+																																				</td>
+									<td class="subject"  onclick="view_product('C01','2004','17554','1','product'); document.getElementById('chk_tbl13').checked=true; setCheckBoxColor('no13'); return false;">
+										<div class="thumbs thumbs_div" data-imglink="'/pub/images/sub/noimage-small.png'">
+											<a class="btn" href="javascript:" onclick="view_product('C01','2004','17554','1','product'); document.getElementById('chk_tbl13').checked=true; setCheckBoxColor('no13'); return false;"></a>
+										</div>
+										<a href="javascript:" onclick="view_product('C01','2004','17554','1','product'); document.getElementById('chk_tbl13').checked=true; setCheckBoxColor('no13'); return false;">
+											인천광역시 남구 주안동 1600신비마을아파트 110동 1층 101호
+											
+											
+																																																						</a>
+									</td>
+									<td>아파트</td>
+									<td class="price">
+										75,000,000<br>
+										<span style="color:#144aaa;">75,000,000</span>
+																			</td>
+									<td class="date">
+										2005-04-04
+																			</td>
+									<td class="result">
+										<span >유찰</span><br />
+										1회<br />										<span>(100%)</span>
+																			</td>
+									<td class="hit">2</td>
+								</tr>
+																								<tr id="no14"
+																		
+									data-courtno="C01"
+									data-courtno2="경매19계"
+									data-eventno="2003"
+									data-eventno2="14605"
+									data-objno="1"
+									data-speed_usagecode="29"
+									data-usagecode="06">
+									<th >
+										<input type="checkbox" class="list_chk_box" id="chk_tbl14" value="14"><label for="chk_tbl14">선택</label>
+																			</th>									
+									<td class="number" onclick="view_product('C01','2003','14605','1','product'); document.getElementById('chk_tbl14').checked=true; setCheckBoxColor('no14'); return false;">
+																																				인천 19계<br />
+									2003-14605
+																																				</td>
+									<td class="subject"  onclick="view_product('C01','2003','14605','1','product'); document.getElementById('chk_tbl14').checked=true; setCheckBoxColor('no14'); return false;">
+										<div class="thumbs thumbs_div" data-imglink="'/pub/images/sub/noimage-small.png'">
+											<a class="btn" href="javascript:" onclick="view_product('C01','2003','14605','1','product'); document.getElementById('chk_tbl14').checked=true; setCheckBoxColor('no14'); return false;"></a>
+										</div>
+										<a href="javascript:" onclick="view_product('C01','2003','14605','1','product'); document.getElementById('chk_tbl14').checked=true; setCheckBoxColor('no14'); return false;">
+											인천광역시 연수구 동춘동 931무지개마을 상가동 지하층 31호
+											
+											
+																																																						</a>
+									</td>
+									<td>아파트상가</td>
+									<td class="price">
+										340,000,000<br>
+										<span style="color:#144aaa;">81,634,000</span>
+																			</td>
+									<td class="date">
+										2005-04-06
+																			</td>
+									<td class="result">
+										<span >유찰</span><br />
+																				<span>(24%)</span>
+																			</td>
+									<td class="hit">4</td>
+								</tr>
+																								<tr id="no15"
+																		
+									data-courtno="C01"
+									data-courtno2="경매19계"
+									data-eventno="2004"
+									data-eventno2="13695"
+									data-objno="1"
+									data-speed_usagecode="03"
+									data-usagecode="03">
+									<th >
+										<input type="checkbox" class="list_chk_box" id="chk_tbl15" value="15"><label for="chk_tbl15">선택</label>
+																			</th>									
+									<td class="number" onclick="view_product('C01','2004','13695','1','product'); document.getElementById('chk_tbl15').checked=true; setCheckBoxColor('no15'); return false;">
+																																				인천 19계<br />
+									2004-13695
+																																				</td>
+									<td class="subject"  onclick="view_product('C01','2004','13695','1','product'); document.getElementById('chk_tbl15').checked=true; setCheckBoxColor('no15'); return false;">
+										<div class="thumbs thumbs_div" data-imglink="'/pub/images/sub/noimage-small.png'">
+											<a class="btn" href="javascript:" onclick="view_product('C01','2004','13695','1','product'); document.getElementById('chk_tbl15').checked=true; setCheckBoxColor('no15'); return false;"></a>
+										</div>
+										<a href="javascript:" onclick="view_product('C01','2004','13695','1','product'); document.getElementById('chk_tbl15').checked=true; setCheckBoxColor('no15'); return false;">
+											인천광역시 남구 숭의동 248-225파인빌리지 지층 비02호
+											
+											
+																																																						</a>
+									</td>
+									<td>다세대<br>(빌라)</td>
+									<td class="price">
+										42,000,000<br>
+										<span style="color:#144aaa;">20,580,000</span>
+																			</td>
+									<td class="date">
+										2005-04-06
+																			</td>
+									<td class="result">
+										<span >유찰</span><br />
+																				<span>(49%)</span>
+																			</td>
+									<td class="hit">2</td>
+								</tr>
+															</tbody>
+						</table>
+						<div class="tbl_top">
+							<input type="checkbox" id="select-all-1"><label for="select-all-1">전체선택</label>						 
+							<div class="btn">
+								<a class="mark" href="javascript:add_interest();"><span>관심</span></a>
+								<a class="mark" style="width:115px; text-align:center;" href="javascript:add_select();"><span>열람물건저장</span></a>								
+								<a class="print" style="width:73px; text-align:center;" href="javascript:f_print_NEW('.tbl_result','standard')"><span>인쇄 1</span></a>
+								<a class="print" style="width:73px;" href="javascript:f_print_NEW('.tbl_result','courtParticipate',452016)"><span>인쇄 2</span></a>
+								<a class="excel" style="width:60px;" href="javascript:f_print_NEW('.tbl_result','excel')"><span>엑셀</span></a>
+							</div>
+						</div>
+						<br>
+						<p class="copy">정보제공 : (주)스피드옥션 http://www.speedauction.co.kr</p>
+						</br>
+																
+		
+			<!-- 페이징 -->
+			<div class="con_paging">
+				<ul data-var="1,1,10,2455">
+					<li class="arr start"><a href="javascript:getpage2(1)">처음</a></li>
+																  
+						<li class="sel"><a href="javascript:;">1</a></li>
+						  
+						<li class=""><a href="javascript:getpage2(2);">2</a></li>
+						  
+						<li class=""><a href="javascript:getpage2(3);">3</a></li>
+						  
+						<li class=""><a href="javascript:getpage2(4);">4</a></li>
+						  
+						<li class=""><a href="javascript:getpage2(5);">5</a></li>
+						  
+						<li class=""><a href="javascript:getpage2(6);">6</a></li>
+						  
+						<li class=""><a href="javascript:getpage2(7);">7</a></li>
+						  
+						<li class=""><a href="javascript:getpage2(8);">8</a></li>
+						  
+						<li class=""><a href="javascript:getpage2(9);">9</a></li>
+						  
+						<li class=""><a href="javascript:getpage2(10);">10</a></li>
+																<li class="arr next"><a href="javascript:getpage2(11)">다음</a></li>					<li class="arr end"><a href="javascript:getpage2(2455)">마지막</a></li>
+				</ul>
+			</div>
+			<!-- //페이징 -->
+		
+					</div>
+					<!-- //결과리스트 -->
+
+					<!-- 예정물건 리스트 -->
+										<!-- //예정물건 리스트 -->
+<script>
+	$(document).on('change', 'select[name=list_view_cnt]', function(){
+//		$('#page').val(1);
+		$('select[name=list_view_cnt]').val($(this).val());
+		$("#searchform > input[name='list_view_cnt']").val($(this).val());
+//		var params = $('#searchform').serializeArray().filter(isNotEmpty);
+//		get_result(params);
+		getpage2(1); return false;
+	});
+
+	$(document).ready(function(){
+		$(".car_info").mouseover(function(event){
+			let item_no = $(this).data("item-no")
+			if(item_no){
+				$(".car_info_box").hide()
+				$("#item_"+item_no).show()
+			}
+		})
+		$(".tbl_result > table > tbody > tr").mouseover(function(){
+			if(!$(this).hasClass("car_info")){
+				$(".car_info_box").hide()
+			}
+		})
+	})	
+	
+	 $("#select-all-1, #select-all").on("change", function() {
+            fn_allchk(this.checked);
+            // 두 체크박스의 상태를 동기화
+            $("#select-all-1, #select-all").prop("checked", this.checked);
+        });		
+	
+	thumbDivTags = document.getElementsByClassName('thumbs_div')
+	forToEachSetImage(thumbDivTags, 'div')
+</script>

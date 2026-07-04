@@ -1,0 +1,1373 @@
+																																																																																																			<!doctype html>
+<html lang="ko">
+
+<head>
+	<!-- Open Graph -->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="경매물건 2016타경828 | 스피드옥션">
+	<meta property="og:description" content="경상남도 거창군 남하면 둔마리 679">
+	<meta property="og:image" content="/pub/images/main/ogimage02.png">
+	<meta property="og:url" content="/auction/viewer?secode=ARQA6@_nppue0aKslpXdY5RnmuBqmJuwmA">
+
+	<meta name="speed_logo" content="/pub/images/common/logo.png">
+	
+	<link rel="stylesheet" type="text/css" href="/pub/css/common.css">
+	<link rel="stylesheet" type="text/css" href="/pub/css/sub-pc02.css?1781359493">
+	<link rel="stylesheet" type="text/css" href="/pub/css/draw.css">
+
+	<!-- Link Swiper's CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>window.jQuery||document.write('<script src="/js/jquery.min.js"><\/script>')</script>
+	
+    <script type="text/javascript" src="/js/common.js?"></script>
+    <script type="text/javascript" src="/js/speed.js?"></script>
+	<script type="text/javascript" src="/js/pub.js"></script>
+	<script type="text/javascript" src="/js/default.js?"></script>
+	<script type="text/javascript" src="/js/search.js?"></script>
+	<script type="text/javascript" src="/js/Alert2.js"></script>
+	<script type="text/javascript" src="/js/print.js?"></script>
+	<script type="text/javascript" src="/js/share.js?"></script>
+	<script type="text/javascript" src="/js/get-url.js?"></script>
+	<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+
+	<title>경매물건 2016타경828 | 스피드옥션</title>
+	<script>
+		const _TOKEN = "J02|2016|828|5"; let Spliter = _TOKEN.split("|");
+		const courtNo = Spliter[0];
+		const courtNo2 = "경매2계";
+		const eventNo1 = Spliter[1];
+		const eventNo2 = Spliter[2];
+		const objNo = Spliter[3];
+		const bjcode = "4888038000";
+		const hjcode = "4888038000";
+		const pnucode = "4888038023106790000";
+		const realtyno = "19142016000477";
+		
+		const courtNo3 = courtNo + "|" + eventNo1 + "|" + eventNo2 + "|";
+
+		$(document).ready(function () {			
+						$(".small_view").trigger('click')
+			
+			
+			$('.option_view strong').click(function () {
+				$('.option_view ul').toggle('1500');
+			});
+			$('.quick .share a').click(function () {
+				$('.quick .share ul').toggle();
+			});
+
+			$(".pop_notify .close").click(function (e) {
+				e.preventDefault();
+				$(".pop_notify").css("display", "none");
+				$("#mask").css("display", "none");
+			});
+			$(".btn_counselling").click(function (e) {
+				e.preventDefault();
+				$(".pop_consulting").css("display", "block");
+				$("#mask").css("display", "block");
+			});
+			$(".pop_consulting .close").click(function (e) {
+				e.preventDefault();
+				$(".pop_consulting").css("display", "none");
+				$("#mask").css("display", "none");
+			});
+			$(".btn_pass").click(function (e) {
+				e.preventDefault();
+				$(".pop_pass").css("display", "block");
+				$("#mask").css("display", "block");
+			});
+			$(".pop_pass .close").click(function (e) {
+				e.preventDefault();
+				$(".pop_pass").css("display", "none");
+				$("#mask").css("display", "none");
+			});
+			
+			$(".pop_zebo .close").click(function (e) {
+				e.preventDefault();
+				$(".pop_zebo").css("display", "none");
+				$("#mask").css("display", "none");
+			});
+			$(".btn_ppleplz").click(function (e) {
+				e.preventDefault();
+				$(".pop_ppleplz").css("display", "block");
+				$("#mask").css("display", "block");
+			});
+			$(".pop_ppleplz .close").click(function (e) {
+				e.preventDefault();
+				$(".pop_ppleplz").css("display", "none");
+				$("#mask").css("display", "none");
+			});
+			$(".btn_maps").click(function (e) {
+				e.preventDefault();
+				$(".pop_maps").css("display", "block");
+				$("#mask").css("display", "block");
+			});
+			$(".pop_maps .close").click(function (e) {
+				e.preventDefault();
+				$(".pop_maps").css("display", "none");
+				$("#mask").css("display", "none");
+			});
+			$(".btn_layer_sham").click(function (e) {
+				e.preventDefault();
+				$(".layer_sham").css("display", "block");
+				$("#mask").css("display", "block");
+			});
+			$(".layer_sham .close").click(function (e) {
+				e.preventDefault();
+				$(".layer_sham").css("display", "none");
+				$("#mask").css("display", "none");
+			});
+			$(".btn_del").click(function (e) {
+				e.preventDefault();
+				$(".pop_del").css("display", "block");
+				$("#mask").css("display", "block");
+			});
+			$(".pop_del .close").click(function (e) {
+				e.preventDefault();
+				$(".pop_del").css("display", "none");
+				$("#mask").css("display", "none");
+			});
+			
+			//이전다음 활성화 여부 판단
+			let getTokenList_ = localStorage.getItem('tokenList')
+			let pathname = window.location.pathname
+
+			if(!getTokenList_ || pathname == '/auction/viewer'){
+				$(".listPrevNextBtn").addClass("dis-none")
+			}else{
+				getTokenList_ = JSON.parse(getTokenList_)
+				if(Object.keys(getTokenList_).length == 1){
+					$(".listPrevNextBtn").addClass("dis-none")
+				}
+			}
+		});
+	</script>
+
+	<style>
+	.print-only {
+    display: none;
+	}
+
+        @media print {
+    * {
+        border-color: #a3a3a3 !important; /* 원하는 색상으로 변경 */
+    }
+    
+    .print-only {
+        display: block;
+    }
+	.no-print {
+      display: none !important;
+    }
+}
+    </style>
+
+</head>
+
+<body class="view_product">
+	
+			
+	<section class="wrap">
+				<!-- 관심물건 삭제 레이어 -->
+		<div class="wish_layer" style="display:none">
+					</div>
+		<!-- //관심물건 삭제 레이어 -->
+		
+		
+		<header>
+			<div class="option_view">
+				<!-- 각 strong에 optHo 클래스 붙이면 호버입니다. -->
+				<!-- 클릭된 버튼은 파란배경 유지됩니다. -->
+				<strong class="row" onclick="location_product()">
+					가로보기
+				</strong>
+				<strong class="column now">
+					세로보기
+				</strong>
+				
+				<img class="listPrevNextBtn" src="/pub/images/sub/view_left.png" onclick="moveCourt('prev','J02|2016|828|5');" title="이전물건" style="height:28px; margin-bottom:-5px; cursor:pointer;">&nbsp;&nbsp;
+				<img class="listPrevNextBtn" src="/pub/images/sub/view_right.png" onclick="moveCourt('next','J02|2016|828|5');" title="다음물건" style="height:28px; margin-bottom:-5px; cursor:pointer;">
+			</div>
+			<div class="speed_official">								
+				<img src="/pub/images/common/logo.png" alt="스피드옥션">
+			</div>
+
+			<ul class="quick">
+				<li>
+					<a href="javascript:void(0);" 
+											onclick="window.open(
+						'/pop/open/!/wish/edit?token=J02|2016|828|5',
+						'viewtop',
+						'width=550,height=900,left=0,top=0,resizable=yes,scrollbars=yes'
+					); return false;"
+											<!-- 관심 클래스 quick_ho로 바꾸면 마우스오버시 하트 이미지로 바뀝니다. -->
+						<!-- 관심 클래스 quick_red로 바꾸면 클릭시 하트 이미지로 바뀝니다. -->
+						<em class="quick_heart " data-token="J02|2016|828|5"></em><span>관심</span>
+					</a>
+				</li> 				
+				<li>
+					<a href="javascript:window.print();">
+						<em></em><span>인쇄</span>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" class="btn_pass">
+						<em></em><span>물건전달</span>
+					</a>
+				</li>
+				<li class="share">
+					<a href="javascript:">
+						<em></em><span>공유</span>
+					</a>
+					<ul>
+						<li>
+							<a href="javascript:void(0);" title="사건공유 새창열기" onclick="window.open('/pop/open/!/share/pay?token=J02|2016|828|5&url='+encodeURIComponent($('meta[property=og\\:url]').attr('content'))+'&secode=ARQA6@_nppue0aKslpXdY5RnmuBqmJuwmA','','width=450,height=300,left='+window.outerWidth+window.screenLeft); return false;"><span>사건공유</span></a>
+						</li> 
+						<li>
+							<a href="javascript:void(0);" title="트위터" onclick="window.open('/pop/open/!/share/pay?token=J02|2016|828|5&url='+encodeURIComponent($('meta[property=og\\:url]').attr('content'))+'&sns=twitter&secode=ARQA6@_nppue0aKslpXdY5RnmuBqmJuwmA','','width=450,height=300,left='+window.outerWidth+window.screenLeft); return false;"><span>트위터</span></a>
+						</li>
+						<li>
+							<a href="javascript:void(0);" title="밴드" onclick="window.open('/pop/open/!/share/pay?token=J02|2016|828|5&url='+encodeURIComponent($('meta[property=og\\:url]').attr('content'))+'&sns=band&secode=ARQA6@_nppue0aKslpXdY5RnmuBqmJuwmA','','width=450,height=300,left='+window.outerWidth+window.screenLeft); return false;"><span>밴드</span></a>
+						</li>
+						<li>
+							<a href="javascript:void(0);" title="카카오톡" onclick="window.open('/pop/open/!/share/pay?token=J02|2016|828|5&url='+encodeURIComponent($('meta[property=og\\:url]').attr('content'))+'&sns=kakaotalk&appkey=3527c09808b294f95be0fe17bda5b99c&secode=ARQA6@_nppue0aKslpXdY5RnmuBqmJuwmA','','width=450,height=300,left='+window.outerWidth+window.screenLeft); return false;"><span>카카오톡</span></a>
+						</li>
+						<li>
+							<a href="javascript:void(0);" title="내폰전송" onclick="window.open('/pop/open/!/send/sms?token=J02|2016|828|5&url='+encodeURIComponent($('meta[property=og\\:url]').attr('content'))+'&secode=ARQA6@_nppue0aKslpXdY5RnmuBqmJuwmA','viewtop','width=500,height=760, left='+ window.outerWidth+window.screenLeft); return false;"><span> 문자발송</span></a>
+						</li>
+					</ul>
+
+				</li>
+			</ul>
+		</header>
+
+	
+		<!-- 상단내용 -->
+		<div class="top">
+			<table class="summary">
+				<colgroup>
+					<col style="width:230px;">
+					<col style="width:150px;">
+					<col >
+					<col >
+				</colgroup>
+				<tbody>
+					<tr>
+												<td style="font-size:18px; line-height:20px;" rowspan="2">
+							창원지방법원 거창지원<br>
+							2016 타경 828(강제)
+						</td>
+						<td  rowspan="2">
+												
+								<select name="물번" id="sel_list" onchange="aside_open('product', courtNo3+this.value, '1')">
+																	<option value="1">물번1 [배당종결]</option>
+																	<option value="2">물번2 [배당종결]</option>
+																	<option value="3">물번3 [배당종결]</option>
+																	<option value="4">물번4 [배당종결]</option>
+																	<option value="5"selected>물번5 [신건]</option>
+																</select>
+													</td>
+						<td class="no-print" style="text-align:right;">경매2계 055-940-7142</td>
+						<td style="text-align:right;"> 						
+							<ul class="law">
+								<li class="gray">
+									<a href="javascript:" onclick="window.open('https://www.courtauction.go.kr/pgj/index.on?w2xPath=/pgj/ui/pgj100/PGJ159M00.xml','courtAuction','scrollbars=no, width='+ window.outerWidth +', top=0, left='+ window.outerWidth+window.screenLeft +', height='+window.screen.height);return false;" title="새창으로 이동합니다">
+										<img src="/pub/images/sub/caurt04.png" alt="대법원">
+										법원정보보기
+									</a>
+								</li>
+								<li class="blue blue_cort">
+									<a href="javascript:" onclick="window.open('/forum/sub/!/data/07_pop?courtno=J02','','scrollbars=no');return false;" title="새 창으로 열립니다">
+										<img src="/pub/images/sub/caurt05.png" alt="관할법원안내">
+										관할법원안내
+									</a>
+								</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						
+						<td></td>
+						<td class="print-only" style="text-align:right; color:#144aaa; font-weight:bold;">
+						경매2계 055-940-7142 / 
+							매각기일&nbsp; 
+														(목) 
+																	 ~
+																					</td>
+						<td class="no-print" style="text-align:right; color:#144aaa; font-weight:bold;">						
+							매각기일&nbsp; 
+														(목) 
+																	 ~
+																					</td>
+					</tr>
+										
+				</tbody>
+			</table>
+			<table>
+				<!-- <colgroup>
+					<col style="width:84px;">
+					<col style="width:183px;">
+					<col style="width:84px;">
+					<col style="width:183px;">
+					<col style="width:84px;">
+					<col>
+				</colgroup> -->
+												<div class="flex-cnt">
+					<div class="address-cnt">
+						<p class="address">
+							<strong>  경상남도 거창군 남하면 둔마리 679</b><br><span style='color:#366ab5;font-size:13px; letter-spacing:-1px'>[도로명주소]</span>&nbsp;&nbsp;<span style='color:#3b3b3b;font-size:13px; letter-spacing:-1px'>경상남도 거창군 남하면 대촌2길 13-29</strong>
+							 						</p>
+					</div>
+					<!-- 지도버튼 -->
+										<div class="con map_btn">
+						<a href="javascript:" 
+								onclick="window.open('https://map.kakao.com/?q=경상남도 거창군 남하면 둔마리 679','','scrollbars=no, width='+ window.outerWidth +', top=0, left='+ window.outerWidth+window.screenLeft +',height='+window.screen.height);return false;" title="새 창으로 이동합니다." class="whith_btn">
+							<img src="/pub/images/sub/kakao_map.png" style="width: 32px; height: 32px;" alt="카카오지도">
+						</a>
+					</div>
+					<div style="width: 20px; display: inline-block;"></div>
+					<div class="con map_btn">
+						<a href="#" 
+						onclick="window.open('https://map.naver.com/p/search/경상남도 거창군 남하면 둔마리 679/?c=18.00,0,0,0,dh','','scrollbars=yes, width='+ window.outerWidth +', top=0, left='+ window.outerWidth+window.screenLeft +',height='+window.screen.height);return false;" title="새 창으로 이동합니다." class="whith_btn">
+							<img src="/pub/images/sub/naver_map.png" style="width: 32px; height: 32px;" alt="네이버지도">
+						</a>
+					</div>
+										<!-- // 지도버튼 -->
+				</div>
+
+				<!-- 해당 물건에 맞게 tobody 클래스에 dis-none으로 조절 가능합니다. -->
+				<!-- 건물/땅 상세내용 -->
+				<tbody class="top_of_t ">
+					<tr>
+						<th>용도</th>
+						<td> </td>
+						<th>채권자</th>
+						<td>서○○○○○ </td>
+						<th>감정가</th>
+						<td class="price-txt txt_right">
+							<span class="price gray">
+								0원
+							</span>
+						</td>
+					</tr>
+					<tr>
+						<th>제시외면적</th>
+						<td>&nbsp;</td>
+						<th>채무자</th>
+						<td>김○○</td>
+						<th>최저가</th>
+						<td class="price-txt txt_right">
+							<span class="blue">
+								(%)
+							</span>
+							<span class="price blue">
+								0원
+							</span>
+						</td>
+					</tr>
+					<tr>
+						<th>토지면적</th>	
+						<td>&nbsp;</td>	
+						<th>소유자</th>
+						<td>김○○</td>
+						<th>보증금</th>
+						<td class=".price-txt txt_right">
+							<span class="red">
+								
+								(10%)
+							</span>
+							<span class="price red">
+								0원
+							</span>
+						</td>
+					</tr>
+					<tr>	
+						<th>건물면적</th>	
+						<td>&nbsp;</td>											
+						<th>매각대상</th>									
+						<td class="red">
+															<span style='font-size:0.8em; color:red; text-decoration:underline;'>내용 업데이트 중</span>
+													</td>
+						<th>청구금액</th>
+						<td class=".price-txt txt_right">10,356,834원</td>
+					</tr>
+					<tr>
+						<th></th>
+						<td>기일입찰</td>
+						<th>배당종기일</th>
+						<td>2016-06-29</td>
+						<th>개시결정</th>
+						<td colspan="3">2016-03-29 </td>
+					</tr>
+				</tbody>
+				<!-- //땅 상세내용 -->
+			</table>
+		</div>
+		<!-- //상단내용 -->
+		<!-- 차량/중기현황 -->
+		<div class="con dis-none">
+			<div class="flex_sb">
+				<h2>
+					<img src="/pub/images/sub/car07.png" alt="차량정보">
+					<strong>
+						차량/중기현황
+					</strong>
+					<span>(주)제일감정</span>
+					<span>2022-10-19</span>
+				</h2>
+				<p class="info_price">
+					<a href="#">
+						시세보기
+						<span class="map_arrow material-symbols-outlined">
+							arrow_right_alt
+						</span>
+					</a>
+					<a href="#">
+						사고이력조회
+						<span class="map_arrow material-symbols-outlined">
+							arrow_right_alt
+						</span>
+					</a>
+				</p>
+			</div>
+			<table class="table_car">
+				<tbody>
+					<tr>
+						<th>제조사</th>
+						<td>볼보트럭코리아</td>
+						<th>색상</th>
+						<td>연두색</td>
+					</tr>
+					<tr>
+						<th>주행거리</th>
+						<td>216,131,6km</td>
+						<th>등록번호</th>
+						<td>서울06거6357</td>
+					</tr>
+					<tr>
+						<th>배기량</th>
+						<td></td>
+						<th>등록일자</th>
+						<td>2019.08.02</td>
+					</tr>
+					<tr>
+						<th>사용연료</th>
+						<td>경유</td>
+						<th>변속기</th>
+						<td>오토</td>
+					</tr>
+					<tr>
+						<th>원동기형식</th>
+						<td>D13</td>
+						<th>승인번호</th>
+						<td>1-06-0192-02-00</td>
+					</tr>
+					<tr>
+						<th>보관장소</th>
+						<td>
+							서울 송파구 올림픽로 336, 2003
+							<br>
+							(방이동, 대우유토피아오피스텔)
+						</td>
+						<th>차대번호</th>
+						<td>YV2XT60GBKA839080</td>
+					</tr>
+					<tr>
+						<th>검사기간</th>
+						<td colspan="3">2022.08.02 ~ 2023.08.01</td>
+					</tr>
+					<tr>
+						<th>기타</th>
+						<td colspan="3">※전반적인 현황 및 관리상태 보통임</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!-- //차량/중기현황 -->
+		<!-- 선박내역 -->
+		<div class="con dis-none">
+			<div class="flex_sb">
+				<h2>
+					<img src="/pub/images/sub/ship01.png" alt="선박내역">
+					<strong>
+						선박내역
+					</strong>
+					<span>(주)태백감정</span>
+					<span>2023-03-23</span>
+				</h2>
+			</div>
+			<table class="table_car">
+				<tbody>
+					<tr>
+						<th>선박명칭</th>
+						<td>동일502호</td>
+						<th>총톤수</th>
+						<td>1,110톤</td>
+					</tr>
+					<tr>
+						<th>선박번호</th>
+						<td>ICB-111891</td>
+						<th>기관의 종류</th>
+						<td>없음</td>
+					</tr>
+					<tr>
+						<th>선박종류</th>
+						<td>부선</td>
+						<th>추진기종류</th>
+						<td>없음</td>
+					</tr>
+					<tr>
+						<th>조선소</th>
+						<td>YIZHENG XINYANG SHIPBUILDING</td>
+						<th>건조일</th>
+						<td></td>
+					</tr>
+					<tr>
+						<th>기통</th>
+						<td></td>
+						<th>진수일</th>
+						<td>2011.03.15</td>
+					</tr>
+					<tr>
+						<th>기타내역</th>
+						<td colspan="3">
+							※선질 강
+							<br>
+							※길이:63.3m, 너비:20m, 깊이:4m
+							<br>
+							※의장품 Anker 외 3점 및 기타 부대설비 일체 선체에 포함 평가함.
+							<br>
+							※선체, 의장품의 관리상태 보통임.
+							<br>
+							※본건 선박의 항해구역은 연해구역임.
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!-- //선박내역 -->
+		
+		<!-- 기일현황 -->
+		<div class="con date_hori">
+			<div class="dayatCnt">
+				<div class="date_cnt">
+					<div class="flex_sb">
+						<h2>
+							<img src="/pub/images/sub/calender02.png" alt="기일현황">
+							<strong>기일현황</strong>
+																				<span>입찰당일</span>
+																									</h2>
+						<div class="info_price">
+							<!-- 클릭하면 서로 체인지 됩니다. -->
+							<span class="dis-none all_view">
+								전체보기
+								<span class="material-symbols-outlined">
+									arrow_drop_down
+								</span>
+							</span>
+							<span class="small_view">
+								간략보기
+								<span class="material-symbols-outlined">
+									arrow_drop_up
+								</span>
+							</span>
+						</div>
+					</div>
+					<table class="txt_center">
+						<thead>
+							<tr>
+								<th>회차</th>
+								<th>매각기일</th>
+								<th>최저매각금액</th>
+								<th>결과</th>
+							</tr>
+						</thead>
+						<tbody>
+												</tbody>
+					</table>
+															<div style="color:red; font-size:13px; text-align:center; font-weight:600;">2016-09-08&nbsp채권자 서울보증보험 주식회사 기각결정정본 발송</div>
+																															<div style="font-size:13px; text-align:center; font-weight:600; color:red;">
+							※본 사건은 현재 상세내용 업데이트 중입니다.
+						</div>
+									</div>
+				<!-- 모의입찰 && 변경/정정/취하 공고 -->
+				<div class="con at_cnt">
+				<!-- 각 필요 내용에 따라 클래스 dis-none으로 조절가능 -->
+					<!-- 변경공고 -->
+					<div class="attention">
+						<table>
+													<thead>
+								<tr>
+									<th>
+										<h2>
+											<img src="/pub/images/sub/attention02.png?=ver2" alt="변경/정정/취하공고">
+											<strong>변경공고</strong>
+										</h2>
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>변경 내용 없음</td>
+								</tr>
+							</tbody>
+												</table>
+					</div>
+				<!-- //변경/정정/취하 공고 -->
+					<!-- 모의입찰 -->
+										<table class="sham">
+						<thead>
+							<tr>
+								<th class="sham_title">
+									<img src="/pub/images/sub/target00.png?=ver2" alt="모의입찰">
+									<span>
+																			모의입찰
+																		</span>
+									<img class="btn_layer_sham" src="/pub/images/sub/view_icon_sham.png?=ver2" alt="도움말">
+								</th>
+							</tr>
+						</thead>
+						<tbody class="sham_tbody">
+							<tr>
+								<td class="sham_input">
+																	<input type="text" name="bidsimulation_price" id="sham_input" placeholder="0" onclick="this.value=''" onkeyup="javascript :  if(event.keyCode==13){ bidsimulation_proc();} this.value=this.value.toLocaleString();" onblur="price_chk(this);" value="0"/>
+									<span>
+										원
+									</span>
+																			<button type="button" onclick="bidsimulation_proc();return false;">입력</button>
+																									</td>
+							</tr>
+						</tbody>
+					</table>
+										<!-- //모의입찰 -->
+				</div>
+			</div>
+
+			<div class="layer_sham">
+				<h2><strong>모의입찰 이용안내</strong><span>bid simulator</span></h2>
+				<p>모의입찰은 회원님의 <strong>실전 입찰가 감각을 향상</strong>시켜 드리기 위한 학습 프로그램입니다.</p>
+				<p>모의입찰가를 작성해 주시면 실제 <strong>매각가와 비교하여 오차를 수치화/통계화</strong> 합니다. 실제 매각가와 오차범위를 줄여나가는 감각을 키움으로써 다음과
+					같은
+					학습효과가 있습니다.</p>
+				<ul>
+					<li>
+						<strong>1년 내내 입찰에서 떨어지셨다구요?</strong>
+						<em>효과1</em>
+						<span>실전 입찰 시 낙찰 성공율을 높일 수 있습니다.</span>
+					</li>
+					<li>
+						<strong>남들보다 현격하게 높은 금액에 낙찰 받으셨나요?</strong>
+						<em>효과2</em>
+						<span>실전감각을 높여 차순위와 근소한 차이로 낙찰 받으실 수 있도록 도와드립니다.</span>
+					</li>
+				</ul>
+				<span class="blue">※ 모의입찰가는 <strong>매각기일 하루 전까지만</strong> 입력/수정 할 수 있습니다.</span>
+				<a class="close">닫기</a>
+			</div>
+			<!-- //모의입찰 -->
+		</div>
+		<!-- //기일현황 -->
+
+		<!-- 해당물건사진-->
+		<div class="con pics_hori">
+			<div class="test_hori">
+				<a href="javascript:" onclick="window.open('/pop/open/!/view/zoom?token=J02|2016|828|5&bjcode=4888038000&hjcode=4888038000','','scrollbars=no, width='+ window.outerWidth +', top=0, left='+ window.outerWidth+window.screenLeft +',height='+window.screen.height);return false;">
+					사진 더보기
+					<!--span class="material-symbols-outlined">
+						add
+					</span-->
+				</a>
+			</div>
+			<!-- <h2><strong>해당 물건 사진</strong></h2> -->
+			<!-- *COMMENT* 좌측 컨텐츠(기일현황) 높이가 길어지면 물건사진 최대4장까지 노출되도록 (기본 2장노출)-->
+			<div class="top_imgTitle">
+							<a href="javascript:" class="noimage"></a>
+										<a href="javascript:" class="noimage"></a>
+										<a href="javascript:" class="noimage"></a>
+										<a href="javascript:" class="noimage"></a>
+						</div>
+		</div>
+		<!-- //해당물건사진 -->
+		<!-- 현장답사회원제보 -->
+				<!-- //현장답사회원제보 -->
+
+				<div id="real-box-1781359493">
+		</div>
+
+		<!-- 광고구좌 -->
+				<!-- //광고구좌 -->
+
+		<!-- 가맹점문의 -->
+		<div class="shop_con swiper shop_slide">
+			<div class="swiper-pagination"></div>
+			<div class="swiper-wrapper">
+				<a class="shop swiper-slide" href="javascript:" target="_blank">
+					<img src="/pub/images/sub/fran07.png" alt="가맹점 모집" />
+				</a>
+				<a class="jisa swiper-slide" href="javascript:" target="_blank" data-type="jisa">
+					<img src="/pub/images/sub/branch06.png" alt="법원별지사 모집" />
+				</a>
+			</div>
+		</div>
+		<!-- //가맹점문의 -->
+		<!-- 푸터 -->
+		<footer>
+			<ul>
+				<li>- 본사에서 제공하는 경매정보는 해당법원 에서 처리하고 있는 물건정보와 일치하지 않을 수도 있습니다</li>
+				<li>- 매각물건의 정확한 내용은 법원에 비치된 매각물건명세서 및 기타 공부서류를 열람, 재확인 하시기 바랍니다.</li>
+				<li>- 인터넷으로 서비스하는 정보만으로 참여한 입찰과 관련하여 발생하는 문제에 대해 스피드옥션은 법적 책임을 지지 않습니다.</li>
+			</ul>
+			<p>(주)스피드옥션 www.speedauction.co.kr [유료회원전용] 권리분석상담 1644-2072(연결2번), 상담시간: AM09:30 ~ PM05:00</p>
+			<div class="top_arrow">
+				<span class="material-symbols-outlined">
+					arrow_upward
+				</span>
+			</div>
+		</footer>
+		<!-- //푸터 -->
+
+			</section>
+	<aside>
+						<div class="hit">
+				<ul>
+					<li><span>TODAY</span><strong>1</strong></li>
+					<li><span>TOTAL</span><strong>6</strong></li>
+				</ul>
+				<a href="javascript:void(0)"
+					onclick="window.open('/pop/open/!/hit/chart?token=J02|2016|828|5','','width=660, left=' + window.outerWidth + ',height=400'); return false;">
+					<span class="chart material-symbols-outlined">
+						bar_chart
+					</span>
+					최근조회 동향
+				</a>
+			</div>
+
+			<!-- 동영상 -->
+						<!-- 동영상 -->
+
+			<nav class="/*dis-none*/">
+							<dl class="side_case">
+					<dt>사건 관련 자료</dt>
+					<dd>
+																		<ul>
+																				<li class="hot"><a href="javascript:" onclick="window.open('/pop/open/!/view/document?t=5&&token=J02|2016|828|5&bjcode=4888038000&hjcode=4888038000&type=','','scrollbars=no, width='+ window.outerWidth +', top=0, left='+ window.outerWidth+window.screenLeft +', height='+window.screen.height);return false;">등기(건물)</a></li>
+																										<li class="hot"><a href="javascript:" onclick="window.open('/pop/open/!/view/document?t=3&token=J02|2016|828|5&bjcode=4888038000&hjcode=4888038000&type=','','scrollbars=no, width='+ window.outerWidth +', top=0, left='+ window.outerWidth+window.screenLeft +', height='+window.screen.height);return false;">등기(토지)</a></li>
+																																																								<li><a href="javascript:" onclick="window.open('/pop/open/!/view/document?t=4&token=J02|2016|828|5&bjcode=4888038000&hjcode=4888038000&type=','','scrollbars=no, width='+ window.outerWidth +', top=0, left='+ window.outerWidth+window.screenLeft +', height='+window.screen.height);return false;">감정평가서</a></li>
+													<li><a href="javascript:" onclick="window.open('/pop/open/!/view/document?t=6&token=J02|2016|828|5&bjcode=4888038000&hjcode=4888038000&type=','','scrollbars=no, width='+ window.outerWidth +', top=0, left='+ window.outerWidth+window.screenLeft +', height='+window.screen.height);return false;">현황조사서</a></li>
+																			<li><a href="javascript:" onclick="window.open('/pop/open/!/view/document?t=13&token=J02|2016|828|5&bjcode=4888038000&hjcode=4888038000&type=','','scrollbars=no, width='+ window.outerWidth +', top=0, left='+ window.outerWidth+window.screenLeft +', height='+window.screen.height);return false;">사건내역</a></li>
+							<li><a href="javascript:" onclick="window.open('/pop/open/!/view/document?t=12&token=J02|2016|828|5&bjcode=4888038000&hjcode=4888038000&type=','','scrollbars=no, width='+ window.outerWidth +', top=0, left='+ window.outerWidth+window.screenLeft +', height='+window.screen.height);return false;">기일내역</a></li>
+							<li><a href="javascript:" onclick="window.open('/pop/open/!/view/document?t=11&token=J02|2016|828|5&bjcode=4888038000&hjcode=4888038000&type=','','scrollbars=no, width='+ window.outerWidth +', top=0, left='+ window.outerWidth+window.screenLeft +', height='+window.screen.height);return false;">문건접수/송달</a></li>
+													<li><a href="javascript:" onclick="window.open('/pop/open/!/view/document?t=8&token=J02|2016|828|5&bjcode=4888038000&hjcode=4888038000&type=','','scrollbars=no, width='+ window.outerWidth +', top=0, left='+ window.outerWidth+window.screenLeft +', height='+window.screen.height);return false;">부동산표시</a></li>
+												</ul>
+											</dd>
+				</dl>
+				<dl class="side_map">
+					<dt>추가사진/지도</dt>
+					<dd>
+						<ul>
+							<li class="hot">
+								<a href="javascript:" onclick="window.open('/pop/open/!/view/zoom?token=J02|2016|828|5','','scrollbars=no, width='+ window.outerWidth +', top=0, left='+ window.outerWidth+window.screenLeft +', height='+window.screen.height);return false;">
+									추가사진보기
+								</a>
+							</li>
+							<li><a href="javascript:" onclick="window.open('/pop/open/!/view/map?token=J02|2016|828|5&type=daum_map_normal','','scrollbars=no, width='+ window.outerWidth +', top=0, left='+ window.outerWidth+window.screenLeft +', height='+window.screen.height);return false;">전자지도</a></li>
+							<!--
+							<li><a href="javascript:" onclick="window.open('/pop/open/!/view/map?token=J02|2016|828|5&type=daum_map','','scrollbars=no, width='+ window.outerWidth +', top=0, left='+ window.outerWidth+window.screenLeft +', height='+window.screen.height);return false;">전자지적도</a></li>
+							<li><a href="javascript:" onclick="window.open('/pop/open/!/view/roadmap?token=J02|2016|828|5&type=roadmap','','scrollbars=no, width='+ window.outerWidth +', top=0, left='+ window.outerWidth+window.screenLeft +', height='+window.screen.height);return false;">로드뷰</a></li>
+							-->
+														<li><a href="javascript:" onclick="window.open('https://www.eum.go.kr/web/mp/mpMapDet.jsp?pnu=4888038023106790000','eum','scrollbars=no, width=940, top=0, left='+ window.outerWidth+window.screenLeft +',height='+window.screen.height+',height='+screen.height);return false;" target="_blank" title="새창으로 열립니다">이음지도</a></li>
+														<li><a href="javascript:" onclick="window.open('https://seereal.lh.or.kr/SeerealMAP/seerealCommon/moveMap.do?center=14105646.98122008,4513664.228254158,253.63017958402634&zoom=18&layer=tl_ctnu_lgstr&pnu=4888038023106790000','lh','scrollbars=no, width=940, top=0, left='+ window.outerWidth+window.screenLeft +',height='+window.screen.height+',height='+screen.height);return false;" target="_blank" title="새창으로 열립니다">온나라지도</a></li>
+						</ul>
+					</dd>
+				</dl>
+																												<dl class="side_etc">
+					<dt>기타 참고자료</dt>
+					<dd>
+						<ul>
+							<li><a href="javascript:void(0);"
+									onclick="window.open('/pop/open/!/usa/end_list?t=01&token=J02|2016|828|5&pnucode=4888038023106790000','','scrollbars=no, width='+ window.outerWidth +', top=0, left='+ window.outerWidth+window.screenLeft +',height='+window.screen.height); return false;">인근
+									진행물건</a></li>
+							<li><a href="javascript:void(0);"
+									onclick="window.open('/pop/open/!/usa/end_list?t=02&token=J02|2016|828|5&pnucode=4888038023106790000','','scrollbars=no, width='+ window.outerWidth +', top=0, left='+ window.outerWidth+window.screenLeft +',height='+window.screen.height); return false;">인근 매각물건</a></li>
+							<li><a href="javascript:void(0);"
+									onclick="window.open('/pop/open/!/usa/end_list?t=03&token=J02|2016|828|5&pnucode=4888038023106790000','','scrollbars=no, width='+ window.outerWidth +', top=0, left='+ window.outerWidth+window.screenLeft +',height='+window.screen.height); return false;">해당 번지사례</a></li>
+							<li><a href="javascript:void(0);"
+								onclick="window.open('/pop/open/!/usa/end_list?t=05&token=J02|2016|828|5&pnucode=4888038023106790000','','width=800, left='+ window.outerWidth+window.screenLeft +',height=600'); return false;">인근
+								공매진행물건</a></li>
+							<li>
+																		<li class="hot"><a href="javascript:void(0);"
+									onclick="window.open('/pop/open/!/view/cgs?token=J02|2016|828|5','','scrollbars=no, width='+ window.outerWidth +', top=0, left='+ window.outerWidth+window.screenLeft +',height='+window.screen.height); return false;">예상배당표
+									및
+									소유권 이전비용</a></li>							<li><a href="javascript:void(0);"
+									onclick="window.open('/pop/open/!/view/tender?token=J02|2016|828|5&ttype=1&selldate= 10:00','','scrollbars=no, width='+ window.outerWidth +', top=0, left='+ window.outerWidth+window.screenLeft +',height='+window.screen.height); return false;">입찰표
+									작성</a>
+							</li>
+							 
+							<li><a href="javascript:"
+									onclick="window.open('/pub/html/cost_all.html','','scrollbars=no, width=940, top=0, left='+ window.outerWidth+window.screenLeft +',height='+window.screen.height); return false;">주택/상가
+									임대차<br/>보호법</a></li>
+													</ul>
+					</dd>
+				</dl>
+
+			</nav>
+
+
+			<a class="shop" href="javascript:" target="_blank">
+				<img src="/pub/images/sub/fran06.png" alt="가맹점 모집" />
+			</a>			
+			<a class="btn_zebo" href="javascript:void(0)">
+				<img src="/pub/images/sub/interview_peaple.png" alt="현장제보" />
+			</a>
+			<!--<a class="btn_counselling" href="javascript:void(0)">
+				<img src="/pub/images/sub/counselling02.png" alt="경매컨설팅" />
+			</a>
+			<a class="btn_ppleplz" href="javascript:void(0)">
+				<img src="/pub/images/sub/peapleplz01.png" alt="이해관계인요청" />
+			</a>-->
+			<ul class="report">
+											<li><a href="javascript:alert('검색중인 사건은 당일 공고된 신건으로 당사에서 자료입력중인 사건이니 잠시후 다시 확인 하시기 바랍니다.')" onclick="return false;">오류신고</a></li>
+											<li class="dis-none"><a href="javascript:void(0)" class="btn_del">삭제요청</a></li>
+			</ul>
+			<a class="btn_lg" href="https://lgedadam.com/" target="_blank">
+				<img src="/resources/dt/images/main/LG사이드배너.jpg" alt="LG몰" />
+			</a>
+		</aside>
+
+	<!-- 레이어팝업:물건전달 -->
+	<div class="layer pop_pass">
+		<div class="con">
+			<h2>해당물건 전달하기</h2>
+			<dl>
+				<dt>관할법원</dt>
+				<dd>창원지방법원 거창지원</dd>
+			</dl>
+			<dl>
+				<dt>사건번호</dt>
+				<dd>2016 타경 828 물번 5</dd>
+			</dl>
+			<dl class="to">
+				<dt>친구목록</dt>
+				<dd>
+					<select id="frind_code">
+						<option value="">친구 선택</option>
+										</select>
+					<a href="javascript:"
+						onclick="window.open('/pop/open/!/join/friends','','width=500,left='+ window.outerWidth+window.screenLeft + ', height=600'); return false;">친구목록관리</a>
+				</dd>
+			</dl>
+			<dl class="txt">
+				<dt>내용입력</dt>
+				<dd>
+					<textarea id="frind_memo"></textarea>
+				</dd>
+			</dl>
+			<!-- a태그에 클래스 sbm_ho 넣으면 마우스오버효과입니다. -->
+			<a href="javascript:" class="sbm" onclick="add_frind();">전달하기</a>
+		</div>
+		<a href="javascript:" class="close">닫기</a>
+	</div>
+	<!-- //레이어팝업:물건전달 -->
+
+	<!-- 레이어팝업:오류신고 -->
+	<div class="layer pop_notify">
+		<div class="con">
+			<h2>사건오류신고</h2>
+			<dl>
+				<dt>관할법원</dt>
+				<dd>창원지방법원 거창지원</dd>
+			</dl>
+			<dl>
+				<dt>사건번호</dt>
+				<dd>2016 타경 828 물번 5</dd>
+			</dl>
+			<dl class="txt">
+				<dt>신고내용</dt>
+				<dd>
+					<textarea></textarea>
+				</dd>
+			</dl>
+			<ul>
+				<li>- 신고내용을 검토 후 스피드머니 1000원을 지급해드립니다.</li>
+				<li>- 원인이 같을 경우, 여러건을 접수하더라도 중복 적용되지 않습니다.</li>
+			</ul>
+			<!-- a태그에 클래스 sbm_ho 넣으면 마우스오버효과입니다. -->
+			<a href="javascript:" class="sbm">신고하기</a>
+		</div>
+		<a href="javascript:" class="close">닫기</a>
+	</div>
+	<!-- //레이어팝업:오류신고 -->
+	<!-- 레이어팝업:경매컨설팅 -->
+	<div class="layer pop_consulting">
+		<div class="con">
+			<h2>경매컨설팅 신청</h2>
+			<dl>
+				<dt>관할법원</dt>
+				<dd>
+					<select name="" id="">
+						<option value="" selected>법원을 선택하세요.</option>
+					</select>
+				</dd>
+			</dl>
+			<dl class="accident">
+				<dt>사건번호</dt>
+				<dd>
+					<select name="" id="">
+						<option value="" selected>2022</option>
+					</select>
+					<span>타경</span>
+					<input type="text">
+					<span>물번</span>
+					<input type="text">
+				</dd>
+			</dl>
+			<dl>
+				<dt>성명</dt>
+				<dd>
+					<input type="text">
+				</dd>
+			</dl>
+			<dl>
+				<dt>연락처</dt>
+				<dd>
+					<input type="text">
+				</dd>
+			</dl>
+			<dl class="txt">
+				<dt>내용입력</dt>
+				<dd>
+					<textarea></textarea>
+				</dd>
+			</dl>
+			<!-- a태그에 클래스 sbm_ho 넣으면 마우스오버효과입니다. -->
+			<a href="javascript:" class="sbm">신청하기</a>
+		</div>
+		<a href="javascript:" class="close">닫기</a>
+	</div>
+	<!-- //레이어팝업:경매컨설팅 -->
+
+	<!-- 레이어팝업:내부구조도 -->
+	<div class="layer pop_maps">
+		<div class="con">
+			<img src="http://img1.speedauction.co.kr/new_gamimg/2021/E02/2021/1935/27615_AUTO_24.jpg" />
+		</div>
+		<a href="javascript:" class="close">닫기</a>
+	</div>
+	<!-- //레이어팝업:내부구조도 -->
+
+	<!-- 레이어팝업:현장제보 -->
+	<div class="layer pop_zebo">
+		<iframe class="iframe_cnt" src="/pop/proxy_zebo?token=J02|2016|828|5&courtNo2=경매2계" loading="lazy"></iframe>		
+		<a href="javascript:" class="close">닫기</a>
+	</div>
+	<!-- //레이어팝업:현장제보 -->
+
+	<!-- 레이어팝업:이해관계인 -->
+	<div class="layer pop_ppleplz">
+		<iframe class="iframe_cnt" src="/pop/proxy_ppleplz?token=J02|2016|828|5&courtNo2=경매2계" loading="lazy">
+			<!-- 이 안에 pop_ppleplz.html 넣어주시면 됩니다. -->
+		</iframe>
+		<a href="javascript:" class="close">닫기</a>
+	</div>
+	<!-- //레이어팝업:이해관계인 -->
+
+	<!-- 삭제요청 -->
+	<div class="layer pop_del" style="display:none;">
+		<iframe class="iframe_cnt" src="/pop/proxy_del?token=J02|2016|828|5&courtNo2=경매2계" loading="lazy">
+			<!-- 이 안에 pop_del.html 넣어주시면 됩니다. -->
+		</iframe>
+		<a href="javascript:" class="close">닫기</a>
+	</div>
+	<!-- //삭제요청 -->
+
+	<div id="mask"></div>
+
+	<script>
+		$(document).ready(function () {
+			$('.option_view strong').click(function () {
+				$('.option_view ul').toggle('1500');
+			});
+			//$('.quick .share a').click(function () {
+			//	$('.quick .share ul').toggle();
+			//});
+			
+			$(".btn_notify").click(function (e) {
+				e.preventDefault();
+				window.open('/pop/proxy_error?token=J02|2016|828|5&courtNo2=경매2계&mode=do_notify', '', 'scrollbars=no, width=640, top=0, left='+ window.outerWidth+window.screenLeft +',height=450')
+				//$(".pop_notify").css("display", "block");
+				//$("#mask").css("display", "block");
+			});
+            $(".pop_notify .sbm").click(function (e) {
+                e.preventDefault();
+				// 오류신고
+				var data = {
+					'mode':"do_notify",
+					'courtNo':courtNo,
+					'eventNo1':eventNo1,
+					'eventNo2':eventNo2,
+					'objNo':objNo,
+					'memo':$(".pop_notify textarea").val(),
+				}
+				if (!data.memo){
+					alert('신고 내용을 적어 주세요.'); return false;
+				}
+				$(".wish_layer").load(speedjs.to_ajax('post','pop@singo_proc.ajax'), data, function(output){
+					$(".wish_layer").html('<p>'+ nl2br(output) +'</p>');
+					$(this).slideDown().delay(1000).slideUp('slow');
+				});
+				$(".pop_notify textarea").val('');
+				$(".pop_notify .close").trigger("click");
+            });
+			$(".pop_notify .close").click(function (e) {
+				e.preventDefault();
+				$(".pop_notify").css("display", "none");
+				$("#mask").css("display", "none");
+			});
+			$(".btn_pass").click(function (e) {
+				e.preventDefault();
+				$(".pop_pass").css("display", "block");
+				$("#mask").css("display", "block");
+			});
+			$(".pop_pass .close").click(function (e) {
+				e.preventDefault();
+				$(".pop_pass").css("display", "none");
+				$("#mask").css("display", "none");
+			});
+			$(".btn_zebo").click(function (e) {
+				e.preventDefault();
+				window.open('/pop/proxy_zebo?token=J02|2016|828|5&courtNo2=경매2계', '', 'scrollbars=no, width=640, top=0, left='+ window.outerWidth+window.screenLeft +',height='+window.screen.height)
+			});
+			$(".pop_zebo .close").click(function (e) {
+				e.preventDefault();
+				$(".pop_zebo").css("display", "none");
+				$("#mask").css("display", "none");
+			});
+			$(".btn_ppleplz").click(function (e) {
+				e.preventDefault();
+				$(".pop_ppleplz").css("display", "block");
+				$("#mask").css("display", "block");
+			});
+			$(".pop_ppleplz .close").click(function (e) {
+				e.preventDefault();
+				$(".pop_ppleplz").css("display", "none");
+				$("#mask").css("display", "none");
+			});
+			$(".btn_maps").click(function (e) {
+				e.preventDefault();
+				$(".pop_maps").css("display", "block");
+				$("#mask").css("display", "block");
+			});
+			$(".pop_maps .close").click(function (e) {
+				e.preventDefault();
+				$(".pop_maps").css("display", "none");
+				$("#mask").css("display", "none");
+			});
+			$(".btn_layer_sham").click(function (e) {
+				e.preventDefault();
+				$(".layer_sham").css("display", "block");
+				$("#mask").css("display", "block");
+			});
+			$(".layer_sham .close").click(function (e) {
+				e.preventDefault();
+				$(".layer_sham").css("display", "none");
+				$("#mask").css("display", "none");
+			});
+			/* 공통 footer 영역으로 이동
+			$(".btn_del").click(function (e) {
+				e.preventDefault();
+				$(".pop_del").css("display", "block");
+				$("#mask").css("display", "block");
+			});
+			$(".pop_del .close").click(function (e) {
+				e.preventDefault();
+				$(".pop_del").css("display", "none");
+				$("#mask").css("display", "none");
+			});*/
+			// 가맹점 모집
+			$(".shop").click(function(e){
+				e.preventDefault();
+				let url = "/forum/sub/!/franchise/02"
+				let thisURL = $(this).attr("href")
+				if(thisURL && (thisURL != 'javascript:') && (thisURL != 'javascript')){
+					url = thisURL
+				}
+				Confirm("가맹점 페이지로 이동하시겠습니까?", "스피드옥션 가맹점",null, function(){
+					var newurl = window.open(url);
+					newurl.focus();
+				})
+				return false;
+			});
+			$(".jisa").click(function(e){
+				e.preventDefault();
+				let url = "/cscenter/sub/!/site/15"
+				let thisURL = $(this).attr("href")
+				if(thisURL && (thisURL != 'javascript:') && (thisURL != 'javascript')){
+					url = thisURL
+				}
+				Confirm("지사 페이지로 이동하시겠습니까?", "스피드옥션 지사",null, function(){
+					var newurl = window.open(url);
+					newurl.focus();
+				})
+				return false;
+			});
+		});
+
+/*
+		// 모의입찰 BTN
+		$(".sham_btn").on('click', function(e){
+			e.preventDefault();
+			if (!$("#sham_input").val()||$("#sham_input").val()==0) {
+				alert('모의 입찰가를 다시 한번 확인해 주시기 바랍니다.');
+				return false;
+			}
+		});
+*/
+		// 인근통계 - select 용도코드 선택시 ajax (으)로 콘텐츠를 새로 작성
+		$(".st_tic").on("change",function(e){
+			e.preventDefault();
+			let usagecode = $(this).val();
+			$(".st-bodycontent").load("/ajax?html&ajax.id=pop@similarity_analysis.ajax&objcode="+usagecode+"&dongcode=4888038000&gmoney=");
+			return false;
+		});
+
+	</script>
+
+<script>
+function price_chk(field)
+{
+	field.value = trim(field.value);
+	var valid = "0123456789,"
+	var ok = "yes";
+	var temp;
+	for (var i=0; i<field.value.length; i++)
+	{
+		temp = "" + field.value.substring(i, i+1);
+		if (valid.indexOf(temp) == "-1") ok = "no";
+	}
+	if (ok == "no")
+	{
+		Alert("숫자만 입력할 수 있습니다", null, null, function(){
+			field.focus();
+			field.select();
+			return false;
+		});
+   }
+}
+
+function bidsimulation_proc()
+{
+	var price = $("input[name=bidsimulation_price]").val();
+	if(price == 0 || price == '')
+	{
+		Alert('모의 입찰가를 다시 한번 확인해 주시기 바랍니다.');
+		return false;
+	}
+
+ 	var aUrl = "/ajax?html&ajax.id=pop@bidsimulation.ajax";
+	var aData = 'courtNo='+courtNo+'&eventNo='+eventNo1+'&eventNo2='+eventNo2+'&objNo='+objNo+'&price='+price;
+	//console.log( aUrl+'?'+aData); return false;
+	$.ajax({
+		type:'get'
+		,dataType: 'html'
+		,url: aUrl
+		,data : aData
+		,success : function(txt){
+			ajax_bidsimulation_result(txt);
+		}
+	});
+}
+
+function ajax_bidsimulation_result(txt)
+{
+	var return_value = txt;
+	$("input[name=bidsimulation_price]").val( return_value );
+	Alert('정상적으로 입력/수정 되었습니다.<br><br><small>수정은 매각기일 1일전까지 가능하며<br>결과는 현 페이지 및 <br><span class=red><b>마이페이지->모의입찰목록</b></span> 에서 확인할 수 있습니다.</small>');
+	return false;
+}
+
+// 전달하기
+function add_frind() {
+	var params = {
+		'token': _TOKEN,
+		'frind_code': $("#frind_code").val(),
+		'frind_memo': $("#frind_memo").val(),
+	}
+	$(".wish_layer").load(speedjs.to_ajax("ajax", "pop@send_frind.ajax"), params, function(output){
+		$(".wish_layer").html("<p>"+ nl2br(output) +"</p>");
+		$(this).slideDown().delay(1000).slideUp('slow');
+	});
+}
+
+//인쇄제외하기
+function exclude_print(el){
+	let tpp = $(el).parent().parent().parent()
+	let tpp_table = $(tpp).children('table:eq(0)')
+
+	if($(tpp).hasClass("exclude_print")){
+		$(tpp).removeClass("exclude_print")
+		$(tpp_table).show(300)
+		$(el).text("인쇄제외하기")
+	}else{
+		$(tpp).addClass("exclude_print")
+		$(tpp_table).hide(300)
+		$(el).text("인쇄포함하기")
+	}
+}
+
+// 관심등록 해제
+$(".quick_heart").on("click", function(e){
+	e.preventDefault();
+	if ($(this).hasClass("red_heart") === true) {
+		if ($(this).prop('tagName') == "BUTTON"){
+			Confirm("관심물건을 삭제하시겠습니까?", "관심물건",null, function(){
+				var data = {
+					'token': 'J02|2016|828|5',
+				}
+				$(".wish_layer").load(speedjs.to_ajax('ajax','pop@del_interest.ajax'), data, function(output){
+					$(this).slideDown().delay(1000).slideUp('slow');
+					if (output.indexOf("실패")==-1) {
+						$(".quick_heart").removeClass("red_heart");
+					}
+					location.reload()
+				});
+			})
+		}else{
+			window.open('/pop/open/!/wish/edit?token='+$(this).data("token"),'viewtop','width=550,height=760');
+		}
+	} else {
+		if ($(this).data("token")) {
+			window.open('/pop/open/!/wish/edit?token='+$(this).data("token"),'viewtop','width=550,height=760');
+		}else{
+			window.open('/pop/open/!/wish/edit?token=J02|2016|828|5','viewtop','width=550,height=760');
+		}
+	}
+	return false;
+});
+
+//관심등록수정
+$(".wish_btn").on("click", function(e){
+	e.preventDefault()
+
+	Confirm("관심물건을 수정하시겠습니까?", "관심물건",null, function(){
+		$.post("/ajax?html&ajax.id=member@myauction_inv_no.ajax", {
+			job : 'list_wrt',
+			serino : '',
+			star : $('input[name=reviewStar]:checked').val(),
+			memo : $("#edit_memo").val(),
+			ispop : $('input[name=alrm]:checked').val(),
+		}, function(output) {
+			if (output){
+				alert(output);
+			}
+			location.reload();
+		});
+	})
+})
+
+// 새창으로 열린 상태
+$(".speed_official").on("click", (e)=>{
+	if (!window.opener){
+		location.href = "/"; return false;
+	}
+});
+
+function setInterestPrint(){
+	if($(".inter_memo").hasClass("print_hide") === false){
+		$(".inter_memo").addClass("print_hide")
+		$("#interestPrint").text("인쇄표시")
+	}else{
+		$(".inter_memo").removeClass("print_hide")
+		$("#interestPrint").text("인쇄제외")
+	}
+}
+
+function containsAnyCharacterIgnoreCase(str, charArray) {
+	const lowerStr = str.toLowerCase();
+	return charArray.some(char => lowerStr.includes(char.toLowerCase()));
+  }
+
+function viewDownloader(idx, fileName){
+	viewerEl = document.getElementById('imageViewer')
+	viewerIframeEl = document.querySelector('#imageViewer > iframe ')
+	var fileTypeArray = ['.jpg','.png','.jpeg','.bmp','.gif','.pdf']
+	var fileNonImageTypeArray = ['.pdf']
+
+	if(containsAnyCharacterIgnoreCase(fileName, fileTypeArray)){
+		viewerEl.classList.remove('dis-none')
+	}else{
+		viewerEl.classList.add('dis-none')
+	}
+	viewerIframeEl.src = 'about:blank'
+	viewerIframeEl.src = '/pop/open/!/view/downloader?idx='+idx
+
+	//viewerIframeEl.style.height = viewerIframeEl.contentDocument.body.scrollHeight + 'px';
+	//viewerEl.style.height = viewerIframeEl.contentDocument.body.scrollHeight+ 68 + 'px'
+	if(containsAnyCharacterIgnoreCase(fileName, fileNonImageTypeArray)){
+		viewerIframeEl.style.width = '810px';
+		viewerEl.style.width =  '810px';
+		viewerIframeEl.style.height = '800px';
+		viewerEl.style.height = '800px';
+	}else{
+		viewerIframeEl.style.width = viewerIframeEl.contentDocument.body.scrollWidth + 'px';
+		viewerEl.style.width = viewerIframeEl.contentDocument.body.scrollWidth+ 100 + 'px'
+	}
+}
+
+document.querySelector('#imageViewer > iframe ').addEventListener('load', function(){
+	viewerEl = document.getElementById('imageViewer')
+	viewerIframeEl = document.querySelector('#imageViewer > iframe ')
+
+	viewerIframeEl.style.height = viewerIframeEl.contentDocument.body.scrollHeight + 'px';
+	viewerEl.style.height = viewerIframeEl.contentDocument.body.scrollHeight+ 68 + 'px'
+	viewerIframeEl.style.width = viewerIframeEl.contentDocument.body.scrollWidth + 'px';
+	viewerEl.style.width = viewerIframeEl.contentDocument.body.scrollWidth+ 10 + 'px'
+});
+
+</script>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+<!-- 공통 기능 -->
+<script src="/pub/js/product_pc_common.js"></script>
+
+<!-- 매매/전월세 기능 -->
+<script src="/pub/js/product_pc_meme.js"></script>
+
+<!-- npl담당자 기능 -->
+<script src="/pub/js/product_pc_npl.js"></script>
+
+<!-- 연도별공시지가 기능 -->
+<script src="/pub/js/product_pc_year.js"></script>
+
+<script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
+<script type="text/javascript">
+if(!wcs_add) var wcs_add = {};
+wcs_add["wa"] = "75a13271895978";
+if(window.wcs) {
+  wcs_do();
+}
+
+$.ajax({
+    url: '/pop/open/!/view/verticaldata?token=J02|2016|828|5', 
+    type: 'GET',                 
+    dataType: 'html',           
+	beforeSend: function() {
+        $('#real-box-1781359493').html('<center><img src="/pub/images/loading.gif"></center>');
+    },
+    success: function(data) {
+
+        $('#real-box-1781359493').html(data)
+    },
+    error: function(xhr, status, error) {
+    }
+})
+</script>
+
+</html>

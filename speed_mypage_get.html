@@ -1,0 +1,2308 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="expires" content="-1">
+    <meta http-equiv="pragma" content="no-cache,must-revalidate">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="theme-color" content="#ff6f61">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="title" content="">
+    <meta name="description" content="" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="imagetoolbar" content="no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="HandheldFriendly" content="false" />
+    <meta property="og:url" content="//new.speedauction.co.kr" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="법원경매 정보서비스 No.1 스피드옥션" />
+    <meta property="og:description" content="법원경매 정보서비스 No.1 스피드옥션" />
+    <meta property="og:image" content="//new.speedauction.co.kr/pub/images/common/oglogo.jpg" />
+    <meta name="naver-site-verification" content="9ae363dc4863ee6173abfd27a7053d03364b700c" />
+	<title>스피드옥션경매</title>
+	<link rel="shortcut icon" type="image/x-icon" href="/pub/images/common/ico.ico">
+    <link rel="stylesheet" type="text/css" href="/pub/css/layout.css">
+    <link rel="stylesheet" type="text/css" href="/pub/css/sub.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+		
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>window.jQuery||document.write('<script src="/js/jquery.min.js"><\/script>')</script>
+
+    		<script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.12/jquery.bxslider.min.js" integrity="sha512-Sd50HlL7yNXIJ5p2EO2O24dNtY892JX4B2Yfhk+BLqDGS76/dfEjJz8mxaRD6gcwZCOOjT/loIGcfV6jm9K+0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!--ajax form-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js" integrity="sha512-YUkaLm+KJ5lQXDBdqBqk7EVhJAdxRnVdT2vtCzwPHSweCzyMgYV/tgGF4/dCyqtCC2eCphz0lRQgatGVdfR0ww==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js" integrity="sha512-fujQJs+fkj7+Az7XKDxMLbVuuaeljjqMQDh3TAI7nYKQMQhEztrmyuex6hlnRuttjXJ9BFvnl4r/t8r8L6gFfA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        // 자바스크립트에서 사용하는 전역변수 선언
+        const SA_URL = "";
+		// URL Params
+		const urlParams = new URLSearchParams(window.location.search);
+    </script>
+    <script type="text/javascript" src="/js/speed.js?1781359284"></script>
+	<script type="text/javascript" src="/js/pub.js?1781359284"></script>
+	<script type="text/javascript" src="/js/default.js?1781359284"></script>
+    <script type="text/javascript" src="/js/common.js?1781359284"></script>
+    <script type="text/javascript" src="/js/common_lists.js?1781359284"></script>
+	<script type="text/javascript" src="/js/calendar.js?1781359284"></script>
+	<script type="text/javascript" src="/js/Alert2.js"></script>
+	<script type="text/javascript" src="/js/login.js?1781359284"></script>
+	<script type="text/javascript" src="/map/js/page.js?1781359284"></script>
+	<!-- 네이버 로그인 sdk -->
+    <script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js" charset="utf-8"></script>
+	<!--연관채널-->
+	<span itemscope="" itemtype="http://schema.org/Organization">
+		<link itemprop="url" href="http://new.speedauction.co.kr">
+		<a itemprop="sameAs" href="http://blog.naver.com/speedauction1"></a>
+		<a itemprop="sameAs" href="http://cafe.naver.com/speedauction1"></a>
+		<a itemprop="sameAs" href="http://www.facebook.com/speedauction1/"></a>
+		<a itemprop="sameAs" href="http://www.instagram.com/speedauction_1/"></a>
+	</span>
+	<style>
+		body {
+			-webkit-text-size-adjust: 100%; /* 텍스트 크기 확대를 무시 */
+		}
+	</style>
+</head>
+<body class="">
+<noscript><img style="display:none; height:0px; width:0px; vertical-align: top;" src="https://www.facebook.com/tr?id=1938724472896368&ev=PageView&noscript=1" /></noscript>
+<script>
+  window.onbeforeprint = function() {
+    document.getElementById('printInvisibleDiv').style.display = 'none';
+  };
+  window.onafterprint = function() {
+    document.getElementById('printInvisibleDiv').style.display = 'block';
+  };
+
+$(function() {
+	
+	var Strcode = "";
+
+	if (['top', 'calendar'].includes(Strcode)) {
+    if ($('#auction_result').length) {
+        $('a.blue').each(function() {
+            if ($(this).text().trim() === '검색하기') {
+                $(this).trigger('click');
+            }
+        });
+		}
+	} else {
+		scroll_top('#sub_visual');
+	}
+
+	$("#eventno2").on('click', (e) => {
+		$("#eventno2").val("");
+	})
+
+	// (우)상단 사건검색
+	/*
+	$('.top_search').on('click',(e)=>{
+		e.preventDefault();
+		var eventno1 = $('#eventno1').val();
+		var eventno2 = $('#eventno2').val();
+		if (!eventno1) {
+			$('#eventno1').focus();
+			return false;
+		}
+		if (!eventno2) {
+			$('#eventno2').focus();
+			return false;
+		}
+			
+		var url = "/search/sub/!/auction/01";
+
+		$('#top_search').attr('method', 'get');
+		$('#top_search').attr('action', url);
+		$('#top_search').submit();
+
+		return false;
+	});
+	*/
+
+	// 알림_레이어 close
+	$(".relay_title").find("span.material-symbols-outlined").on("click", (e)=>{
+		$(".relay.layer").fadeOut('slow');
+	});
+
+	// 알림_보러가기
+	$(document).on("click", "button.check_btn", function(e){
+		e.preventDefault();
+		var _token = $(this).data("token");
+		if (_token){
+			var data = {
+				'serino': $(this).data("code")
+			}
+			// 열람정보 update
+			$.post("/ajax?ajax.id=main@alarm_click.ajax", data);
+			var item = _token.split('|');
+			// 상세열기
+			view_product(item[0],item[1],item[2],item[3]);			
+			//창닫기
+			$(".relay_title").find("span.material-symbols-outlined").trigger("click");
+		}
+		return false;
+	});
+
+});
+
+function searchSubmit(){
+	var eventno1 = $('#eventno1').val();
+	var eventno2 = $('#eventno2').val();
+
+	if (!eventno2) {
+		$('#eventno2').focus();
+		return false;
+	}
+		
+	var url = "/search/sub/!/auction/01";
+
+	$("#top_search").attr('method', 'get');
+	$("#top_search").attr('action', url);
+	$("#top_search").attr('onsubmit', '');
+	$("#top_search").submit();
+}
+
+function searchKeyUp(){
+	if(event.keyCode === 13){
+		searchSubmit()
+	}
+}
+</script>
+<!-- End Facebook Pixel Code -->
+<!-- 헤더 -->
+
+<!-- site error report -->
+<!-- stie error report -->
+<img class="print-block" src="/pub/images/common/logo.png" alt="로고">
+<header id="hd" class="hide-on-print">
+	<div class="wrap">
+		<h1><a href="/">스피드옥션</a></h1>
+		<div class="search_top">
+			<form name="top_search" id="top_search"  method="post" onsubmit="return false; ">
+				<input type="hidden" name="topsearch" value="1" />
+				<input type="hidden" name="strcode" value="top" />
+				<h2>사건검색</h2>
+				<label>연도</label>
+				<select id="eventno1" name="eventno1">
+					<option value="">전체</option>					
+					<option value="2026" >2026</option>
+					<option value="2025" >2025</option>
+					<option value="2024" >2024</option>
+					<option value="2023" >2023</option>
+					<option value="2022" >2022</option>
+					<option value="2021" >2021</option>
+					<option value="2020" >2020</option>
+					<option value="2019" >2019</option>
+					<option value="2018" >2018</option>
+					<option value="2017" >2017</option>
+					<option value="2016" >2016</option>
+					<option value="2015" >2015</option>
+					<option value="2014" >2014</option>
+					<option value="2013" >2013</option>
+					<option value="2012" >2012</option>
+					<option value="2011" >2011</option>
+					<option value="2010" >2010</option>
+					<option value="2009" >2009</option>
+					<option value="2008" >2008</option>
+					<option value="2007" >2007</option>
+				</select>
+				<label>타경</label>
+				<h2>타경</h2>
+				<input type="text" id="eventno2" name="eventno2" placeholder="" value="" numberOnly onkeyup="searchKeyUp()"/>
+				<button type="button" class="top_search" onclick="searchSubmit();" >검색</button>
+			</form>
+		</div>
+		<div class="top_right">
+			<ul>
+				<li class="" style="display:none;"><a href="/cscenter/sub/!/members/05">로그인</a></li>
+				<li class="blue" style=""><a href="javascript:" class="logout_btn">로그아웃</a></li>
+				<li><a href="/cscenter/sub/!/members/06" style="display:none;">회원가입</a></li>
+				<li><a href="/cscenter/sub/!/members/06_02?job=modify" style="">정보수정</a></li>
+				<li><a href="/member/sub/!/mypage/01" style="">마이페이지</a></li>
+				<li><a href="https://github.com/rustdesk/rustdesk/releases/download/1.4.6/rustdesk-1.4.6-x86_64.exe" target="_blank">원격지원</a></li>
+				<li><a style="color:#f00; font-weight:600;" href="/member/sub/!/mypage/09">요금결제</a></li>
+				<li><a href="javascript:" onclick="window.open('/pop/open/!/del/request', '사건 삭제요청', 'width=500,height=800')">삭제요청</a></li>
+			</ul>
+		</div>
+	</div>
+	</header>
+<!-- //헤더 -->
+
+<!-- 네비 -->
+<nav id="gnb" class="hide-on-print">
+	<ul class="dep1">
+		<li><a href="/search/sub/!/auction/01">경매검색</a>
+			<div class="dep2">
+				<ul>
+					<li><a href="/search/sub/!/auction/01">종합검색</a></li>
+					<li><a href="/search/sub/!/auction/02">관심지역검색</a></li>
+					<li><a href="/search/sub/!/auction/03">역세권검색</a></li>
+					<li><a href="/devmap/sub/!/map/01" target="_blank">지도검색</a></li>
+					<li><a href="/map/index" target="_blank">지도검색(구)</a></li>
+					<li><a href="/search/sub/!/auction/04">맞춤검색</a></li>
+					<li><a href="/search/sub/!/auction/05">지역검색</a></li>
+					<li><a href="/search/sub/!/auction/06">법원별검색</a></li>
+					<li><a href="/search/sub/!/auction/07">일정별검색</a></li>
+					<!--<li><a href="/search/sub/!/auction/08">일정별결과검색</a></li>-->
+					<!--<li><a href="/search/sub/!/auction/09">기간입찰</a></li>-->
+					<li><a href="/search/sub/!/special/01">특수물건</a></li>
+					<li><a href="/search/sub/!/today/01">배당요구종기공고</a></li>
+					<li><a href="/search/sub/!/auction/12">차량선박</a></li>
+					<li><a href="/search/sub/!/auction/13">NPL검색</a></li>
+				</ul>
+			</div>
+		</li>
+		<li><a href="/search/sub/!/ready/01">예정</a>
+			<div class="dep2">
+				<ul>
+					<li><a href="/search/sub/!/ready/01">예정물건검색</a></li>
+				</ul>
+			</div>
+		</li>
+		<li><a href="/search/sub/!/kamco/renew/">공매</a>
+			<div class="dep2">
+				<ul>
+					<li><a href="/search/sub/!/kamco/renew/">공매종합검색</a></li>
+					<li class="blank"><a href="https://www.onbid.co.kr/op/dsa/main/main.do" target="_blank">온비드 바로가기</a></li>
+									</ul>
+			</div>
+		</li>
+			<li><a href="/search/sub/!/movables/01">동산</a>
+				<div class="dep2">
+				<ul>
+					<li><a href="/search/sub/!/movables/01">동산경매검색</a></li>
+				</ul>
+			</div>
+		</li>
+		<li><a href="/forum/sub/!/lecture/01">동영상강좌</a>
+			<div class="dep2">
+				<ul>
+					<li><a href="/forum/sub/!/lecture/01">경매플러스</a></li>
+					<li><a href="/forum/sub/!/lecture/02">ABC경매</a></li>
+					<li><a href="/forum/sub/!/lecture/03">전자펜강의실</a></li>
+					<li><a href="/forum/sub/!/lecture/04">생생경매</a></li>
+					<li><a href="/forum/sub/!/lecture/05">경매아카데미</a></li>
+					<li><a href="/forum/sub/!/lecture/06">정보마당</a></li>
+					<li><a href="/forum/sub/!/lecture/07">세법강의</a></li>
+					<li><a href="/forum/sub/!/lecture/speedauctiontv/">스피드옥션TV</a></li>
+				</ul>
+			</div>
+		</li>
+		<li><a href="/forum/sub/!/lab/board?c=6">경매연구실</a>
+			<div class="dep2">
+				<ul>
+					<li><a href="/forum/sub/!/lab/board?c=6">전문가칼럼</a></li>
+					<li><a href="/forum/sub/!/lab/board?c=4">부동산뉴스&amp;정보</a></li>
+					<li><a href="/forum/sub/!/lab/board?c=17">경매물건토론방</a></li>
+					<li><a href="/forum/sub/!/lab/board?c=16">경매수기</a></li>
+					<li><a href="/forum/sub/!/lab/05">경매관련법률</a></li>
+					<li><a href="/forum/sub/!/lab/board?c=8">대법원판례 영상해설</a></li>
+					<li><a href="/forum/sub/!/lab/board?c=7">만화 경매핵심강좌</a></li>
+										<li><a href="/forum/sub/!/lab/board?c=5">교육강좌안내</a></li>
+				</ul>
+			</div>
+		</li>
+		<li><a href="/forum/sub/!/consult/01">커뮤니티</a>
+			<div class="dep2">
+				<ul>
+					<li><a href="/forum/sub/!/consult/01">동영상해설물건</a></li>
+					<li><a href="/forum/sub/!/consult/02">금주의 인기물건</a></li>
+					<li><a href="/forum/sub/!/consult/03">조회수TOP50</a></li>
+					<li><a href="/forum/sub/!/consult/04">전문가소개 및 상담</a></li>
+					<li><a href="/forum/sub/!/lab/board?c=18">경매종합상담</a></li>
+					<li><a href="/forum/sub/!/lab/board?c=19">농지취득자격증명상담</a></li>
+				</ul>
+			</div>
+		</li>
+		<li><a href="/forum/sub/!/data/01">경매자료실</a>
+			<div class="dep2">
+				<ul>
+					<li><a href="/forum/sub/!/data/01">경매절차</a></li>
+					<li><a href="/forum/sub/!/data/02">경매용어</a></li>
+					<li><a href="/forum/sub/!/data/03">경매서식</a></li>
+					<li><a href="/forum/sub/!/data/04">관련사이트</a></li>
+					<li><a href="/forum/sub/!/data/05">소유권이전등기 촉탁신청서</a></li>
+					<li><a href="/forum/sub/!/data/06">경매관련도표</a></li>
+					<li><a href="/forum/sub/!/data/07">관할법원안내</a></li>
+				</ul>
+			</div>
+		</li>
+		<li><a href="/cscenter/sub/!/site/10">고객센터</a>
+			<div class="dep2">
+				<ul>
+					<li><a href="/cscenter/sub/!/site/10">회사소개</a></li>
+					<li><a href="/forum/sub/!/lab/board?c=1">공지사항</a></li>
+					<li><a href="/cscenter/sub/!/site/01">사이트이용안내</a></li>
+					<li><a href="/cscenter/sub/!/site/02">개인정보처리방침</a></li>
+					<li><a href="/cscenter/sub/!/site/03">사이트이용약관</a></li>
+					<li><a href="/cscenter/sub/!/site/04">관련프로그램</a></li>
+					<li><a href="/cscenter/sub/!/members/05" style="display:none;">회원로그인</a></li>
+					<li><a href="/cscenter/sub/!/members/06" style="display:none;">회원가입</a></li>
+					<li><a href="/cscenter/sub/!/members/07" style="display:none;">아이디/비밀번호찾기</a></li>
+					<li><a href="/cscenter/sub/!/site/08">이메일추출금지</a></li>
+				</ul>
+			</div>
+		</li>
+		<li><a href="/member/sub/!/mypage/01" style="">마이페이지</a>			
+			<div class="dep2">
+				<ul>
+					<li><a href="/member/sub/!/mypage/01" style="">관심경매물건</a></li>
+					<li><a href="/member/sub/!/mypage/22" style="">관심공매물건</a></li>
+										<li><a href="/member/sub/!/mypage/03" style="">관심예정물건</a></li>
+					<li><a href="/member/sub/!/mypage/04" style="">전달받은 물건</a></li>
+					<!--<li><a href="/member/sub/!/mypage/05" style="">전달한 물건</a></li>-->
+					<li><a href="/member/sub/!/mypage/06" style="">휴대폰 전송 물건</a></li>
+					<!--<li><a href="/member/sub/!/mypage/07" style="">사건 공유 물건</a></li>
+					<li><a href="/member/sub/!/mypage/10" style="">모의입찰목록</a></li>-->
+					<li><a href="/member/sub/!/mypage/board?c=18" style="">나의상담목록</a></li>
+					<li><a href="/cscenter/sub/!/members/06_02?job=modify" style="">회원정보수정</a></li>
+					<li><a href="/member/sub/!/mypage/08" style="">스피드포인트</a></li>
+					<li><a href="/member/sub/!/mypage/08_05" style="">결제내역</a></li>
+					<li><a href="/member/sub/!/mypage/09" style="">기간연장/요금결제</a></li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+	<a class="all" href="/cscenter/sub/!/site/09">전체메뉴</a>
+</nav>
+<!-- //네비 -->
+
+	<!-- 전달알림 레이어 -->
+	<div class="relay layer hide-on-print" style="display:none">
+		<div class="relay_title">
+			스피드옥션 알림
+			<span class="material-symbols-outlined">
+				close
+			</span>
+		</div>
+		<div class="con">
+			<div class="re_contitle">
+				<h2>전달물건이 도착하였습니다!</h2>
+				<p><span>[마이페이지] - [전달받은물건]</span>에서도 확인이 가능합니다.</p>
+			</div>
+			<ul class="alarm_list">
+				<!--<li>
+					<p class="relay_pf_cnt">
+						<span class="relay_profile material-symbols-outlined">
+							location_home
+						</span>
+						<span class="relay_bold">황지원님</span>
+					</p>
+					<span class="realay_intxt">
+						서울중앙 2021타경109869물건을 전달하였습니다.
+						<button class="check_btn">
+							물건 보러가기
+							<span class="material-symbols-outlined">
+								double_arrow
+							</span>
+						</button>
+					</span>
+				</li>-->
+			</ul>
+		</div>
+	</div>
+	<!-- //전달알림 레이어 -->
+
+<script src="/js/search.js?1781359284"></script>
+
+
+<!-- 서브비주얼 -->
+<div id="sub_visual" class="hide-on-print">
+	<p>정보제공을 넘어 차별화된 토털 경매 서비스</p>
+</div>
+<!-- //서브비주얼 -->
+
+<!-- 서브레이아웃 -->
+<div id="container">
+    <!-- 레프트메뉴 -->	
+		
+	<section class="sub_left hide-on-print">
+		<h2><span>마이페이지</span></h2>
+		<ul>
+			<li class="sel"><a href="/member/sub/!/mypage/01"><span>관심경매물건</span></a></li>
+			<li class=""><a href="/member/sub/!/mypage/22"><span>관심공매물건</span></a></li>
+						<li class=""><a href="/member/sub/!/mypage/03"><span>관심예정물건</span></a></li>
+			<li class=""><a href="/member/sub/!/mypage/04"><span>전달받은 물건</span></a></li>
+			<li class=""><a href="/member/sub/!/mypage/06"><span>휴대폰 전송 물건</span></a></li>
+					<li class=""><a href="javascript:" onclick="alert('서비스 준비중 입니다'); return false;"><span>사건 공유 물건</span></a></li>
+					<li class=""><a href="/member/sub/!/mypage/10"><span>모의입찰목록</span></a></li>
+			<li class=""><a href="javascript:" onclick="window.open('/pop/open/!/my/calendar/','입찰달력','scrollbars=no, width=1330, top=0, left='+ window.outerWidth+window.screenLeft +',height='+window.screen.height+',height='+screen.height);return false;" target="_blank"><span>개인입찰달력</span></a></li>
+			<li class=""><a href="/member/sub/!/mypage/board?c=18"><span>나의상담목록</span></a></li>
+			<li class=""><a href="/cscenter/sub/!/members/06_02?job=modify"><span>회원정보수정</span></a></li>
+			<li class=""><a href="/member/sub/!/mypage/08"><span>스피드포인트</span></a></li>
+			<li class=""><a href="/member/sub/!/mypage/08_05"><span>결제내역</span></a></li>
+			<li class=""><a href="/member/sub/!/mypage/09"><span>기간연장/요금결제</span></a></li>
+			
+		</ul>
+				<a class="left_banner" href="/search/sub/!/auction/07" title="일정별검색 페이지로 이동합니다.">
+			<strong>경매 일정 및 결과</strong>
+			<span>SCHEDULE</span>
+			<em></em>
+		</a>
+	</section>
+		
+	<!-- //레프트메뉴 -->
+
+	<section class="sub_wrap">
+		<!-- 서브타이틀 -->
+		<div class="sub_top">
+			<h3>관심경매물건</h3>
+			<ul class="locate">
+				<li class="home"><span>홈</span></li>
+				<li><span>마이페이지</span></li>
+				<li><span>관심경매물건</span></li>
+			</ul>
+		</div>
+		<!-- //서브타이틀 -->
+
+		<!-- 서브컨텐츠 -->
+		<section class="sub_con_wrap">
+        
+            <div class="dep3 dep3_4 hide-on-print">
+                <ul>
+                    <li class="sel"><a href="/member/sub/!/mypage/01"><span>전체</span></a></li>
+                    <li class=""><a href="/member/sub/!/mypage/01?lastresultcode=88"><span>진행물건</span></a></li>
+                    <li class=""><a href="/member/sub/!/mypage/01?lastresultcode=77"><span>종결물건</span></a></li>
+                    <li class=""><a href="/member/sub/!/mypage/01?today_result=1"><span>금일물건</span></a></li>
+                </ul>
+            </div>
+
+            <article class="sub_con con_my01">
+
+				<form id="searchform" name="searchform" class="hide-on-print">
+					<input type="hidden" name="page" id="page" value="1" /><!-- page -->
+					<input type="hidden" name="court_sub" id="court_sub" value="전체" />
+					<input type="hidden" name="lastresultcode_new" id="lastresultcode_new" />
+					<input type="hidden" name="usagecode_new" id="usagecode_new" />
+					<input type="hidden" name="strcode" value="" />
+					<input type="hidden" name="orderby" value="abs(datediff(dd,getdate(), a.selldate)), a.eventNo, a.eventNo2, a.objno" />
+					<input type="hidden" name="gubun" value="" />					
+					<input type="hidden" name="courtno" value="" />
+					<input type="hidden" name="list_view_cnt" value="30" />
+					<input type="hidden" name="autosubmit" value ="1" />
+									<!-- 경 -->
+                <div class="auction_search">
+                    <dl>
+                        <dt><strong>법원</strong></dt>
+                        <dd>
+                            <select name='courtNo_main' id="courtNo_main" onchange="set_court_detail(this.value); document.searchform.courtno.value=''">
+															<option value="00" selected>본원전체</option>
+															<option value="A00" >서울지법전체</option>
+															<option value="A01" >서울중앙지법</option>
+															<option value="A02" >서울동부지법</option>
+															<option value="A03" >서울서부지법</option>
+															<option value="A04" >서울남부지법</option>
+															<option value="A05" >서울북부지법</option>
+															<option value="C01" >인천지법</option>
+															<option value="E01" >수원지법</option>
+															<option value="D01" >의정부지법</option>
+															<option value="B01" >부산지법</option>
+															<option value="J01" >창원지법</option>
+															<option value="I01" >대구지법</option>
+															<option value="N01" >울산지법</option>
+															<option value="L01" >광주지법</option>
+															<option value="K01" >전주지법</option>
+															<option value="H01" >대전지법</option>
+															<option value="G01" >청주지법</option>
+															<option value="F01" >춘천지법</option>
+															<option value="M01" >제주지법</option>
+							                            </select>
+                            <select name='courtNo_sub' id="courtNo_sub">
+                                <option value="00">지원전체</option>
+                            </select>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><strong>경매결과</strong></dt>
+                        <dd>
+                            <select name="lastresultcode">
+							<option value="99" selected>전체</option>
+<option value="88">진행물건</option>
+<option value="77">종결물건</option>
+<option value="89">변경/연기/정지/미진행</option>
+<option value="66">진행/변경</option>
+<option value='1'>신건</option>
+<option value='2'>유찰</option>
+<option value='3'>매각</option>
+<option value='4'>변경</option>
+<option value='5'>취하</option>
+<option value='6'>기각</option>
+<option value='7'>정지</option>
+<option value='8'>재진행</option>
+<option value='9'>연기</option>
+<option value='10'>취소</option>
+<option value='11'>미진행</option>
+<option value='12'>불허</option>
+<option value='13'>각하</option>
+<option value='14'>병합</option>
+<option value='15'>잔금납부</option>
+<option value='16'>배당종결</option>
+<option value='17'>재매각</option>
+<option value='18'>미진행(수동)</option>
+<option value='19'>항고</option>
+<option value='20'>수수료부족</option>
+<option value='21'>이송</option>
+<option value='22'>진행예정</option>
+<option value='23'>대금미납</option>
+<option value='24'>기타</option>
+<option value='25'>추후미지정</option>
+
+                            </select>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><strong>소재지</strong></dt>
+                        <dd>
+                            <select id="addr1" name="region_code1" onchange="ChgArea(this.value, this.form.region_code2, this.form);">
+							<option value='0' >전체</option>
+<option value='1100000000' >서울</option>
+<option value='4100000000' >경기</option>
+<option value='2800000000' >인천</option>
+<option value='2600000000' >부산</option>
+<option value='2700000000' >대구</option>
+<option value='3000000000' >대전</option>
+<option value='2900000000' >광주</option>
+<option value='3100000000' >울산</option>
+<option value='4700000000' >경북</option>
+<option value='4800000000' >경남</option>
+<option value='4300000000' >충북</option>
+<option value='4400000000' >충남</option>
+<option value='5200000000' >전북</option>
+<option value='4600000000' >전남</option>
+<option value='5100000000' >강원</option>
+<option value='5000000000' >제주</option>
+<option value='3600000000' >세종</option>
+
+                            </select>
+                            <select id="addr2" name="region_code2" onchange="ChgArea(this.value, this.form.region_code3, this.form);">
+                                <option value="0">구/군</option>
+                            </select>
+                            <select id="addr3" name="region_code3">
+                                <option value="0">동/읍</option>
+                            </select>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><strong>주소내용</strong></dt>
+                        <dd>
+                            <input type="text" name="quick_addr" value="" />
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><strong>용도검색</strong></dt>
+                        <dd>
+                            <select name="usagecode">
+                                <option value="0">용도전체</option>
+							<option value="H">주거용</option>
+<option value="S">상업용</option>
+<option value="L">토지</option>
+<option value="E">기타부동산</option>
+<option value="C">차량 외</option>
+<option value="0">------------------------</option>
+<option value='01'>아파트</option>
+<option value='02'>주택</option>
+<option value='03'>다세대(빌라)</option>
+<option value='04'>다가구(원룸등)</option>
+<option value='05'>근린주택</option>
+<option value='07'>도시형생활주택</option>
+<option value='09'>농가주택</option>
+<option value='21'>근린시설</option>
+<option value='22'>근린상가</option>
+<option value='06'>오피스텔</option>
+<option value='33'>아파트형공장</option>
+<option value='25'>숙박시설</option>
+<option value='26'>주유소</option>
+<option value='28'>병원</option>
+<option value='29'>아파트상가</option>
+<option value='30'>창고</option>
+<option value='35'>상가(사우나)</option>
+<option value='34'>목욕탕</option>
+<option value='36'>노유자시설</option>
+<option value='85'>자동차관련시설</option>
+<option value='86'>문화및집회시설</option>
+<option value='37'>장례식장</option>
+<option value='88'>분뇨처리및자원순환시설</option>
+<option value='24'>공장</option>
+<option value='41'>대지</option>
+<option value='42'>임야</option>
+<option value='43'>전</option>
+<option value='44'>답</option>
+<option value='45'>과수원</option>
+<option value='75'>묘지</option>
+<option value='46'>잡종지</option>
+<option value='47'>공장용지</option>
+<option value='48'>도로</option>
+<option value='49'>구거</option>
+<option value='50'>유지</option>
+<option value='51'>목장용지</option>
+<option value='81'>염전</option>
+<option value='52'>수도용지</option>
+<option value='53'>철도용지</option>
+<option value='83'>종교용지</option>
+<option value='60'>창고용지</option>
+<option value='54'>체육용지</option>
+<option value='55'>제방</option>
+<option value='56'>하천</option>
+<option value='57'>유원지</option>
+<option value='58'>사적지</option>
+<option value='59'>광천지</option>
+<option value='87'>공원</option>
+<option value='89'>교육연구시설</option>
+<option value='90'>주유소용지</option>
+<option value='71'>축사</option>
+<option value='72'>콘도</option>
+<option value='73'>학교</option>
+<option value='74'>주차장</option>
+<option value='76'>광업권</option>
+<option value='77'>어업권</option>
+<option value='78'>농가관련시설</option>
+<option value='79'>종교시설</option>
+<option value='80'>기타</option>
+<option value='82'>양어장</option>
+<option value='84'>주차운영권</option>
+<option value='91'>승용자동차</option>
+<option value='92'>승합자동차</option>
+<option value='93'>화물자동차</option>
+<option value='94'>중장비</option>
+<option value='96'>덤프트럭</option>
+<option value='97'>선박</option>
+<option value='98'>SUV</option>
+<option value='95'>차량기타</option>
+
+							</select>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><strong>메모내용</strong></dt>
+                        <dd>
+                            <input type="text" name="quick_memo" value=""/>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><strong>시스템폴더</strong></dt>
+                        <dd>
+                            <select name="gubun_in">
+                                <option value="0">전체</option>
+							<option value='98'>기타</option>
+<option value='1'>실거주</option>
+<option value='2'>장기보유투자</option>
+<option value='3'>단기매각투자</option>
+<option value='4'>임대수익투자</option>
+<option value='5'>재개발</option>
+<option value='6'>재건축</option>
+<option value='7'>뉴타운</option>
+<option value='8'>공동투자</option>
+<option value='9'>컨설팅물건</option>
+<option value='10'>학습용</option>
+<option value='99'>낙찰</option>
+
+                            </select>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><strong>최저가</strong></dt>
+                        <dd>
+                            <select name="lowpricemin">
+																							<option value="0" selected>최소</option>
+																																														<option value="10000000" >1천만원</option>
+																															<option value="15000000" >1천5백만</option>
+																															<option value="20000000" >2천만원</option>
+																															<option value="30000000" >3천만원</option>
+																															<option value="40000000" >4천만원</option>
+																															<option value="50000000" >5천만원</option>
+																															<option value="60000000" >6천만원</option>
+																															<option value="80000000" >8천만원</option>
+																															<option value="100000000" >1억</option>
+																															<option value="120000000" >1억2천</option>
+																															<option value="140000000" >1억4천</option>
+																															<option value="160000000" >1억6천</option>
+																															<option value="180000000" >1억8천</option>
+																															<option value="200000000" >2억</option>
+																															<option value="220000000" >2억2천</option>
+																															<option value="240000000" >2억4천</option>
+																															<option value="260000000" >2억6천</option>
+																															<option value="280000000" >2억8천</option>
+																															<option value="300000000" >3억</option>
+																															<option value="320000000" >3억2천</option>
+																															<option value="340000000" >3억4천</option>
+																															<option value="360000000" >3억6천</option>
+																															<option value="380000000" >3억8천</option>
+																															<option value="400000000" >4억</option>
+																															<option value="450000000" >4억5천</option>
+																															<option value="500000000" >5억</option>
+																															<option value="550000000" >5억5천</option>
+																															<option value="600000000" >6억</option>
+																															<option value="700000000" >7억</option>
+																															<option value="800000000" >8억</option>
+																															<option value="900000000" >9억</option>
+																															<option value="1000000000" >10억</option>
+																															<option value="1500000000" >15억</option>
+																															<option value="2000000000" >20억</option>
+																															<option value="3000000000" >30억</option>
+																															<option value="4000000000" >40억</option>
+																															<option value="5000000000" >50억</option>
+																															<option value="6000000000" >60억</option>
+																															<option value="8000000000" >80억</option>
+																															<option value="10000000000" >100억</option>
+																															<option value="300000000000" >300억</option>
+																														                            </select>
+                            <span>~</span>
+                            <select name="lowpricemax">
+																							<option value="0" selected>최소</option>
+																															<option value="99999999999999" >최대</option>
+																															<option value="10000000" >1천만원</option>
+																															<option value="15000000" >1천5백만</option>
+																															<option value="20000000" >2천만원</option>
+																															<option value="30000000" >3천만원</option>
+																															<option value="40000000" >4천만원</option>
+																															<option value="50000000" >5천만원</option>
+																															<option value="60000000" >6천만원</option>
+																															<option value="80000000" >8천만원</option>
+																															<option value="100000000" >1억</option>
+																															<option value="120000000" >1억2천</option>
+																															<option value="140000000" >1억4천</option>
+																															<option value="160000000" >1억6천</option>
+																															<option value="180000000" >1억8천</option>
+																															<option value="200000000" >2억</option>
+																															<option value="220000000" >2억2천</option>
+																															<option value="240000000" >2억4천</option>
+																															<option value="260000000" >2억6천</option>
+																															<option value="280000000" >2억8천</option>
+																															<option value="300000000" >3억</option>
+																															<option value="320000000" >3억2천</option>
+																															<option value="340000000" >3억4천</option>
+																															<option value="360000000" >3억6천</option>
+																															<option value="380000000" >3억8천</option>
+																															<option value="400000000" >4억</option>
+																															<option value="450000000" >4억5천</option>
+																															<option value="500000000" >5억</option>
+																															<option value="550000000" >5억5천</option>
+																															<option value="600000000" >6억</option>
+																															<option value="700000000" >7억</option>
+																															<option value="800000000" >8억</option>
+																															<option value="900000000" >9억</option>
+																															<option value="1000000000" >10억</option>
+																															<option value="1500000000" >15억</option>
+																															<option value="2000000000" >20억</option>
+																															<option value="3000000000" >30억</option>
+																															<option value="4000000000" >40억</option>
+																															<option value="5000000000" >50억</option>
+																															<option value="6000000000" >60억</option>
+																															<option value="8000000000" >80억</option>
+																															<option value="10000000000" >100억</option>
+																															<option value="300000000000" >300억</option>
+																															<option value="100000000000" >1000억</option>
+															                            </select>
+                        </dd>
+                    </dl>
+                    <dl class="personal_folder bbn">
+                        <dt><strong>개인폴더</strong></dt>
+                        <dd>
+                            <select name="gubun_my">
+                                <option value="0">전체</option>
+							<option value='103'>매매사업자</option>
+<option value='121'>실거주고려</option>
+<option value='102'>재건축/재개발</option>
+<option value='100'>주거용 지분</option>
+<option value='110'>차량관리</option>
+<option value='125'>콘텐츠용</option>
+<option value='119'>허위 유치권</option>
+<option value='127'>차량검토</option>
+<option value='130'>김동준님</option>
+<option value='131'>밀착케어 카톡방</option>
+<option value='132'>컨설팅물건</option>
+<option value='133'>박태준</option>
+<option value='134'>김미영님</option>
+
+                            </select>
+                            <a class="btn_s" href="javascript:void(0);" onclick="window.open('/pop/open/!/wish/folder','','width=340,height=400'); return false;">폴더관리</a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><strong>중요도</strong></dt>
+                        <dd>
+                            <select name="star">
+                            <option value="0" selected>낮음</option>
+<option value="1">★</option>
+<option value="2">★★</option>
+<option value="3">★★★</option>
+<option value="4">★★★★</option>
+<option value="5">★★★★★</option>
+
+                            </select>
+                        </dd>
+                    </dl>
+				</div></form>
+                <div class="search_btn_wrap hide-on-print">
+                    <a class="blue" href="#;">검색하기</a>
+                </div>
+                <div class="auction_search mT30 hide-on-print">
+                    <dl class="w100">
+                        <dt><strong><a href="/member/sub/!/mypage/01">전체법원</a></strong></dt>
+                        <dd class="blue">
+                            <ul>
+															<li><a href="javascript:change_court('A01');" >서울중앙 <span >33</span>건</a></li>
+															<li><a href="javascript:change_court('A02');" >서울동부 <span >27</span>건</a></li>
+															<li><a href="javascript:change_court('A03');" >서울서부 <span >24</span>건</a></li>
+															<li><a href="javascript:change_court('A04');" >서울남부 <span >37</span>건</a></li>
+															<li><a href="javascript:change_court('A05');" >서울북부 <span >53</span>건</a></li>
+															<li><a href="javascript:change_court('B01');" >부산 <span >17</span>건</a></li>
+															<li><a href="javascript:change_court('B02');" >부산동부 <span >8</span>건</a></li>
+															<li><a href="javascript:change_court('B03');" >부산서부 <span >5</span>건</a></li>
+															<li><a href="javascript:change_court('C01');" >인천 <span >123</span>건</a></li>
+															<li><a href="javascript:change_court('C02');" >부천 <span >69</span>건</a></li>
+															<li><a href="javascript:change_court('D01');" >의정부 <span >42</span>건</a></li>
+															<li><a href="javascript:change_court('D02');" >고양 <span >69</span>건</a></li>
+															<li><a href="javascript:change_court('D03');" >남양주 <span >11</span>건</a></li>
+															<li><a href="javascript:change_court('E01');" >수원 <span >102</span>건</a></li>
+															<li><a href="javascript:change_court('E02');" >성남 <span >20</span>건</a></li>
+															<li><a href="javascript:change_court('E03');" >여주 <span >3</span>건</a></li>
+															<li><a href="javascript:change_court('E04');" >평택 <span >20</span>건</a></li>
+															<li><a href="javascript:change_court('E05');" >안산 <span >33</span>건</a></li>
+															<li><a href="javascript:change_court('E06');" >안양 <span >19</span>건</a></li>
+															<li><a href="javascript:change_court('F01');" >춘천 <span >7</span>건</a></li>
+															<li><a href="javascript:change_court('F02');" >강릉 <span >4</span>건</a></li>
+															<li><a href="javascript:change_court('F03');" >속초 <span >3</span>건</a></li>
+															<li><a href="javascript:change_court('F04');" >원주 <span >9</span>건</a></li>
+															<li><a href="javascript:change_court('G01');" >청주 <span >30</span>건</a></li>
+															<li><a href="javascript:change_court('G02');" >충주 <span >2</span>건</a></li>
+															<li><a href="javascript:change_court('H01');" >대전 <span >15</span>건</a></li>
+															<li><a href="javascript:change_court('H02');" >천안 <span >21</span>건</a></li>
+															<li><a href="javascript:change_court('H04');" >서산 <span >4</span>건</a></li>
+															<li><a href="javascript:change_court('H05');" >홍성 <span >1</span>건</a></li>
+															<li><a href="javascript:change_court('H06');" >논산 <span >1</span>건</a></li>
+															<li><a href="javascript:change_court('I01');" >대구 <span >12</span>건</a></li>
+															<li><a href="javascript:change_court('I02');" >경주 <span >2</span>건</a></li>
+															<li><a href="javascript:change_court('I08');" >포항 <span >2</span>건</a></li>
+															<li><a href="javascript:change_court('I09');" >대구서부 <span >12</span>건</a></li>
+															<li><a href="javascript:change_court('J01');" >창원 <span >15</span>건</a></li>
+															<li><a href="javascript:change_court('J04');" >진주 <span >1</span>건</a></li>
+															<li><a href="javascript:change_court('J06');" >마산 <span >2</span>건</a></li>
+															<li><a href="javascript:change_court('K01');" >전주 <span >91</span>건</a></li>
+															<li><a href="javascript:change_court('K02');" >군산 <span >4</span>건</a></li>
+															<li><a href="javascript:change_court('K04');" >정읍 <span >1</span>건</a></li>
+															<li><a href="javascript:change_court('L01');" >광주 <span >21</span>건</a></li>
+															<li><a href="javascript:change_court('L02');" >순천 <span >32</span>건</a></li>
+															<li><a href="javascript:change_court('L05');" >해남 <span >1</span>건</a></li>
+															<li><a href="javascript:change_court('M01');" >제주 <span >1</span>건</a></li>
+															<li><a href="javascript:change_court('N01');" >울산 <span >37</span>건</a></li>
+							                            </ul>
+                        </dd>
+                    </dl>
+                </div>
+
+                <div class="list_top hide-on-print">
+                    <div class="selects">
+                        <select name="move_gubun" id="move_gubun">
+                            <option value="">-- 옮기실 폴더 선택 --</option>
+						<option value='98'>기타</option>
+<option value='1'>실거주</option>
+<option value='2'>장기보유투자</option>
+<option value='3'>단기매각투자</option>
+<option value='4'>임대수익투자</option>
+<option value='5'>재개발</option>
+<option value='6'>재건축</option>
+<option value='7'>뉴타운</option>
+<option value='8'>공동투자</option>
+<option value='9'>컨설팅물건</option>
+<option value='10'>학습용</option>
+<option value='99'>낙찰</option>
+
+							<option value="">-----------------</option>
+						<option value='103'>매매사업자</option>
+<option value='121'>실거주고려</option>
+<option value='102'>재건축/재개발</option>
+<option value='100'>주거용 지분</option>
+<option value='110'>차량관리</option>
+<option value='125'>콘텐츠용</option>
+<option value='119'>허위 유치권</option>
+<option value='127'>차량검토</option>
+<option value='130'>김동준님</option>
+<option value='131'>밀착케어 카톡방</option>
+<option value='132'>컨설팅물건</option>
+<option value='133'>박태준</option>
+<option value='134'>김미영님</option>
+
+                        </select>
+                        <select class="orderby">
+						                            <option value="abs(datediff(dd,getdate(), a.selldate)), a.eventNo, a.eventNo2, a.objno" selected>기본정렬</option>
+						                            <option value="a.speed_usagecode|asc">용도별</option>
+						                            <option value="a.addr|asc">지역별</option>
+						                            <option value="a.eventNo|asc">사건번호 ▲</option>
+						                            <option value="a.eventNo|desc">사건번호 ▼</option>
+						                            <option value="a.gamjungprice|asc">감 정 가 ▲</option>
+						                            <option value="a.gamjungprice|desc">감 정 가 ▼</option>
+						                            <option value="a.lowprice|asc">최 저 가 ▲</option>
+						                            <option value="a.lowprice|desc">최 저 가 ▼</option>
+						                            <option value="a.uchalcnt|asc">유찰횟수 ▲</option>
+						                            <option value="a.uchalcnt|desc">유찰횟수 ▼</option>
+						                            <option value="convert(char(10), a.selldate,20)|asc">매각기일 ▲</option>
+						                            <option value="convert(char(10), a.selldate,20)|desc">매각기일 ▼</option>
+						                            <option value="viewcnt|desc">조회수 ▼</option>
+						                            <option value="viewcnt|asc">조회수 ▲</option>
+						                            <option value="c.signdate|desc">저장일시 ▼</option>
+						                            <option value="c.signdate|asc">저장일시 ▲</option>
+						                            <option value="c.등록일시|desc">전송일시 ▼</option>
+						                            <option value="c.등록일시|asc">전송일시 ▲</option>
+						                        </select>						
+						<select id="listSelBox" onchange="set_list_view(this.value)">
+							<option value="10" >10개씩 보기</option>
+							<option value="20" >20개씩 보기</option>
+							<option value="30" selected>30개씩 보기</option>
+							<option value="50" >50개씩 보기</option>
+							<option value="100" >100개씩 보기</option>
+							<option value="150" >150개씩 보기</option>
+						</select>
+                        <p>총 <strong>1046</strong>건이 검색되었습니다.</p>
+                    </div>
+                    <ul>
+                        <li><a class="btn_calendar" href="javascript:void(0);" onclick="window.open('/pop/open/!/my/calendar','','width=1100,height=650'); return false;">개인입찰달력</a ></li>
+                        <li><a href="javascript:" class="btn_blue">전체선택</a></li><!-- 전체선택 / 전체선택해제 토글기능으로 작업해주세요-->
+                        <li><a href="javascript:" class="btn_gray">선택삭제</a></li>
+                        <li><a href="javascript:window.print()" class="btn_white">인쇄</a></li>
+                    </ul>
+                </div>
+                <!-- 리스트 -->
+                <div class="list_wish">
+				                    <!-- 물건 -->
+                    <div class="con" style="page-break-inside: avoid; page-break-after: auto;">
+                        <div class="top">
+                            <strong onclick="view_product('K01','2022','32380','1');">[전주지방법원]</strong>
+                            <span onclick="view_product('K01','2022','32380','1');">2022 타경 32380</span>
+							                            <ul>
+                                <li>관심유형 &nbsp; 기타</li>
+                                <li>중요도 &nbsp; <em class="">낮음</em></li>
+                                <li>조회 &nbsp; 244</li>
+								<li><a href="javascript:" onclick="delete_interest(13558878)">관심물건삭제</a></li>
+								<li></li>
+                            </ul>
+                            <input type="checkbox" class="movenum" name="inv_no" id="chk1" value="13558878"/><label for="chk1"></label>
+                        </div>
+                        <div class="pic">
+                            <a href="javascript:view_product('K01','2022','32380','1');" style="background:url(http://img1.speedauction.co.kr/new_gamimg/2024/K01/2022/32380/1_1709541556.png) no-repeat;"></a>
+                            <p>2026-06-15 <span class='red'>정지</span></p>
+                        </div>
+                        <div class="info">
+                            <dl class="location">
+                                <dt>소재지</dt>
+                                <dd>
+                                    <strong onclick="view_product('K01','2022','32380','1');" style="cursor:pointer display:block; float:left; width:530px;">전북특별자치도 전주시 덕진구 송천동2가 175-44, 301동 13층1302호 (송천동2가,현대3차아파트)</strong>
+                                    <div style="float:right;">
+										<a class="btn_map" href="javascript:view_product('K01','2022','32380','1');">물건보기</a>
+										<a class="btn_map" href="javascript:window.open('/pop/open/!/view/zoom?token=K01%7C2022%7C32380%7C1&type=daum_map','mapview','width=1000');">전자지도</a>	
+									</div>
+								</dd>
+                            </dl>
+                            <dl class="f3">
+                                <dt>물건용도</dt>
+                                <dd>아파트</dd>
+                                <dt>최근결과</dt>
+                                <dd>정지</dd>
+                                <dt>감정가</dt>
+                                <dd class="price">406,000,000원</dd>
+                            </dl>
+                            <dl class="f3">
+                                <dt>매각기일</dt>
+                                <dd>2026-06-15</dd>
+                                <dt>유찰횟수</dt>
+                                <dd>1회</dd>
+                                <dt>최저가</dt>
+                                <dd class="min price">(70%)284,200,000원</dd>
+                            </dl>
+                            <dl class="caution">
+                                <dt>주의사항</dt>
+                                <dd><span class="blue">[토지 70.16㎡ (21.22평)][건물 40.75평]</span>
+								<span class="red">[관련사건]</span></dd>
+                            </dl>
+                            <dl class="memo">
+                                <dt>메모내용</dt>
+                                <dd>
+                                    <textarea onclick="setTextareaHeight(this);" onkeyup="setTextareaHeight(this);">덕진구 입지 좋은 곳 / 대형평수 (단타 어려움)
+
+매매가 3.55억 수준 (재평가 필요 - 인테리어 안됨)
+전세가 2.9억 수준 (갭이 좀 들어감)
+
+한번 지켜보자</textarea>
+                                    <button>메모수정</button>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <!-- //물건 -->
+				                    <!-- 물건 -->
+                    <div class="con" style="page-break-inside: avoid; page-break-after: auto;">
+                        <div class="top">
+                            <strong onclick="view_product('E04','2024','43219','1');">[수원지방법원 평택지원]</strong>
+                            <span onclick="view_product('E04','2024','43219','1');">2024 타경 43219</span>
+							                            <ul>
+                                <li>관심유형 &nbsp; 컨설팅</li>
+                                <li>중요도 &nbsp; <em class="">낮음</em></li>
+                                <li>조회 &nbsp; 30</li>
+								<li><a href="javascript:" onclick="delete_interest(13881303)">관심물건삭제</a></li>
+								<li></li>
+                            </ul>
+                            <input type="checkbox" class="movenum" name="inv_no" id="chk2" value="13881303"/><label for="chk2"></label>
+                        </div>
+                        <div class="pic">
+                            <a href="javascript:view_product('E04','2024','43219','1');" style="background:url(https://img1.speedauction.co.kr/new_gamimg/202606/E04/2024/43219/IMGADD_20260601_105056.jpg) no-repeat;"></a>
+                            <p>2026-06-15 <span class='red'>변경</span></p>
+                        </div>
+                        <div class="info">
+                            <dl class="location">
+                                <dt>소재지</dt>
+                                <dd>
+                                    <strong onclick="view_product('E04','2024','43219','1');" style="cursor:pointer display:block; float:left; width:530px;">경기도 평택시 용이동 580 이편한세상평택 106동 18층1804호</strong>
+                                    <div style="float:right;">
+										<a class="btn_map" href="javascript:view_product('E04','2024','43219','1');">물건보기</a>
+										<a class="btn_map" href="javascript:window.open('/pop/open/!/view/zoom?token=E04%7C2024%7C43219%7C1&type=daum_map','mapview','width=1000');">전자지도</a>	
+									</div>
+								</dd>
+                            </dl>
+                            <dl class="f3">
+                                <dt>물건용도</dt>
+                                <dd>아파트</dd>
+                                <dt>최근결과</dt>
+                                <dd>변경</dd>
+                                <dt>감정가</dt>
+                                <dd class="price">440,000,000원</dd>
+                            </dl>
+                            <dl class="f3">
+                                <dt>매각기일</dt>
+                                <dd>2026-06-15</dd>
+                                <dt>유찰횟수</dt>
+                                <dd>0회</dd>
+                                <dt>최저가</dt>
+                                <dd class="min price">(100%)440,000,000원</dd>
+                            </dl>
+                            <dl class="caution">
+                                <dt>주의사항</dt>
+                                <dd><span class="blue">[25.59평형]</span>
+								<span class="red">[유치권,중복사건,토지거래허가구역,관련사건]</span></dd>
+                            </dl>
+                            <dl class="memo">
+                                <dt>메모내용</dt>
+                                <dd>
+                                    <textarea onclick="setTextareaHeight(this);" onkeyup="setTextareaHeight(this);"></textarea>
+                                    <button>메모수정</button>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <!-- //물건 -->
+				                    <!-- 물건 -->
+                    <div class="con" style="page-break-inside: avoid; page-break-after: auto;">
+                        <div class="top">
+                            <strong onclick="view_product('A03','2023','2714','1');">[서울서부지방법원]</strong>
+                            <span onclick="view_product('A03','2023','2714','1');">2023 타경 2714</span>
+							                            <ul>
+                                <li>관심유형 &nbsp; 박태준</li>
+                                <li>중요도 &nbsp; <em class="star">★★★★</em></li>
+                                <li>조회 &nbsp; 422</li>
+								<li><a href="javascript:" onclick="delete_interest(13842785)">관심물건삭제</a></li>
+								<li></li>
+                            </ul>
+                            <input type="checkbox" class="movenum" name="inv_no" id="chk3" value="13842785"/><label for="chk3"></label>
+                        </div>
+                        <div class="pic">
+                            <a href="javascript:view_product('A03','2023','2714','1');" style="background:url(https://img1.speedauction.co.kr/new_gamimg/202512/A03/2023/2714/IMG_2411875.jpg) no-repeat;"></a>
+                            <p>입찰 3일전</p>
+                        </div>
+                        <div class="info">
+                            <dl class="location">
+                                <dt>소재지</dt>
+                                <dd>
+                                    <strong onclick="view_product('A03','2023','2714','1');" style="cursor:pointer display:block; float:left; width:530px;">서울특별시 은평구 응암동 419-130 </strong>
+                                    <div style="float:right;">
+										<a class="btn_map" href="javascript:view_product('A03','2023','2714','1');">물건보기</a>
+										<a class="btn_map" href="javascript:window.open('/pop/open/!/view/zoom?token=A03%7C2023%7C2714%7C1&type=daum_map','mapview','width=1000');">전자지도</a>	
+									</div>
+								</dd>
+                            </dl>
+                            <dl class="f3">
+                                <dt>물건용도</dt>
+                                <dd>주택</dd>
+                                <dt>최근결과</dt>
+                                <dd>유찰</dd>
+                                <dt>감정가</dt>
+                                <dd class="price">229,095,000원</dd>
+                            </dl>
+                            <dl class="f3">
+                                <dt>매각기일</dt>
+                                <dd>2026-06-16</dd>
+                                <dt>유찰횟수</dt>
+                                <dd>4회</dd>
+                                <dt>최저가</dt>
+                                <dd class="min price">(41%)93,838,000원</dd>
+                            </dl>
+                            <dl class="caution">
+                                <dt>주의사항</dt>
+                                <dd><span class="blue">[토지 36.3㎡ (10.98평)][건물 15.46평]</span>
+								<span class="red">[지분매각,선순위가등기]</span></dd>
+                            </dl>
+                            <dl class="memo">
+                                <dt>메모내용</dt>
+                                <dd>
+                                    <textarea onclick="setTextareaHeight(this);" onkeyup="setTextareaHeight(this);">조용한 주택가</textarea>
+                                    <button>메모수정</button>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <!-- //물건 -->
+				                    <!-- 물건 -->
+                    <div class="con" style="page-break-inside: avoid; page-break-after: auto;">
+                        <div class="top">
+                            <strong onclick="view_product('N01','2024','114252','1');">[울산지방법원]</strong>
+                            <span onclick="view_product('N01','2024','114252','1');">2024 타경 114252</span>
+							                            <ul>
+                                <li>관심유형 &nbsp; 매매사업자</li>
+                                <li>중요도 &nbsp; <em class="">낮음</em></li>
+                                <li>조회 &nbsp; 556</li>
+								<li><a href="javascript:" onclick="delete_interest(13461507)">관심물건삭제</a></li>
+								<li></li>
+                            </ul>
+                            <input type="checkbox" class="movenum" name="inv_no" id="chk4" value="13461507"/><label for="chk4"></label>
+                        </div>
+                        <div class="pic">
+                            <a href="javascript:view_product('N01','2024','114252','1');" style="background:url(http://img1.speedauction.co.kr/auction_img/202506/N01/2024/114252/202506_AUTO_1831897.jpg) no-repeat;"></a>
+                            <p><span class='red'>[입찰인원12명]</span><br>2026-06-10 <span class='red'>매각</span><br>391,173,000원<br>(99%)</p>
+                        </div>
+                        <div class="info">
+                            <dl class="location">
+                                <dt>소재지</dt>
+                                <dd>
+                                    <strong onclick="view_product('N01','2024','114252','1');" style="cursor:pointer display:block; float:left; width:530px;">울산광역시 동구 화정동 949 힐스테이트 이스턴베이 111동 9층902호</strong>
+                                    <div style="float:right;">
+										<a class="btn_map" href="javascript:view_product('N01','2024','114252','1');">물건보기</a>
+										<a class="btn_map" href="javascript:window.open('/pop/open/!/view/zoom?token=N01%7C2024%7C114252%7C1&type=daum_map','mapview','width=1000');">전자지도</a>	
+									</div>
+								</dd>
+                            </dl>
+                            <dl class="f3">
+                                <dt>물건용도</dt>
+                                <dd>아파트</dd>
+                                <dt>최근결과</dt>
+                                <dd>매각</dd>
+                                <dt>감정가</dt>
+                                <dd class="price">397,000,000원</dd>
+                            </dl>
+                            <dl class="f3">
+                                <dt>매각기일</dt>
+                                <dd>2026-06-10</dd>
+                                <dt>유찰횟수</dt>
+                                <dd>7회</dd>
+                                <dt>최저가</dt>
+                                <dd class="min price">(70%)277,900,000원</dd>
+                            </dl>
+                            <dl class="caution">
+                                <dt>주의사항</dt>
+                                <dd><span class="blue">[25.68평형]</span>
+								<span class="red">[대항력있는임차인,선순위임차권,관련사건]</span></dd>
+                            </dl>
+                            <dl class="memo">
+                                <dt>메모내용</dt>
+                                <dd>
+                                    <textarea onclick="setTextareaHeight(this);" onkeyup="setTextareaHeight(this);">hug인수조건변경 나오려나?</textarea>
+                                    <button>메모수정</button>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <!-- //물건 -->
+				                    <!-- 물건 -->
+                    <div class="con" style="page-break-inside: avoid; page-break-after: auto;">
+                        <div class="top">
+                            <strong onclick="view_product('I01','2025','669','1');">[대구지방법원]</strong>
+                            <span onclick="view_product('I01','2025','669','1');">2025 타경 669</span>
+							                            <ul>
+                                <li>관심유형 &nbsp; 컨설팅</li>
+                                <li>중요도 &nbsp; <em class="">낮음</em></li>
+                                <li>조회 &nbsp; 989</li>
+								<li><a href="javascript:" onclick="delete_interest(13655408)">관심물건삭제</a></li>
+								<li></li>
+                            </ul>
+                            <input type="checkbox" class="movenum" name="inv_no" id="chk5" value="13655408"/><label for="chk5"></label>
+                        </div>
+                        <div class="pic">
+                            <a href="javascript:view_product('I01','2025','669','1');" style="background:url(http://img1.speedauction.co.kr/auction_img/202508/I01/2025/669/202508_MANUAL_689594659c7ba.jpg) no-repeat;"></a>
+                            <p>입찰 3일전</p>
+                        </div>
+                        <div class="info">
+                            <dl class="location">
+                                <dt>소재지</dt>
+                                <dd>
+                                    <strong onclick="view_product('I01','2025','669','1');" style="cursor:pointer display:block; float:left; width:530px;">대구광역시 수성구 범어동 966-1 범어 월드메르디앙 웨스턴카운티 203동 2층203호</strong>
+                                    <div style="float:right;">
+										<a class="btn_map" href="javascript:view_product('I01','2025','669','1');">물건보기</a>
+										<a class="btn_map" href="javascript:window.open('/pop/open/!/view/zoom?token=I01%7C2025%7C669%7C1&type=daum_map','mapview','width=1000');">전자지도</a>	
+									</div>
+								</dd>
+                            </dl>
+                            <dl class="f3">
+                                <dt>물건용도</dt>
+                                <dd>아파트</dd>
+                                <dt>최근결과</dt>
+                                <dd>유찰</dd>
+                                <dt>감정가</dt>
+                                <dd class="price">830,000,000원</dd>
+                            </dl>
+                            <dl class="f3">
+                                <dt>매각기일</dt>
+                                <dd>2026-06-16</dd>
+                                <dt>유찰횟수</dt>
+                                <dd>9회</dd>
+                                <dt>최저가</dt>
+                                <dd class="min price">(4%)33,492,000원</dd>
+                            </dl>
+                            <dl class="caution">
+                                <dt>주의사항</dt>
+                                <dd><span class="blue">[40.14평형]</span>
+								<span class="red">[대항력있는임차인,선순위임차권,관련사건]</span></dd>
+                            </dl>
+                            <dl class="memo">
+                                <dt>메모내용</dt>
+                                <dd>
+                                    <textarea onclick="setTextareaHeight(this);" onkeyup="setTextareaHeight(this);">매매가 7.9억
+보증금 7억 청구
+
+3천 수준으로 들어가볼까? </textarea>
+                                    <button>메모수정</button>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <!-- //물건 -->
+				                    <!-- 물건 -->
+                    <div class="con" style="page-break-inside: avoid; page-break-after: auto;">
+                        <div class="top">
+                            <strong onclick="view_product('A05','2025','12958','1');">[서울북부지방법원]</strong>
+                            <span onclick="view_product('A05','2025','12958','1');">2025 타경 12958</span>
+							                            <ul>
+                                <li>관심유형 &nbsp; 박태준</li>
+                                <li>중요도 &nbsp; <em class="star">★★★</em></li>
+                                <li>조회 &nbsp; 430</li>
+								<li><a href="javascript:" onclick="delete_interest(13632037)">관심물건삭제</a></li>
+								<li></li>
+                            </ul>
+                            <input type="checkbox" class="movenum" name="inv_no" id="chk6" value="13632037"/><label for="chk6"></label>
+                        </div>
+                        <div class="pic">
+                            <a href="javascript:view_product('A05','2025','12958','1');" style="background:url(https://img1.speedauction.co.kr/new_gamimg/202511/A05/2025/12958/IMG_2263798.jpg) no-repeat;"></a>
+                            <p>입찰 3일전</p>
+                        </div>
+                        <div class="info">
+                            <dl class="location">
+                                <dt>소재지</dt>
+                                <dd>
+                                    <strong onclick="view_product('A05','2025','12958','1');" style="cursor:pointer display:block; float:left; width:530px;">서울특별시 노원구 상계동 1313 수락리버시티4단지 404동 3층306호</strong>
+                                    <div style="float:right;">
+										<a class="btn_map" href="javascript:view_product('A05','2025','12958','1');">물건보기</a>
+										<a class="btn_map" href="javascript:window.open('/pop/open/!/view/zoom?token=A05%7C2025%7C12958%7C1&type=daum_map','mapview','width=1000');">전자지도</a>	
+									</div>
+								</dd>
+                            </dl>
+                            <dl class="f3">
+                                <dt>물건용도</dt>
+                                <dd>아파트</dd>
+                                <dt>최근결과</dt>
+                                <dd>재진행</dd>
+                                <dt>감정가</dt>
+                                <dd class="price">583,000,000원</dd>
+                            </dl>
+                            <dl class="f3">
+                                <dt>매각기일</dt>
+                                <dd>2026-06-16</dd>
+                                <dt>유찰횟수</dt>
+                                <dd>1회</dd>
+                                <dt>최저가</dt>
+                                <dd class="min price">(0%)0원</dd>
+                            </dl>
+                            <dl class="caution">
+                                <dt>주의사항</dt>
+                                <dd><span class="blue">[18.12평형]</span>
+								</dd>
+                            </dl>
+                            <dl class="memo">
+                                <dt>메모내용</dt>
+                                <dd>
+                                    <textarea onclick="setTextareaHeight(this);" onkeyup="setTextareaHeight(this);">산속</textarea>
+                                    <button>메모수정</button>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <!-- //물건 -->
+				                    <!-- 물건 -->
+                    <div class="con" style="page-break-inside: avoid; page-break-after: auto;">
+                        <div class="top">
+                            <strong onclick="view_product('A05','2025','13141','1');">[서울북부지방법원]</strong>
+                            <span onclick="view_product('A05','2025','13141','1');">2025 타경 13141</span>
+							                            <ul>
+                                <li>관심유형 &nbsp; 박태준</li>
+                                <li>중요도 &nbsp; <em class="star">★★★</em></li>
+                                <li>조회 &nbsp; 499</li>
+								<li><a href="javascript:" onclick="delete_interest(13781853)">관심물건삭제</a></li>
+								<li></li>
+                            </ul>
+                            <input type="checkbox" class="movenum" name="inv_no" id="chk7" value="13781853"/><label for="chk7"></label>
+                        </div>
+                        <div class="pic">
+                            <a href="javascript:view_product('A05','2025','13141','1');" style="background:url(https://img1.speedauction.co.kr/new_gamimg/202602/A05/2025/13141/IMG_2540168.jpg) no-repeat;"></a>
+                            <p>입찰 3일전</p>
+                        </div>
+                        <div class="info">
+                            <dl class="location">
+                                <dt>소재지</dt>
+                                <dd>
+                                    <strong onclick="view_product('A05','2025','13141','1');" style="cursor:pointer display:block; float:left; width:530px;">서울특별시 동대문구 청량리동 548 </strong>
+                                    <div style="float:right;">
+										<a class="btn_map" href="javascript:view_product('A05','2025','13141','1');">물건보기</a>
+										<a class="btn_map" href="javascript:window.open('/pop/open/!/view/zoom?token=A05%7C2025%7C13141%7C1&type=daum_map','mapview','width=1000');">전자지도</a>	
+									</div>
+								</dd>
+                            </dl>
+                            <dl class="f3">
+                                <dt>물건용도</dt>
+                                <dd>주택</dd>
+                                <dt>최근결과</dt>
+                                <dd>유찰</dd>
+                                <dt>감정가</dt>
+                                <dd class="price">840,784,500원</dd>
+                            </dl>
+                            <dl class="f3">
+                                <dt>매각기일</dt>
+                                <dd>2026-06-16</dd>
+                                <dt>유찰횟수</dt>
+                                <dd>3회</dd>
+                                <dt>최저가</dt>
+                                <dd class="min price">(51%)430,482,000원</dd>
+                            </dl>
+                            <dl class="caution">
+                                <dt>주의사항</dt>
+                                <dd><span class="blue">[토지 95.2㎡ (28.8평)][건물 10평]</span>
+								<span class="red">[토지거래허가구역]</span></dd>
+                            </dl>
+                            <dl class="memo">
+                                <dt>메모내용</dt>
+                                <dd>
+                                    <textarea onclick="setTextareaHeight(this);" onkeyup="setTextareaHeight(this);">청량리 재개발</textarea>
+                                    <button>메모수정</button>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <!-- //물건 -->
+				                    <!-- 물건 -->
+                    <div class="con" style="page-break-inside: avoid; page-break-after: auto;">
+                        <div class="top">
+                            <strong onclick="view_product('A03','2025','51771','1');">[서울서부지방법원]</strong>
+                            <span onclick="view_product('A03','2025','51771','1');">2025 타경 51771</span>
+							                            <ul>
+                                <li>관심유형 &nbsp; 박태준</li>
+                                <li>중요도 &nbsp; <em class="star">★★★★</em></li>
+                                <li>조회 &nbsp; 253</li>
+								<li><a href="javascript:" onclick="delete_interest(13854619)">관심물건삭제</a></li>
+								<li></li>
+                            </ul>
+                            <input type="checkbox" class="movenum" name="inv_no" id="chk8" value="13854619"/><label for="chk8"></label>
+                        </div>
+                        <div class="pic">
+                            <a href="javascript:view_product('A03','2025','51771','1');" style="background:url(https://img1.speedauction.co.kr/new_gamimg/202603/A03/2025/51771/IMG_2650695.jpg) no-repeat;"></a>
+                            <p>입찰 3일전</p>
+                        </div>
+                        <div class="info">
+                            <dl class="location">
+                                <dt>소재지</dt>
+                                <dd>
+                                    <strong onclick="view_product('A03','2025','51771','1');" style="cursor:pointer display:block; float:left; width:530px;">서울특별시 은평구 구산동 22-28  5층501호</strong>
+                                    <div style="float:right;">
+										<a class="btn_map" href="javascript:view_product('A03','2025','51771','1');">물건보기</a>
+										<a class="btn_map" href="javascript:window.open('/pop/open/!/view/zoom?token=A03%7C2025%7C51771%7C1&type=daum_map','mapview','width=1000');">전자지도</a>	
+									</div>
+								</dd>
+                            </dl>
+                            <dl class="f3">
+                                <dt>물건용도</dt>
+                                <dd>다세대(빌라)</dd>
+                                <dt>최근결과</dt>
+                                <dd>유찰</dd>
+                                <dt>감정가</dt>
+                                <dd class="price">370,000,000원</dd>
+                            </dl>
+                            <dl class="f3">
+                                <dt>매각기일</dt>
+                                <dd>2026-06-16</dd>
+                                <dt>유찰횟수</dt>
+                                <dd>2회</dd>
+                                <dt>최저가</dt>
+                                <dd class="min price">(64%)236,800,000원</dd>
+                            </dl>
+                            <dl class="caution">
+                                <dt>주의사항</dt>
+                                <dd><span class="blue">[15.22평형]</span>
+								<span class="red">[선순위임차권,관련사건,HUG인수조건변경]</span></dd>
+                            </dl>
+                            <dl class="memo">
+                                <dt>메모내용</dt>
+                                <dd>
+                                    <textarea onclick="setTextareaHeight(this);" onkeyup="setTextareaHeight(this);">위치 평범</textarea>
+                                    <button>메모수정</button>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <!-- //물건 -->
+				                    <!-- 물건 -->
+                    <div class="con" style="page-break-inside: avoid; page-break-after: auto;">
+                        <div class="top">
+                            <strong onclick="view_product('E01','2024','58489','1');">[수원지방법원]</strong>
+                            <span onclick="view_product('E01','2024','58489','1');">2024 타경 58489</span>
+							                            <ul>
+                                <li>관심유형 &nbsp; </li>
+                                <li>중요도 &nbsp; <em class="">낮음</em></li>
+                                <li>조회 &nbsp; 874</li>
+								<li><a href="javascript:" onclick="delete_interest(13189584)">관심물건삭제</a></li>
+								<li></li>
+                            </ul>
+                            <input type="checkbox" class="movenum" name="inv_no" id="chk9" value="13189584"/><label for="chk9"></label>
+                        </div>
+                        <div class="pic">
+                            <a href="javascript:view_product('E01','2024','58489','1');" style="background:url(http://img1.speedauction.co.kr/new_gamimg/2025/E01/2024/58489/2839035.jpg) no-repeat;"></a>
+                            <p><span class='red'>[입찰인원17명]</span><br>2026-06-09 <span class='red'>매각</span><br>248,650,000원<br>(94%)</p>
+                        </div>
+                        <div class="info">
+                            <dl class="location">
+                                <dt>소재지</dt>
+                                <dd>
+                                    <strong onclick="view_product('E01','2024','58489','1');" style="cursor:pointer display:block; float:left; width:530px;">경기도 화성시 병점1로 82, 103동 10층1001호 (병점동,한신아파트)</strong>
+                                    <div style="float:right;">
+										<a class="btn_map" href="javascript:view_product('E01','2024','58489','1');">물건보기</a>
+										<a class="btn_map" href="javascript:window.open('/pop/open/!/view/zoom?token=E01%7C2024%7C58489%7C1&type=daum_map','mapview','width=1000');">전자지도</a>	
+									</div>
+								</dd>
+                            </dl>
+                            <dl class="f3">
+                                <dt>물건용도</dt>
+                                <dd>아파트</dd>
+                                <dt>최근결과</dt>
+                                <dd>매각</dd>
+                                <dt>감정가</dt>
+                                <dd class="price">265,000,000원</dd>
+                            </dl>
+                            <dl class="f3">
+                                <dt>매각기일</dt>
+                                <dd>2026-06-09</dd>
+                                <dt>유찰횟수</dt>
+                                <dd>1회</dd>
+                                <dt>최저가</dt>
+                                <dd class="min price">(70%)185,500,000원</dd>
+                            </dl>
+                            <dl class="caution">
+                                <dt>주의사항</dt>
+                                <dd><span class="blue">[토지 26.27㎡ (7.95평)][건물 18.09평]</span>
+								<span class="red">[관련사건]</span></dd>
+                            </dl>
+                            <dl class="memo">
+                                <dt>메모내용</dt>
+                                <dd>
+                                    <textarea onclick="setTextareaHeight(this);" onkeyup="setTextareaHeight(this);">오세일님</textarea>
+                                    <button>메모수정</button>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <!-- //물건 -->
+				                    <!-- 물건 -->
+                    <div class="con" style="page-break-inside: avoid; page-break-after: auto;">
+                        <div class="top">
+                            <strong onclick="view_product('D02','2024','80070','1');">[의정부지방법원 고양지원]</strong>
+                            <span onclick="view_product('D02','2024','80070','1');">2024 타경 80070</span>
+							                            <ul>
+                                <li>관심유형 &nbsp; 밀착케어 카톡방</li>
+                                <li>중요도 &nbsp; <em class="">낮음</em></li>
+                                <li>조회 &nbsp; 520</li>
+								<li><a href="javascript:" onclick="delete_interest(13501459)">관심물건삭제</a></li>
+								<li></li>
+                            </ul>
+                            <input type="checkbox" class="movenum" name="inv_no" id="chk10" value="13501459"/><label for="chk10"></label>
+                        </div>
+                        <div class="pic">
+                            <a href="javascript:view_product('D02','2024','80070','1');" style="background:url(http://img1.speedauction.co.kr/auction_img/202505/D02/2024/80070/202505_AUTO_1737365.jpg) no-repeat;"></a>
+                            <p>입찰 4일전</p>
+                        </div>
+                        <div class="info">
+                            <dl class="location">
+                                <dt>소재지</dt>
+                                <dd>
+                                    <strong onclick="view_product('D02','2024','80070','1');" style="cursor:pointer display:block; float:left; width:530px;">경기도 파주시 금촌동 1019 서원마을뜨란채 711동 2층204호</strong>
+                                    <div style="float:right;">
+										<a class="btn_map" href="javascript:view_product('D02','2024','80070','1');">물건보기</a>
+										<a class="btn_map" href="javascript:window.open('/pop/open/!/view/zoom?token=D02%7C2024%7C80070%7C1&type=daum_map','mapview','width=1000');">전자지도</a>	
+									</div>
+								</dd>
+                            </dl>
+                            <dl class="f3">
+                                <dt>물건용도</dt>
+                                <dd>아파트</dd>
+                                <dt>최근결과</dt>
+                                <dd>유찰</dd>
+                                <dt>감정가</dt>
+                                <dd class="price">303,000,000원</dd>
+                            </dl>
+                            <dl class="f3">
+                                <dt>매각기일</dt>
+                                <dd>2026-06-17</dd>
+                                <dt>유찰횟수</dt>
+                                <dd>9회</dd>
+                                <dt>최저가</dt>
+                                <dd class="min price">(70%)212,100,000원</dd>
+                            </dl>
+                            <dl class="caution">
+                                <dt>주의사항</dt>
+                                <dd><span class="blue">[25.65평형]</span>
+								<span class="red">[대항력있는임차인,선순위임차권,관련사건,HUG인수조건변경]</span></dd>
+                            </dl>
+                            <dl class="memo">
+                                <dt>메모내용</dt>
+                                <dd>
+                                    <textarea onclick="setTextareaHeight(this);" onkeyup="setTextareaHeight(this);"><깡통 물건>
+파주 금촌 주공 선순위 임차인 물건
+1100세대  거래회전율 좋음
+
+매도가능금액 2.75~2.8억 수준
+최저가 1억 300..
+
+특수물건이지만 실질 우선변제권 확보된 채권자이기에 배당에도 문제 없음
+수익성 평가 후 접근해보면 좋을 듯
+
+25년 10월 27일 버전
+
+1. 매매가 3억 수준으로 팔 수 있는가? (인테리어 유무 검증)
+2. 입찰가 2.83억이면 배당까지 문제가 전혀 없음
+3. 수익은 적더라도 빠른 엑시트가 가능할까? 
+
+12월 26일자
+매매가 3억 수준 형성 - 호가 - 인테리어 안된 기준
+보증금 2.8억 + 경매비용 300 = 2.83억
+
+입찰가 재산정 필요</textarea>
+                                    <button>메모수정</button>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <!-- //물건 -->
+				                    <!-- 물건 -->
+                    <div class="con" style="page-break-inside: avoid; page-break-after: auto;">
+                        <div class="top">
+                            <strong onclick="view_product('A05','2025','822','1');">[서울북부지방법원]</strong>
+                            <span onclick="view_product('A05','2025','822','1');">2025 타경 822</span>
+							                            <ul>
+                                <li>관심유형 &nbsp; 박태준</li>
+                                <li>중요도 &nbsp; <em class="star">★★★★</em></li>
+                                <li>조회 &nbsp; 491</li>
+								<li><a href="javascript:" onclick="delete_interest(13854692)">관심물건삭제</a></li>
+								<li></li>
+                            </ul>
+                            <input type="checkbox" class="movenum" name="inv_no" id="chk11" value="13854692"/><label for="chk11"></label>
+                        </div>
+                        <div class="pic">
+                            <a href="javascript:view_product('A05','2025','822','1');" style="background:url(https://img1.speedauction.co.kr/new_gamimg/202602/A05/2025/822/IMG_2520388.jpg) no-repeat;"></a>
+                            <p><span class='red'>[입찰인원2명]</span><br>2026-06-09 <span class='red'>매각</span><br>588,500,000원<br>(91%)</p>
+                        </div>
+                        <div class="info">
+                            <dl class="location">
+                                <dt>소재지</dt>
+                                <dd>
+                                    <strong onclick="view_product('A05','2025','822','1');" style="cursor:pointer display:block; float:left; width:530px;">서울특별시 노원구 공릉동 604-11 대동아파트 101동 6층604호</strong>
+                                    <div style="float:right;">
+										<a class="btn_map" href="javascript:view_product('A05','2025','822','1');">물건보기</a>
+										<a class="btn_map" href="javascript:window.open('/pop/open/!/view/zoom?token=A05%7C2025%7C822%7C1&type=daum_map','mapview','width=1000');">전자지도</a>	
+									</div>
+								</dd>
+                            </dl>
+                            <dl class="f3">
+                                <dt>물건용도</dt>
+                                <dd>아파트</dd>
+                                <dt>최근결과</dt>
+                                <dd>매각</dd>
+                                <dt>감정가</dt>
+                                <dd class="price">650,000,000원</dd>
+                            </dl>
+                            <dl class="f3">
+                                <dt>매각기일</dt>
+                                <dd>2026-06-09</dd>
+                                <dt>유찰횟수</dt>
+                                <dd>2회</dd>
+                                <dt>최저가</dt>
+                                <dd class="min price">(80%)520,000,000원</dd>
+                            </dl>
+                            <dl class="caution">
+                                <dt>주의사항</dt>
+                                <dd><span class="blue">[25.7평형]</span>
+								<span class="red">[대항력있는임차인]</span></dd>
+                            </dl>
+                            <dl class="memo">
+                                <dt>메모내용</dt>
+                                <dd>
+                                    <textarea onclick="setTextareaHeight(this);" onkeyup="setTextareaHeight(this);">위치 좋은 구축</textarea>
+                                    <button>메모수정</button>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <!-- //물건 -->
+				                    <!-- 물건 -->
+                    <div class="con" style="page-break-inside: avoid; page-break-after: auto;">
+                        <div class="top">
+                            <strong onclick="view_product('A05','2025','12959','1');">[서울북부지방법원]</strong>
+                            <span onclick="view_product('A05','2025','12959','1');">2025 타경 12959</span>
+							                            <ul>
+                                <li>관심유형 &nbsp; 실거주고려</li>
+                                <li>중요도 &nbsp; <em class="">낮음</em></li>
+                                <li>조회 &nbsp; 503</li>
+								<li><a href="javascript:" onclick="delete_interest(13850131)">관심물건삭제</a></li>
+								<li></li>
+                            </ul>
+                            <input type="checkbox" class="movenum" name="inv_no" id="chk12" value="13850131"/><label for="chk12"></label>
+                        </div>
+                        <div class="pic">
+                            <a href="javascript:view_product('A05','2025','12959','1');" style="background:url(https://img1.speedauction.co.kr/new_gamimg/202604/A05/2025/12959/B000213_20250130012959_2.jpg) no-repeat;"></a>
+                            <p><span class='red'>[입찰인원17명]</span><br>2026-06-09 <span class='red'>매각</span><br>1,031,000,000원<br>(104%)</p>
+                        </div>
+                        <div class="info">
+                            <dl class="location">
+                                <dt>소재지</dt>
+                                <dd>
+                                    <strong onclick="view_product('A05','2025','12959','1');" style="cursor:pointer display:block; float:left; width:530px;">서울특별시 도봉구 창동 808 동아청솔아파트 114동 6층 605호</strong>
+                                    <div style="float:right;">
+										<a class="btn_map" href="javascript:view_product('A05','2025','12959','1');">물건보기</a>
+										<a class="btn_map" href="javascript:window.open('/pop/open/!/view/zoom?token=A05%7C2025%7C12959%7C1&type=daum_map','mapview','width=1000');">전자지도</a>	
+									</div>
+								</dd>
+                            </dl>
+                            <dl class="f3">
+                                <dt>물건용도</dt>
+                                <dd>아파트</dd>
+                                <dt>최근결과</dt>
+                                <dd>매각</dd>
+                                <dt>감정가</dt>
+                                <dd class="price">989,000,000원</dd>
+                            </dl>
+                            <dl class="f3">
+                                <dt>매각기일</dt>
+                                <dd>2026-06-09</dd>
+                                <dt>유찰횟수</dt>
+                                <dd>1회</dd>
+                                <dt>최저가</dt>
+                                <dd class="min price">(80%)791,200,000원</dd>
+                            </dl>
+                            <dl class="caution">
+                                <dt>주의사항</dt>
+                                <dd><span class="blue">[25.7평형]</span>
+								</dd>
+                            </dl>
+                            <dl class="memo">
+                                <dt>메모내용</dt>
+                                <dd>
+                                    <textarea onclick="setTextareaHeight(this);" onkeyup="setTextareaHeight(this);">서울 실거주 고려</textarea>
+                                    <button>메모수정</button>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <!-- //물건 -->
+				                    <!-- 물건 -->
+                    <div class="con" style="page-break-inside: avoid; page-break-after: auto;">
+                        <div class="top">
+                            <strong onclick="view_product('H01','2025','503955','1');">[대전지방법원]</strong>
+                            <span onclick="view_product('H01','2025','503955','1');">2025 타경 503955</span>
+							                            <ul>
+                                <li>관심유형 &nbsp; 컨설팅</li>
+                                <li>중요도 &nbsp; <em class="">낮음</em></li>
+                                <li>조회 &nbsp; 283</li>
+								<li><a href="javascript:" onclick="delete_interest(13841770)">관심물건삭제</a></li>
+								<li></li>
+                            </ul>
+                            <input type="checkbox" class="movenum" name="inv_no" id="chk13" value="13841770"/><label for="chk13"></label>
+                        </div>
+                        <div class="pic">
+                            <a href="javascript:view_product('H01','2025','503955','1');" style="background:url(https://img1.speedauction.co.kr/new_gamimg/202603/H01/2025/503955/IMG_2668906.jpg) no-repeat;"></a>
+                            <p>입찰 4일전</p>
+                        </div>
+                        <div class="info">
+                            <dl class="location">
+                                <dt>소재지</dt>
+                                <dd>
+                                    <strong onclick="view_product('H01','2025','503955','1');" style="cursor:pointer display:block; float:left; width:530px;">대전광역시 서구 월평동 223 무궁화아파트 202동 7층703호</strong>
+                                    <div style="float:right;">
+										<a class="btn_map" href="javascript:view_product('H01','2025','503955','1');">물건보기</a>
+										<a class="btn_map" href="javascript:window.open('/pop/open/!/view/zoom?token=H01%7C2025%7C503955%7C1&type=daum_map','mapview','width=1000');">전자지도</a>	
+									</div>
+								</dd>
+                            </dl>
+                            <dl class="f3">
+                                <dt>물건용도</dt>
+                                <dd>아파트</dd>
+                                <dt>최근결과</dt>
+                                <dd>재진행</dd>
+                                <dt>감정가</dt>
+                                <dd class="price">522,000,000원</dd>
+                            </dl>
+                            <dl class="f3">
+                                <dt>매각기일</dt>
+                                <dd>2026-06-17</dd>
+                                <dt>유찰횟수</dt>
+                                <dd>1회</dd>
+                                <dt>최저가</dt>
+                                <dd class="min price">(100%)522,000,000원</dd>
+                            </dl>
+                            <dl class="caution">
+                                <dt>주의사항</dt>
+                                <dd><span class="blue">[30.83평형]</span>
+								<span class="red">[대항력있는임차인]</span></dd>
+                            </dl>
+                            <dl class="memo">
+                                <dt>메모내용</dt>
+                                <dd>
+                                    <textarea onclick="setTextareaHeight(this);" onkeyup="setTextareaHeight(this);">보증금 미상 선순위 임차인
+
+대형평수 1년 보유 전략 접근 필요</textarea>
+                                    <button>메모수정</button>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <!-- //물건 -->
+				                    <!-- 물건 -->
+                    <div class="con" style="page-break-inside: avoid; page-break-after: auto;">
+                        <div class="top">
+                            <strong onclick="view_product('C01','2024','505148','1');">[인천지방법원]</strong>
+                            <span onclick="view_product('C01','2024','505148','1');">2024 타경 505148</span>
+							                            <ul>
+                                <li>관심유형 &nbsp; </li>
+                                <li>중요도 &nbsp; <em class="">낮음</em></li>
+                                <li>조회 &nbsp; 334</li>
+								<li><a href="javascript:" onclick="delete_interest(13228140)">관심물건삭제</a></li>
+								<li></li>
+                            </ul>
+                            <input type="checkbox" class="movenum" name="inv_no" id="chk14" value="13228140"/><label for="chk14"></label>
+                        </div>
+                        <div class="pic">
+                            <a href="javascript:view_product('C01','2024','505148','1');" style="background:url(http://img1.speedauction.co.kr/new_gamimg/2025/C01/2024/505148/1440234.jpg) no-repeat;"></a>
+                            <p>입찰 5일전</p>
+                        </div>
+                        <div class="info">
+                            <dl class="location">
+                                <dt>소재지</dt>
+                                <dd>
+                                    <strong onclick="view_product('C01','2024','505148','1');" style="cursor:pointer display:block; float:left; width:530px;">인천광역시 남동구 논현동 564-1 논현주공아파트 102동 16층1601호</strong>
+                                    <div style="float:right;">
+										<a class="btn_map" href="javascript:view_product('C01','2024','505148','1');">물건보기</a>
+										<a class="btn_map" href="javascript:window.open('/pop/open/!/view/zoom?token=C01%7C2024%7C505148%7C1&type=daum_map','mapview','width=1000');">전자지도</a>	
+									</div>
+								</dd>
+                            </dl>
+                            <dl class="f3">
+                                <dt>물건용도</dt>
+                                <dd>아파트</dd>
+                                <dt>최근결과</dt>
+                                <dd>재진행</dd>
+                                <dt>감정가</dt>
+                                <dd class="price">249,000,000원</dd>
+                            </dl>
+                            <dl class="f3">
+                                <dt>매각기일</dt>
+                                <dd>2026-06-18</dd>
+                                <dt>유찰횟수</dt>
+                                <dd>1회</dd>
+                                <dt>최저가</dt>
+                                <dd class="min price">(100%)249,000,000원</dd>
+                            </dl>
+                            <dl class="caution">
+                                <dt>주의사항</dt>
+                                <dd><span class="blue">[17.89평형]</span>
+								</dd>
+                            </dl>
+                            <dl class="memo">
+                                <dt>메모내용</dt>
+                                <dd>
+                                    <textarea onclick="setTextareaHeight(this);" onkeyup="setTextareaHeight(this);">논현주공 좋은물건</textarea>
+                                    <button>메모수정</button>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <!-- //물건 -->
+				                    <!-- 물건 -->
+                    <div class="con" style="page-break-inside: avoid; page-break-after: auto;">
+                        <div class="top">
+                            <strong onclick="view_product('K01','2025','31220','1');">[전주지방법원]</strong>
+                            <span onclick="view_product('K01','2025','31220','1');">2025 타경 31220</span>
+							                            <ul>
+                                <li>관심유형 &nbsp; 컨설팅</li>
+                                <li>중요도 &nbsp; <em class="">낮음</em></li>
+                                <li>조회 &nbsp; 642</li>
+								<li><a href="javascript:" onclick="delete_interest(13773215)">관심물건삭제</a></li>
+								<li></li>
+                            </ul>
+                            <input type="checkbox" class="movenum" name="inv_no" id="chk15" value="13773215"/><label for="chk15"></label>
+                        </div>
+                        <div class="pic">
+                            <a href="javascript:view_product('K01','2025','31220','1');" style="background:url(https://img1.speedauction.co.kr/new_gamimg/202602/K01/2025/31220/IMG_2557998.jpg) no-repeat;"></a>
+                            <p><span class='red'>[입찰인원1명]</span><br>2026-06-08 <span class='red'>매각</span><br>20,550,000원<br>(73%)</p>
+                        </div>
+                        <div class="info">
+                            <dl class="location">
+                                <dt>소재지</dt>
+                                <dd>
+                                    <strong onclick="view_product('K01','2025','31220','1');" style="cursor:pointer display:block; float:left; width:530px;">전북특별자치도 전주시 완산구 평화동2가 336-6 현대아파트 105동 2층208호</strong>
+                                    <div style="float:right;">
+										<a class="btn_map" href="javascript:view_product('K01','2025','31220','1');">물건보기</a>
+										<a class="btn_map" href="javascript:window.open('/pop/open/!/view/zoom?token=K01%7C2025%7C31220%7C1&type=daum_map','mapview','width=1000');">전자지도</a>	
+									</div>
+								</dd>
+                            </dl>
+                            <dl class="f3">
+                                <dt>물건용도</dt>
+                                <dd>아파트</dd>
+                                <dt>최근결과</dt>
+                                <dd>매각</dd>
+                                <dt>감정가</dt>
+                                <dd class="price">28,300,000원</dd>
+                            </dl>
+                            <dl class="f3">
+                                <dt>매각기일</dt>
+                                <dd>2026-06-08</dd>
+                                <dt>유찰횟수</dt>
+                                <dd>2회</dd>
+                                <dt>최저가</dt>
+                                <dd class="min price">(49%)13,867,000원</dd>
+                            </dl>
+                            <dl class="caution">
+                                <dt>주의사항</dt>
+                                <dd><span class="blue">[18.14평형]</span>
+								<span class="red">[지분매각,대항력있는임차인,우선매수신고가능,관련사건]</span></dd>
+                            </dl>
+                            <dl class="memo">
+                                <dt>메모내용</dt>
+                                <dd>
+                                    <textarea onclick="setTextareaHeight(this);" onkeyup="setTextareaHeight(this);">전주 지분 1/5
+
+가족 상속분으로 임차인은 아마 할머니가 존재하는 것으로 보임
+인테리어 안된 상태 
+
+한번 검토해보기</textarea>
+                                    <button>메모수정</button>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <!-- //물건 -->
+								<div class="list_top hide-on-print">
+					<ul>
+						<li><a href="javascript:" class="btn_blue">전체선택</a></li><!-- 전체선택 / 전체선택해제 토글기능으로 작업해주세요-->
+						<li><a href="javascript:" class="btn_gray">선택삭제</a></li>
+					</ul>
+				</div>
+					<!-- 페이징 -->
+															
+		
+			<!-- 페이징 -->
+			<div class="con_paging">
+				<ul data-var="1,1,10,70">
+					<li class="arr start"><a href="javascript:reload_page(1)">처음</a></li>
+																  
+						<li class="sel"><a href="javascript:;">1</a></li>
+						  
+						<li class=""><a href="javascript:reload_page(2);">2</a></li>
+						  
+						<li class=""><a href="javascript:reload_page(3);">3</a></li>
+						  
+						<li class=""><a href="javascript:reload_page(4);">4</a></li>
+						  
+						<li class=""><a href="javascript:reload_page(5);">5</a></li>
+						  
+						<li class=""><a href="javascript:reload_page(6);">6</a></li>
+						  
+						<li class=""><a href="javascript:reload_page(7);">7</a></li>
+						  
+						<li class=""><a href="javascript:reload_page(8);">8</a></li>
+						  
+						<li class=""><a href="javascript:reload_page(9);">9</a></li>
+						  
+						<li class=""><a href="javascript:reload_page(10);">10</a></li>
+																<li class="arr next"><a href="javascript:reload_page(11)">다음</a></li>					<li class="arr end"><a href="javascript:reload_page(70)">마지막</a></li>
+				</ul>
+			</div>
+			<!-- //페이징 -->
+		
+<script>
+	function reload_page(page){
+		//let query_string = location.search
+		$("#page").val(page)
+		$("#searchform").submit()
+	}
+
+	function set_list_view(cnt){
+		localStorage.setItem('listViewCnt',cnt)
+		$("#page").val(1)
+		$("input[name='list_view_cnt']").val(cnt)
+		$("#searchform").submit()
+	}
+
+	$(document).ready(function(){
+		listCnt = localStorage.getItem('listViewCnt')
+		if(listCnt == 15 || listCnt == 25){
+			listCnt = 30
+		}
+		$("input[name='list_view_cnt']").val(listCnt)
+		$("#listSelBox > option").each(function(val,el){
+			if(el.value == listCnt){
+				el.selected = true
+			}
+		})
+
+			})
+</script>                    <!-- //페이징 -->
+                </div>
+                <!-- //리스트 -->
+
+                
+            </article>
+        </section>
+        <!-- //서브컨텐츠 -->
+    </section>
+
+</div>
+<!-- //서브레이아웃 --> 
+
+
+<script>
+	$(document).ready(function(){
+		$("textarea").each(function(){
+			$(this).trigger('click')
+		})
+	})
+
+	function setTextareaHeight(el){		
+		const targetTextarea = el;
+		if(targetTextarea.scrollHeight > targetTextarea.clientHeight){ //textarea height 확장
+			targetTextarea.style.height= targetTextarea.scrollHeight + "px";
+		}else{ //textarea height 축소
+			targetTextarea.style.height= (targetTextarea.scrollHeight-18) + "px";
+		}
+	}
+	
+	//단일 삭제 
+	function delete_interest(no){
+		Confirm("정말 삭제하시겠습니까?<br>삭제하면 복구할 수 없습니다.","관심물건삭제",null,function(){
+			let param = {
+				job: "del",
+				inv_no: []
+			}
+			param.inv_no[0] = no
+
+			$.post("/ajax?html&ajax.id=member@myauction_inv_no.ajax", param, function(data) {
+				Alert(data, null, "success", setTimeout(function(){
+					location.reload()
+				},700))
+			})
+		})
+	}
+
+	function do_ajax() {
+	}
+
+	function change_court(code) {
+		var resultcode = "99";
+		var list_view_cnt = $("input[name='list_view_cnt']").val()
+		location.href = "/member/sub/!/mypage/01?courtno="+ code + "&list_view_cnt=" + list_view_cnt + (resultcode ? "&lastresultcode="+ resultcode : "");
+	}
+
+	$("select[name=gubun_in]").on("change", function(e){
+		e.preventDefault();
+		let selected_val = $("select[name=gubun_in] option:selected").val(); 
+		if ( selected_val ) {
+			$("input[name=gubun]").val( selected_val );
+			$("select[name=gubun_my] option").eq(0).prop("selected", true);
+		}
+	});
+
+	$("select[name=gubun_my]").on("change", function(e){
+		e.preventDefault();
+		let selected_val = $("select[name=gubun_my] option:selected").val(); 
+		if ( selected_val ) {
+			$("input[name=gubun]").val( selected_val );
+			$("select[name=gubun_in] option").eq(0).prop("selected", true);
+		}
+	});
+
+	// 메모수정
+	$(".memo button").on("click", function(e){
+		e.preventDefault();
+		$.post("/ajax?html&ajax.id=member@myauction_inv_no.ajax", {
+			job : 'me_wrt',
+			serino : $(this).closest(".con").find("input:checkbox").val(),
+			memo : $(this).siblings("textarea").val(),
+		}, function(output) {
+			if (output){
+				alert(output);
+			}
+			location.reload();
+		});
+	});
+
+	// 옴기실 폴더 선택
+	$("#move_gubun").on("change", function(e){
+		e.preventDefault();
+		let selected_val = $("#move_gubun option:selected").val();
+		let selected_chain = '';
+
+		if ( selected_val && $(".movenum").is(":checked")) {
+			$.each($(".movenum:checked"), function(idx, item){
+				selected_chain += (selected_chain!=''? "||":"") + item.value;
+			});
+		} else {
+			$("#move_gubun option").eq(0).prop("selected", true);
+			Alert("최소 1건 이상 선택해야만 이동 가능합니다.");
+			return false;
+		}
+			//console.log(selected_chain);
+		if ( selected_chain ) {
+			$.post("/ajax?html&ajax.id=member@myauction_move_gubun.ajax", {
+				mgubun : selected_val,
+				mserino : selected_chain
+			},function(data) {
+				alert(data);
+				location.reload();
+			});
+		}
+	});
+
+	// 정렬
+	$(".orderby").on("change", function(e){
+		e.preventDefault()
+		$("input[name=orderby]").val($(this).val())
+
+		$.post("/ajax?html&ajax.id=member@configSetting.ajax", {
+			key : 'interestAuctionSort',
+			val : $(this).val()
+		},function(data) {
+			$('a.blue:contains("검색하기")').trigger('click')
+		});
+	});
+
+	// 전체선택
+	$(".btn_blue").on('click', function(e){
+		e.preventDefault();
+		if ($("input:checkbox").is(':checked')) {
+			$("input:checkbox").toggle().prop("checked", false);
+		} else {
+			$("input:checkbox").toggle().prop("checked", true);
+		}
+		return false;
+	});
+
+
+	// 선택삭제
+	$(".btn_gray").on("click", function(e){
+		e.preventDefault();
+		if ($("input:checkbox").is(':checked')) {
+			Confirm("정말 삭제하시겠습니까?<br>삭제하면 복구할 수 없습니다.","선택삭제",null,function(){
+				let param = {
+					job: "del",
+					inv_no: []
+				};
+				$.each($("input[type=checkbox]:checked"), function(idx,item){
+					//console.log(idx);
+					//console.log(item.value);
+					param.inv_no[idx] = item.value;
+				});
+				$.post("/ajax?html&ajax.id=member@myauction_inv_no.ajax", param, function(data) {
+					Alert(data, null, "success", setTimeout(function(){
+						location.reload();
+					},1500));
+				});
+			});
+		} else {
+			Alert("최소 1건이상 선택해야만 삭제가능합니다.", "선택삭제");
+			return false;
+		}
+	});
+
+	// 검색하기 btn
+	$('a.blue').click(function() {
+		$("#lastresultcode_new").val('');
+		$("#usagecode_new").val('');
+//		$('#auction_result').html( loading_bar() ).delay(3000);
+//		scroll_top('#auction_result', 45);
+
+		//var params = $(searchform).serialize();
+//		const params = $('#searchform').serializeArray().filter(isNotEmpty);
+//		console.log(params);
+//		speedjs.ajax_event('post', 'search@auction_result.ajax', params, '#auction_result');
+		$("#searchform").submit();
+		return false;
+	});
+
+	//주소
+	var addr_url = SA_URL + speedjs.to_ajax('html','main@address.ajax');
+	var addr1 = "";
+	var addr2 = "";
+	var addr3 = "";
+	var addr_view_id = '';
+	var addr_params = {};
+
+		if (addr1) {
+			$("#addr1").val(addr1);
+
+			addr_view_id = '#addr2';
+			addr_params = {
+				'addr1': addr1,
+				'addr1_2': addr2,
+			};
+			//console.log(addr_params);
+			$(addr_view_id).load(addr_url, addr_params);
+		}
+		if (addr2) {
+			$("#addr2").val(addr2);
+
+			addr_view_id = '#addr3';
+			addr_params = {
+				'addr2': addr2,
+				'addr2_3': addr3,
+			};
+			$(addr_view_id).load(addr_url, addr_params);
+		}
+		if (addr3) {
+			$("#addr3").val(addr3);
+		}
+</script>
+
+<!-- 하단 -->
+<aside id="side" class="hide-on-print">
+    <a class="blue" href="javascript:view_recently();">최근<br />열람</a>
+    <a class="blue" href="#" onclick="window.open('/pop/open/!/view/sitereport', '사이트 오류신고', 'width=500,height=600')">사이트<br />오류신고</a>
+                <a class="red" href="https://lgedadam.com/" target="_blank">LG몰<br />바로가기</a> 
+        <a id="btn_top" href="javascript:window.scrollTo(0,0);">TOP</a>
+
+</aside>
+
+<article id="bottom" class="hide-on-print">
+    <div class="wrap">
+        <!-- 고객센터 -->
+        <div class="call">
+            <h2>고객센터 1644-2072</h2>
+            <strong>09:00 ~ 18:00 (토&middot;일&middot;공휴일 휴무)</strong>
+            <span>speedauction1@naver.com</span>
+        </div>
+        <!-- //고객센터 -->
+
+        <!-- 계좌안내 -->
+        <div class="account">
+            <ul>
+                <li class="kb">
+                    <em></em>
+                    <span>국민</span><strong>599701-04-123244</strong>
+                </li>
+                <li class="nh">
+                    <em></em>
+                    <span>농협</span><strong>794-01-129225</strong>
+                </li>
+                <li class="wr">
+                    <em></em>
+                    <span>우리</span><strong>1005-901-269243</strong>
+                </li>
+            </ul>
+        </div>
+        <!-- //계좌안내 -->
+
+        <!-- 서비스 -->
+        <div class="service">
+            <img src="/resources/dt/images/common/icon_bottom.jpg" alt="" />
+        </div>
+        <!-- //서비스 -->
+    </div>
+</article>
+
+<div id="mobileLinkBox" onclick="location.href='https://mobile.speedauction.co.kr';" >
+    <a href="https://mobile.speedauction.co.kr" target="_self">
+        모바일 버전으로 보기
+    </a>
+</div>
+
+<footer class="hide-on-print">
+    <div class="wrap">
+        <ul class="nav">
+            <li><a href="/cscenter/sub/!/site/10">회사소개</a></li>
+            <li><a href="/cscenter/sub/!/site/15">지사안내</a></li>
+            <li><a href="/forum/sub/!/franchise/01">가맹점안내</a></li>
+            <li><a href="/cscenter/sub/!/site/01">사이트이용안내</a></li>
+            <li><a href="/member/sub/!/mypage/09">요금결제</a></li>
+            <li><a href="/cscenter/sub/!/site/03">이용약관</a></li>
+            <li class="b"><a href="/cscenter/sub/!/site/02">개인정보처리방침</a></li>
+                        <li><a href="/cscenter/sub/!/site/16">사업제휴</a></li>
+                        <li style="color:#eee;"><a href="https://mobile.speedauction.co.kr" target="_self">모바일 버전 (OPEN)</a></li>
+        </ul>
+        <p>서울사무소 : 서울특별시 금천구 벚꽃로 286(가산동) 1201호 | 대구사무소 : 대구시 북구 대현로 44 다담빌딩 4층 | 대표이사 : 이원관<br />
+            사업자등록번호 : 503-81-71911 | 통신판매신고번호 : 제2023-대구북구-1286호 | 개인정보보호책임자 박상길 (speedauction1@naver.com)<br />
+            상호명 : (주)스피드옥션 | 고객상담센터 : 1644-2072 | 팩스 : 02-2026-7105 | 상표출원번호 : 1-2006-020210-0 | <a href="javascript:" style="color:#aaa" onclick="window.open('/pub/images/main/license.gif','viewer','width=550,height=770');">프로그램등록증</a></p>
+
+        <cite>COPYRIGHT &copy; SPEED AUCTION. ALL RIGHTS RESERVED.</cite>
+
+        <ul class="sns">
+            <li class="blog">
+                <a href="https://blog.naver.com/speedauction1" target="_blank">네이버블로그</a>
+            </li>
+            <li class="cafe">
+                <a href="https://cafe.naver.com/speedauction1" target="_blank">네이버카페</a>
+            </li>
+            <li class="fbook">
+                <a href="https://www.facebook.com/speedauction1/" target="_blank">페이스북</a>
+            </li>
+            <li class="insta">
+                <a href="https://www.instagram.com/speedauction_1/" target="_blank">인스타그램</a>
+            </li>
+        </ul>
+    </div>
+</footer>
+<!-- //하단 -->
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.3/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.3/jquery-ui.min.js"></script>
+<style>
+.ui-autocomplete {
+  max-height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: auto;
+  font-size: small;
+}
+.ui-menu-item div.ui-state-hover,
+.ui-menu-item div.ui-state-active {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #f6B664;
+  border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  background-image: none;
+  border:none;
+}
+</style>
+<script src="/js/autocomplete.js"></script><!-- autocomplete -->
+
+<script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
+<script type="text/javascript">
+if(!wcs_add) var wcs_add = {};
+wcs_add["wa"] = "75a13271895978";
+if(window.wcs) {
+  wcs_do();
+}
+</script>
+</body>
+</html>
