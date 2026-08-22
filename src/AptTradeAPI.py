@@ -115,72 +115,104 @@ def fetch_apt_trade(service_key: str, lawd_cd: str, deal_ym: str,
     }
 
 
+# 구 단위 조회 결과 캐시: {(lawd_cd, deal_ym): items}
+# 같은 구/동에 속한 여러 법원경매 물건을 배치로 매칭할 때(예: CourtTradeMatcher.match_batch)
+# 동일한 (법정동코드, 계약년월) 조합을 반복 조회하는 것을 피하기 위함.
+# 2026-08-22: 마이옥션 3사 교차검증 작업 중 한 배치(246건) 매칭이 25분 넘게 걸려서 추가함.
+_TRADE_CACHE: dict = {}
+
+
 def get_trade_prices(service_key: str, gungu: str, dong: str,
-                     months_back: int = 6, area_tolerance: float = 5.0) -> pd.DataFrame:
+                     months_back: int = 6, area_tolerance: float = 5.0,
+                     use_cache: bool = True) -> pd.DataFrame:
     """
     특정 동의 최근 실거래가 조회
-    
+
     Args:
         service_key: API 키
         gungu: 구군명 (예: '성북구')
         dong: 동명 (예: '정릉동') - API에는 없지만 필터용
         months_back: 조회할 과거 개월 수
         area_tolerance: 면적 매칭 허용 오차
-    
+        use_cache: True(기본값)면 (법정동코드, 계약년월) 단위로 프로세스 내
+            메모리 캐시를 사용 - 같은 구의 다른 동/사건을 연달아 조회할 때
+            중복 API 호출을 없애준다. 장시간 실행되는 배치에서 캐시가
+            무한정 쌓이는 게 우려되면 False로 끄거나 `clear_trade_cache()` 호출.
+
     Returns:
         실거래가 DataFrame
+
+    성능 참고 (2026-08-22): 국토부 API는 기본 100건/페이지라 강남구 등
+    거래량 많은 구는 한 달에 300~500건씩 나와 페이지를 여러 번 나눠 호출해야
+    했다. `numOfRows=1000`으로 올리면 실측상 한 달치가 보통 한 번의 호출로
+    끝난다 (한 달에 1000건 넘는 극단적 케이스만 추가 페이지 필요) - 이 함수는
+    이제 첫 호출부터 numOfRows=1000을 사용한다.
     """
     lawd_cd = get_lawd_cd(gungu)
     if not lawd_cd:
         raise ValueError(f'구군 코드를 찾을 수 없음: {gungu}')
-    
+
+    NUM_OF_ROWS = 1000
     all_items = []
     today = datetime.now()
-    
+
     for i in range(months_back):
         # 해당 월 계산
         ym = today - timedelta(days=30 * i)
         deal_ym = ym.strftime('%Y%m')
-        
+        cache_key = (lawd_cd, deal_ym)
+
+        if use_cache and cache_key in _TRADE_CACHE:
+            all_items.extend(_TRADE_CACHE[cache_key])
+            continue
+
         print(f'  조회: {deal_ym} (법정동코드: {lawd_cd})...')
-        
-        # 1페이지 조회
-        result = fetch_apt_trade(service_key, lawd_cd, deal_ym)
-        
+
+        # 1페이지 조회 (대용량 페이지 크기로 대부분 한 번에 끝남)
+        result = fetch_apt_trade(service_key, lawd_cd, deal_ym, num_of_rows=NUM_OF_ROWS)
+
         if 'error' in result:
             print(f'    오류: {result["error"]}')
+            if use_cache:
+                _TRADE_CACHE[cache_key] = []
             continue
-        
+
         items = result.get('items', [])
         total = result.get('totalCount', 0)
         print(f'    {len(items)}건 (전체: {total}건)')
-        
-        # 전체 페이지 조회
+
+        # 한 달에 NUM_OF_ROWS건을 초과하는 극단적 케이스에 대한 안전망
         page = 1
-        while len(items) < total and len(items) >= result.get('numOfRows', 100) * page:
+        while len(items) < total and len(items) >= NUM_OF_ROWS * page:
             page += 1
-            result = fetch_apt_trade(service_key, lawd_cd, deal_ym, page_no=page)
+            result = fetch_apt_trade(service_key, lawd_cd, deal_ym, page_no=page, num_of_rows=NUM_OF_ROWS)
             if 'error' not in result:
                 items.extend(result.get('items', []))
-            time.sleep(0.3)
-        
+            time.sleep(0.2)
+
+        if use_cache:
+            _TRADE_CACHE[cache_key] = items
         all_items.extend(items)
-        time.sleep(0.5)
-    
+
     if not all_items:
         return pd.DataFrame()
-    
+
     df = pd.DataFrame(all_items)
-    
+
     # 동 필터
     if dong:
         df = df[df['umdNm'].str.contains(dong, na=False)].copy()
-    
+
     # 가격 숫자 변환
     df['price'] = df['dealAmount'].str.replace(',', '').astype(float)
     df['area_m2'] = pd.to_numeric(df['excluUseAr'], errors='coerce')
-    
+
     return df
+
+
+def clear_trade_cache():
+    """`get_trade_prices()`의 (법정동코드, 계약년월) 캐시를 비운다."""
+    _TRADE_CACHE.clear()
 
 
 def match_by_area_and_dong(df: pd.DataFrame, court_area_m2: float, 

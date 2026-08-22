@@ -5,8 +5,7 @@ CourtNaverMatcher.py를 대체 (네이버 API 차단으로 인해)
 """
 import re, time
 import pandas as pd
-from datetime import datetime, timedelta
-from AptTradeAPI import get_lawd_cd, fetch_apt_trade, match_by_area_and_dong
+from AptTradeAPI import get_lawd_cd, get_trade_prices, match_by_area_and_dong
 
 
 def parse_court_address(addr: str) -> dict:
@@ -52,51 +51,19 @@ def parse_court_address(addr: str) -> dict:
 
 
 def get_recent_trades(api_key: str, gungu: str, dong: str, months_back: int = 12) -> pd.DataFrame:
-    """법정동의 최근 실거래가 조회"""
-    lawd_cd = get_lawd_cd(gungu)
-    if not lawd_cd:
+    """
+    법정동의 최근 실거래가 조회.
+
+    2026-08-22: 기존에 AptTradeAPI.get_trade_prices()와 동일한 로직을 이 파일에
+    별도로 중복 구현해놓았던 것을 제거하고 그쪽 함수를 재사용하도록 변경함.
+    get_trade_prices()가 이후 개선(numOfRows 확대, 구/동/월 단위 캐싱)되면
+    match_batch()로 여러 사건을 배치 매칭할 때도 자동으로 그 이득을 받는다
+    (배치 매칭 246건 기준 25분 이상 걸리던 것을 이 문제 발견 후 개선함).
+    """
+    try:
+        return get_trade_prices(api_key, gungu, dong, months_back=months_back)
+    except ValueError:
         return pd.DataFrame()
-    
-    all_items = []
-    today = datetime.now()
-    
-    for i in range(months_back):
-        ym = today - timedelta(days=30 * i)
-        deal_ym = ym.strftime('%Y%m')
-        
-        result = fetch_apt_trade(api_key, lawd_cd, deal_ym)
-        if 'error' in result:
-            continue
-        
-        items = result.get('items', [])
-        total = result.get('totalCount', 0)
-        
-        page = 1
-        while len(items) < total and len(items) >= result.get('numOfRows', 100) * page:
-            page += 1
-            result = fetch_apt_trade(api_key, lawd_cd, deal_ym, page_no=page)
-            if 'error' not in result:
-                items.extend(result.get('items', []))
-            time.sleep(0.3)
-        
-        all_items.extend(items)
-        time.sleep(0.5)
-    
-    if not all_items:
-        return pd.DataFrame()
-    
-    df = pd.DataFrame(all_items)
-    
-    # 동 필터
-    if dong:
-        df_filtered = df[df['umdNm'].str.contains(dong, na=False)].copy()
-        if not df_filtered.empty:
-            df = df_filtered
-    
-    df['price'] = df['dealAmount'].str.replace(',', '').astype(float)
-    df['area_m2'] = pd.to_numeric(df['excluUseAr'], errors='coerce')
-    
-    return df
 
 
 def match_court_to_market(api_key: str, court_addr: str, court_gameval_amt: str = None) -> dict:

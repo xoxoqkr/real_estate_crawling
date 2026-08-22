@@ -2,25 +2,38 @@
     "family": "real_estate_crawling",
     "networkMode": "awsvpc",
     "requiresCompatibilities": ["FARGATE"],
-    "cpu": "1024",
-    "memory": "2048",
+    "cpu": "512",
+    "memory": "1024",
     "executionRoleArn": "arn:aws:iam::730335187691:role/ecsTaskExecutionRole",
     "containerDefinitions": [
         {
             "name": "real_estate_crawling",
-            "image": "730335187691.dkr.ecr.eu-north-1.amazonaws.com/real_estate_crawling:latest",
+            "image": "730335187691.dkr.ecr.ap-northeast-2.amazonaws.com/real_estate_crawling:latest",
             "essential": true,
+            "command": ["python", "src/main.py", "--skip-court", "--skip-speed"],
             "environment": [
                 {
                     "name": "PYTHONUNBUFFERED",
                     "value": "1"
                 }
             ],
+            "secrets": [
+                {"name": "MOLIT_API_KEY", "valueFrom": "arn:aws:secretsmanager:ap-northeast-2:730335187691:secret:real-estate-crawling/env-urpo8O:MOLIT_API_KEY::"},
+                {"name": "SPEED_AUCTION_ID", "valueFrom": "arn:aws:secretsmanager:ap-northeast-2:730335187691:secret:real-estate-crawling/env-urpo8O:SPEED_AUCTION_ID::"},
+                {"name": "SPEED_AUCTION_PW", "valueFrom": "arn:aws:secretsmanager:ap-northeast-2:730335187691:secret:real-estate-crawling/env-urpo8O:SPEED_AUCTION_PW::"},
+                {"name": "MY_AUCTION_ID", "valueFrom": "arn:aws:secretsmanager:ap-northeast-2:730335187691:secret:real-estate-crawling/env-urpo8O:MY_AUCTION_ID::"},
+                {"name": "MY_AUCTION_PW", "valueFrom": "arn:aws:secretsmanager:ap-northeast-2:730335187691:secret:real-estate-crawling/env-urpo8O:MY_AUCTION_PW::"},
+                {"name": "AWS_ACCESS_KEY_ID", "valueFrom": "arn:aws:secretsmanager:ap-northeast-2:730335187691:secret:real-estate-crawling/env-urpo8O:AWS_ACCESS_KEY_ID::"},
+                {"name": "AWS_SECRET_ACCESS_KEY", "valueFrom": "arn:aws:secretsmanager:ap-northeast-2:730335187691:secret:real-estate-crawling/env-urpo8O:AWS_SECRET_ACCESS_KEY::"},
+                {"name": "AWS_REGION", "valueFrom": "arn:aws:secretsmanager:ap-northeast-2:730335187691:secret:real-estate-crawling/env-urpo8O:AWS_REGION::"},
+                {"name": "AWS_S3_BUCKET_NAME", "valueFrom": "arn:aws:secretsmanager:ap-northeast-2:730335187691:secret:real-estate-crawling/env-urpo8O:AWS_S3_BUCKET_NAME::"},
+                {"name": "SAVE_DIR", "valueFrom": "arn:aws:secretsmanager:ap-northeast-2:730335187691:secret:real-estate-crawling/env-urpo8O:SAVE_DIR::"}
+            ],
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
                     "awslogs-group": "/ecs/fargate-cluster",
-                    "awslogs-region": "eu-north-1",
+                    "awslogs-region": "ap-northeast-2",
                     "awslogs-stream-prefix": "ecs"
                 }
             }

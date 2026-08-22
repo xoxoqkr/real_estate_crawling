@@ -1,10 +1,10 @@
 import boto3
 
-AWS_REGION = "eu-north-1"
+AWS_REGION = "ap-northeast-2"
 ECS_CLUSTER_NAME = "fargate-cluster"
 TASK_DEFINITION = "real_estate_crawling"
-SUBNET_ID = "subnet-0991f2b8b9e37fa3e"  # 실제 값 입력
-SECURITY_GROUP_ID = "sg-017bc48d1ea066c2c"  # 실제 값 입력
+SUBNET_ID = "subnet-0ff952eb6ed7ef300"  # 실제 값 입력
+SECURITY_GROUP_ID = "sg-0710391540fef28fc"  # 실제 값 입력
 
 ecs_client = boto3.client("ecs", region_name=AWS_REGION)
 

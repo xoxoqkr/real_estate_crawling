@@ -67,6 +67,9 @@ def setup_webdriver():
         from webdriver_manager.chrome import ChromeDriverManager
         service = Service(ChromeDriverManager().install())
         driver = webdriver.Chrome(service=service, options=options)
+        # chromedriver 프로세스가 죽는 등 비정상 상황에서 selenium의 HTTP 클라이언트가
+        # 무한 대기(hang)하는 것을 방지 (2026-08-22, 실제로 크롤링 중 hang 발생해 확인함)
+        driver.command_executor.set_timeout(30)
         return driver
     except Exception as e:
         print(f"ChromeDriver 설정 중 오류 발생: {e}")
@@ -189,17 +192,48 @@ def extract_results(driver, loading_wait_time_sec :int = 3):
 
 
 def click_button(driver, button):
+    """
+    2026-08-22 수정: 이 사이트의 페이지네이션 버튼(w2ui 그리드)은 네이티브
+    `button.click()`이나 ActionChains 클릭이 예외 없이 "성공"하면서도 실제로는
+    프레임워크의 페이지 전환 핸들러를 트리거하지 못하는 경우가 실측으로 확인됨
+    (버튼의 선택 상태(class)는 바뀌는데 그리드 데이터는 갱신되지 않음). JS로 직접
+    click()을 실행하는 방식만 안정적으로 동작함을 확인해 이 방식을 우선 사용한다.
+    """
     try:
-        button.click()
-    except:
+        driver.execute_script("arguments[0].click();", button)
+    except Exception:
         try:
+            button.click()
+        except Exception:
             actions = ActionChains(driver)
             actions.move_to_element(button).click().perform()
-        except:
-            driver.execute_script("arguments[0].click();", button)
 
 
 def paginate_and_extract(driver, max_pages : int = 100, loading_wait_time_sec :int = 3):
+    """
+    페이지네이션 버그 수정 (2026-08-22): 기존 코드는 다음 페이지 버튼 클릭 후
+    `presence_of_element_located((By.CLASS_NAME, "grid_body_row"))`로만 대기했는데,
+    이 사이트의 그리드(w2ui 계열)는 페이지 전환 시 `<tr class="grid_body_row">`
+    엘리먼트 자체를 새로 만들지 않고 기존 DOM 노드를 재사용한 채 셀 텍스트만
+    갱신하는 것으로 보인다. 그 결과 `presence_of_element_located` 조건은 클릭
+    직후에도 즉시 만족되어(엘리먼트가 여전히 DOM에 있으므로) 실제 텍스트 갱신이
+    끝나기 전에 extract_results()가 실행되어 이전 페이지 내용을 다시 읽어오는
+    경우가 있었다. (`staleness_of()`로 갱신을 감지하려는 시도도 같은 이유로
+    작동하지 않음을 실측으로 확인함 - 노드가 재사용되므로 staleness 자체가
+    발생하지 않음.)
+
+    수정: 클릭 전 현재 페이지의 (사건번호, 물건번호) 조합을 지문(fingerprint)으로
+    저장해두고, 클릭 후 실제로 추출되는 지문이 바뀔 때까지 재추출을 반복해서
+    기다린다 (최대 `loading_wait_time_sec`의 여러 배). 이 방식은 이 사이트의
+    그리드가 DOM 노드를 재사용하는지 여부와 무관하게, 우리가 실제로 확인하려는
+    "화면에 보이는 데이터가 실제로 바뀌었는가"를 직접 검증하므로 더 신뢰할 수 있다.
+    """
+    def _page_fingerprint(df):
+        if df.empty or 'printCsNo' not in df.columns:
+            return frozenset()
+        cols = ['printCsNo', 'maemulSer'] if 'maemulSer' in df.columns else ['printCsNo']
+        return frozenset(map(tuple, df[cols].itertuples(index=False, name=None)))
+
     all_results = pd.DataFrame()
     current_page = 1
     while True:
@@ -208,23 +242,21 @@ def paginate_and_extract(driver, max_pages : int = 100, loading_wait_time_sec :i
             WebDriverWait(driver, 10).until(
                 EC.presence_of_element_located((By.CLASS_NAME, "grid_body_row"))
             )
-            
+
             result_df = extract_results(driver, loading_wait_time_sec)
-            
+
             # 데이터 유효성 검사 추가
             if result_df.empty or 'printCsNo' not in result_df.columns:
                 print(f"페이지 {current_page}에서 유효한 데이터를 찾을 수 없습니다.")
                 break
-                
+
             print(result_df[['printCsNo','maemulSer']])
             all_results = pd.concat([all_results, result_df], ignore_index=True)
-            
-            # 다음 페이지 버튼 클릭 전 대기 시간 추가
-            time.sleep(loading_wait_time_sec)
-            
+
             print('current page : {}'.format(current_page))
             next_page = current_page + 1
-            
+            prev_fingerprint = _page_fingerprint(result_df)
+
             if next_page % 10 == 1:
                 try:
                     next_list_button = WebDriverWait(driver, 10).until(
@@ -243,15 +275,25 @@ def paginate_and_extract(driver, max_pages : int = 100, loading_wait_time_sec :i
                 except Exception as e:
                     print(f"페이지 {next_page} 이동 중 오류 발생: {e}")
                     break
-            
+
+            # 그리드 내용이 실제로 바뀔 때까지 재추출하며 대기 (최대 ~5회 재시도)
+            for attempt in range(5):
+                time.sleep(loading_wait_time_sec)
+                probe_df = extract_results(driver, 0)
+                if _page_fingerprint(probe_df) != prev_fingerprint:
+                    break
+            else:
+                print(f"경고: 페이지 {next_page} 내용이 {5*loading_wait_time_sec}초 후에도 "
+                      f"이전 페이지와 동일함 - 페이지 이동이 반영 안 됐을 수 있음")
+
             current_page += 1
             if current_page >= max_pages:
                 break
-                
+
         except Exception as e:
             print(f"페이지 {current_page} 처리 중 오류 발생: {e}")
             break
-    
+
     return all_results
 
 
